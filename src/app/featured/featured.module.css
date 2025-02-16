@@ -1,0 +1,44 @@
+.featuredGrid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.featureImage {
+  border-radius: 10px;
+}
+
+.gitBox {
+  font-size: 1.25rem;
+  display: flex;
+  height: 100px;
+  margin-left: 15px;
+  border-left: 1px solid #add8e6;
+  padding-left: 20px;
+  align-items: center;
+}
+
+.gitBoxRight {
+  font-size: 1.25rem;
+  display: flex;
+  height: 100px;
+  margin-right: 15px;
+  border-right: 1px solid #add8e6;
+  padding-right: 20px;
+  align-items: center;
+  flex-direction: row-reverse;
+  width: 220px;
+}
+
+.cardLink {
+  color: #acacac;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 430px) {
+  .cardImageRight {
+    width: 300px;
+  }
+}
