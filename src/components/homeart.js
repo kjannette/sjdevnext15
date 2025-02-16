@@ -1,4 +1,4 @@
-import styles from "../../styles/Home.module.css";
+import styles from "../app/styles.module.css";
 import Image from "next/image";
 import seqTheFut from "../../public/seqTheFut.gif";
 
