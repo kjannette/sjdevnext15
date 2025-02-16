@@ -2,7 +2,6 @@
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import headerStyles from "./component.module.css";
-
 import styles from "../app/styles.module.css";
 import logo from "../../public/logo.png";
 import { Roboto } from "next/font/google";
@@ -41,7 +40,7 @@ export default function Header(props) {
           <div className={headerStyles.linksRow}>
             <div>
               <div
-                className={styles.nextLink}
+                className={headerStyles.nextLink}
                 onClick={() => handleClick("/about")}
               >
                 About
@@ -49,7 +48,7 @@ export default function Header(props) {
             </div>
             <div>
               <div
-                className={styles.nextLink}
+                className={headerStyles.nextLink}
                 onClick={() => handleClick("/featured")}
               >
                 Featured Work
@@ -57,7 +56,7 @@ export default function Header(props) {
             </div>
             <div>
               <div
-                className={styles.nextLink}
+                className={headerStyles.nextLink}
                 onClick={() => handleClick("/contact")}
               >
                 Contact
