@@ -1,0 +1,19 @@
+import styles from "../../styles/Home.module.css";
+import Image from "next/image";
+import seqTheFut from "../../public/seqTheFut.gif";
+
+export default function Homeart() {
+  return (
+    <div className={styles.homeContainer}>
+      <div className={styles.gridColumn}>
+        <div className={styles.imgBox}>
+          <Image
+            src={seqTheFut}
+            className={styles.homeImg}
+            alt="would you like to play a game?"
+          />
+        </div>
+      </div>
+    </div>
+  );
+}

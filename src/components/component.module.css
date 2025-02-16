@@ -1,0 +1,177 @@
+/****  Footer ****/
+.footerContainer {
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.footerInnerBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerLink {
+  padding-left: 5px;
+  text-decoration: none;
+  color: #0070f3;
+}
+
+.nextLogoBox {
+  margin-bottom: -4px;
+  margin-left: 30px;
+}
+
+.nextLogoBox {
+  margin-bottom: -4px;
+  margin-left: 30px;
+}
+/****  End Footer ****/
+
+/****    Header    ****/
+
+.headerContainer {
+  margin-top: 1px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 120px;
+  font-size: 1.3rem;
+}
+
+.headerBox {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  margin-left: -4px;
+}
+
+.headerBoxLeft {
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: flex-end;
+}
+
+.headerHead {
+  margin-top: -2px;
+  margin-bottom: 1px;
+  color: #2196f3;
+  letter-spacing: 0.18rem;
+  font-family: var(--font-roboto);
+  font-size: 48px;
+  font-weight: 400;
+}
+
+.headerText {
+  font-family: var(--font-roboto);
+  font-weight: 300;
+  color: #878787;
+  margin-top: 0px;
+  margin-bottom: 4px;
+  letter-spacing: 0.06rem;
+  padding-right: 5px;
+}
+
+.linksRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  min-width: 350px;
+  align-items: flex-end;
+  margin-left: 10px;
+  margin-bottom: 14px;
+}
+
+.colorText {
+  color: blue;
+}
+
+.nextLink {
+  font-family: var(--font-roboto);
+  font-weight: 300;
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: #acacac;
+  letter-spacing: 0.07rem;
+}
+
+.nextLink:hover {
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: #0070f3;
+  letter-spacing: -0.04rem;
+}
+
+.nextLink > a {
+  font-family: var(--roboto);
+  color: inherit;
+  text-decoration: none;
+  letter-spacing: -0.04rem;
+}
+
+@media only screen and (min-width: 430px) {
+  .burgerBox {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .headerContainer {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .burgerButton {
+    background-color: #fff;
+    border: none;
+    padding: none;
+    width: 75px;
+    color: #2196f3;
+    padding-left: 2rem;
+    padding-right: 0rem;
+  }
+
+  .burgerBox > button {
+    padding-left: 1rem;
+    padding-right: 0rem;
+  }
+  .menuOpen {
+    font-size: 46px;
+  }
+  .burgerBox {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: right;
+    align-items: baseline;
+  }
+  .headerBoxLeft {
+    display: none;
+  }
+
+  .linksRow {
+    display: none;
+  }
+
+  .ksMenuLines {
+    width: 60px;
+    margin-right: 1px;
+    cursor: pointer;
+  }
+
+  .ksMenuLine {
+    background-color: #acacac;
+    width: 100%;
+    height: 6px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+  }
+}
