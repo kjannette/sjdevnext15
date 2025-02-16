@@ -395,9 +395,9 @@ export default function About() {
                       <Link className={aboutStyles.aboutLink} href="/contact">
                         Let's talk{" "}
                       </Link>
-                      about how AI, ML and analytics, along with technology you
-                      already use, can grow your opportunities. Don't wait for
-                      the future, sequence it yourself.
+                      about how AI and ML, along with technology you already
+                      use, can grow your opportunities. Don't wait for the
+                      future to unfold, sequence it.
                     </p>
                   </>
                 </div>
