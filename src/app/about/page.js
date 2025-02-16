@@ -1,15 +1,13 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
-import homeStyles from "../app/styles.module.css";
+import homeStyles from "../styles.module.css";
 import aboutStyles from "./about.module.css";
 import Image from "next/image";
-import purpleMe from "../../public/purpleMe.png";
-import flipitFinalz from "../../public/flipitFinalz.png";
-
+import purpleMe from "../../../public/purpleMe.png";
+import flipitFinalz from "../../../public/flipitFinalz.png";
 import Link from "next/link";
 import { Roboto } from "next/font/google";
-import Navpanel from "../components/navpanel.js";
 
 const roboto = Roboto({
   subsets: ["latin"],
