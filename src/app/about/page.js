@@ -185,14 +185,16 @@ export default function About() {
 
                   <>
                     <p className={aboutStyles.solutionsText}>
-                      I bring that creativity to every solution I create for
-                      clients. While “solution” might imply a problem, I frame
-                      it optimistically, as an opportunity realized. Like
-                      leveraging technology to give professionals an edge.
+                      I bring creativity to every solution I create for clients.
+                      While “solution” might imply a problem, I use it here
+                      optimistically: an opportunity realized. Such as
+                      leveraging technology in novel ways, to give professionals
+                      an edge.
                     </p>
                     <p>
-                      While in the popular media, "chatbots" are making a
-                      splash...
+                      Take, for example, the Artifical Intelligence (so-called
+                      "chatbots"), which, in this moment, have captivated our
+                      popular attenion.
                     </p>
                   </>
 
@@ -200,9 +202,9 @@ export default function About() {
                     <p> They help {`${textArray[index]}`}</p>
                   </>
                   <p>
-                    Understanding how large language models (LLMs/AI) and
-                    machine learning (ML) can improve your business in a
-                    practical way is nuanced.
+                    But, applying large language models (LLMs/AI) and machine
+                    learning (ML) to maximum effect in business requires not
+                    just technical skill, it requires imagination.
                   </p>
                 </div>
               </div>
@@ -241,7 +243,7 @@ export default function About() {
                       {show2 ? (
                         <div className={aboutStyles.colorCell3}>
                           <Image
-                            classname={aboutStyles.imgTwo}
+                            className={aboutStyles.imgTwo}
                             src={purpleMe}
                             height={230}
                             alt="sjDev logo"
@@ -255,7 +257,7 @@ export default function About() {
                       {show3 ? (
                         <div className={aboutStyles.colorCell4}>
                           <Image
-                            classname={aboutStyles.imgThree}
+                            className={aboutStyles.imgThree}
                             src={purpleMe}
                             height={275}
                             alt="sjDev logo"
@@ -269,7 +271,7 @@ export default function About() {
                       {show4 ? (
                         <div className={aboutStyles.colorCell5}>
                           <Image
-                            classname={aboutStyles.imgFour}
+                            className={aboutStyles.imgFour}
                             src={purpleMe}
                             height={310}
                             alt="sjDev logo"
@@ -340,24 +342,24 @@ export default function About() {
                   <>
                     <p>
                       {" "}
-                      I’ve developed practical LLM applications. One, using
-                      ML-augmented OCR and CoT prompting, generates
-                      contextually-precise completions for
+                      I’ve made it my business to develop practical LLM
+                      applications. One, using ML-augmented OCR and CoT
+                      prompting, generates contextually-precise
                       <Link
                         className={aboutStyles.aboutLink}
                         href="https://www.novodraft.ai"
                       >
                         {" "}
-                        legal drafting.
+                        legal drafting,
                       </Link>{" "}
-                      This makes trial attorney's work more efficient, but, more
-                      broadly, shows that you can leverage AI to do whatever you
-                      do faster and smarter.
+                      making the trial attorney's work more efficient. More
+                      broadly, It demonstartes that AI can be leveraged to do
+                      just about anything faster and smarter.
                     </p>
                     <p>
                       Do you retail? Imagine deploying a 24/7
-                      associate-force-multiplier that has one purpose: widening
-                      your mote. In sales, AI offers customers a
+                      associate-force-multiplier with one purpose: widening your
+                      mote. In sales, AI offers customers a
                       conversion-increasing, bespoke concierge experience,{" "}
                       <Link
                         className={aboutStyles.aboutLink}
@@ -370,15 +372,16 @@ export default function About() {
                   </>
                   <>
                     <p>
-                      Do you finance? Operationally, machine-learning has{" "}
+                      Do you finance? Machine-learning has{" "}
                       <Link
                         className={aboutStyles.aboutLink}
                         href="https://www.forbes.com/sites/tomdavenport/2019/07/10/from-analytics-first-to-ai-first-at-capital-one/?sh=423a14372f1b"
                       >
-                        redefined what's possible,{" "}
+                        redefined what is operatiionally feasible.{" "}
                       </Link>
-                      by recognizing patterns in complex data that yield
-                      actionable paths to once-hidden revenue streams.
+                      AI and ML, by recognizing patterns in data previosuly
+                      obfuscated by sheer voklume and compleixty, has yielded
+                      actionable paths to once-hidden revenue.
                     </p>{" "}
                   </>
                   <>
