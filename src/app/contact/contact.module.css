@@ -1,0 +1,222 @@
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 600px;
+}
+
+.contactInner {
+  display: flex;
+  flex-direction: row;
+  height: 350px;
+  width: 100%;
+  margin-top: 15px;
+  background-color: #f5fcfc;
+}
+
+.contactLeftColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 350px;
+  border-radius: 40px 0px 40px 0px;
+  border-left: 1px solid #00dbff;
+}
+
+.contactRightColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  width: 50%;
+  border-radius: 40px 0px 40px 0px;
+  border-bottom: 1px solid #00dbff;
+  border-right: 1px solid #00dbff;
+}
+
+.contactLink {
+  font-size: 1rem;
+  letter-spacing: -0.07rem;
+  color: #fff;
+  text-decoration: none;
+  padding-right: 5px;
+}
+
+.contactLinkTwo {
+  font-size: 0.95rem;
+  letter-spacing: 0.1rem;
+  color: #acacac;
+  text-decoration: none;
+  padding-right: 25px;
+}
+
+.contactLinkThree {
+  letter-spacing: 1rem;
+  text-decoration: none;
+}
+
+.contactLinkFour {
+  letter-spacing: 1rem;
+  text-decoration: none;
+  color: black;
+}
+
+.contactLinkFive {
+  font-size: 0.95rem;
+  letter-spacing: 0.45rem;
+  color: #acacac;
+  text-decoration: none;
+  margin-left: 10px;
+  padding-left: 35px;
+}
+
+.contactLinkSix {
+  font-size: 0.95rem;
+  letter-spacing: 0.1rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.contactInfoBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 60%;
+  height: 80%;
+}
+
+.contactDetailOne {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 20px;
+  background-color: aqua;
+}
+
+.contactDetailTwo {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 20px;
+  background-color: yellow;
+  letter-spacing: -1rem;
+}
+
+.contactDetailThree {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 20px;
+  background-color: pink;
+  letter-spacing: 0.37rem;
+  width: 84%;
+}
+
+.contactDetailFour {
+  width: 40%;
+  background-color: #9fe8ec;
+  color: #000;
+}
+
+.contactDetailFive {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: yellow;
+  letter-spacing: 0.6rem;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+
+.contactDetailSix {
+  background-color: #acacac;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.imgBox {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.imgBoxOne {
+  display: flex;
+  width: 30%;
+}
+
+.imgBoxTwo {
+  display: flex;
+  width: 30%;
+}
+
+.imgBoxThree {
+  display: flex;
+  align-items: center;
+  width: 40%;
+}
+
+.threeInner {
+  display: flex;
+  margin-left: 5px;
+  height: 300px;
+  width: 130px;
+  border-radius: 0px;
+  overflow: hidden;
+  opacity: 0.7;
+  background: linear-gradient(to left, rgba(245, 246, 252, 0.52), cyan);
+}
+
+@media only screen and (max-width: 430px) {
+  .contactInner {
+    display: flex;
+    flex-direction: column;
+  }
+  .contactLeftColumn {
+    width: 100%;
+  }
+  .contactRightColumn {
+    width: 100%;
+    height: 500px;
+    margin-top: 25px;
+  }
+  .contactInfoBox {
+    height: 400px;
+  }
+
+  .contactDetailTwo {
+    align-items: flex-end;
+  }
+
+  .contactDetailThree {
+    align-items: center;
+  }
+
+  .navLinkThree {
+    color: black;
+    letter-spacing: 1rem;
+    text-decoration: none;
+    letter-spacing: 1.2rem;
+  }
+  .contactLink {
+    letter-spacing: 0.2rem;
+  }
+}
+
+/*
+.threeInner {
+  display: flex;
+  margin-left: 5px;
+  height: 300px;
+  width: 130px;
+  border-radius: 0px;
+  overflow: hidden;
+  opacity: 0.4;
+  background: linear-gradient(to left, rgba(245, 246, 252, 0.52), red);
+}
+*/
