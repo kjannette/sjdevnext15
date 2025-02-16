@@ -1,12 +1,11 @@
-import { useState } from "react";
 import homeStyles from "../styles.module.css";
 import featuredStyles from "./featured.module.css";
 import { Roboto } from "next/font/google";
 import Image from "next/image";
-import bookBrowser from "../../public/images/bookBrowser.jpg";
-import logoMatrixUltrafav from "../../public/images/logoMatrixUltrafav.png";
-import budget from "../../public/images/budget.jpg";
-import salesFlow from "../../public/images/salesFlow.jpg";
+import bookBrowser from "../../../public/bookBrowser.jpg";
+import logoMatrixUltrafav from "../../../public/logoMatrixUltrafav.png";
+import budget from "../../../public/budget.jpg";
+import salesFlow from "../../../public/salesFlow.jpg";
 
 const roboto = Roboto({
   weight: "300",
@@ -14,11 +13,6 @@ const roboto = Roboto({
 });
 
 export default function Featured() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  function navToggle() {
-    setMenuOpen(!menuOpen);
-  }
   return (
     <div className={homeStyles.container}>
       <div className={homeStyles.innerContainer}>
