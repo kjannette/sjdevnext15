@@ -1,13 +1,13 @@
+"use client";
+import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
-import homeStyles from "../app/styles.module.css";
+import homeStyles from "../styles.module.css";
 import aboutStyles from "./about.module.css";
 import Image from "next/image";
-import purpleMe from "../../public/purpleMe.png";
-import flipitFinalz from "../../public/images/flipitFinalz.png";
-
+import purpleMe from "../../../public/purpleMe.png";
+import flipitFinalz from "../../../public/flipitFinalz.png";
 import Link from "next/link";
 import { Roboto } from "next/font/google";
-import Navpanel from "../pageElements/navpanel.js";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -151,16 +151,6 @@ export default function About() {
     <div className={roboto.className}>
       <div className={homeStyles.container}>
         <div className={homeStyles.innerContainer}>
-          <Header
-            navToggle={navToggle}
-            menuOpen={menuOpen}
-            setMenuOpen={setMenuOpen}
-          />
-          <Navpanel
-            navToggle={navToggle}
-            menuOpen={menuOpen}
-            setMenuOpen={setMenuOpen}
-          />
           <div className={aboutStyles.aboutContainer}>
             <div className={homeStyles.gridRow}>
               <div className={aboutStyles.aboutHeadingOuter}></div>
@@ -411,7 +401,6 @@ export default function About() {
               </div>
             </div>
           </div>
-          <Footer />
         </div>
       </div>
     </div>

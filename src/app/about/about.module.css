@@ -1,0 +1,351 @@
+.aboutContainer {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.aboutRow {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.aboutColumnTL {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #abd1ff;
+  border-top: 1px solid #abd1ff;
+  width: 50%;
+  border-radius: 40px 0px 0px 0px;
+}
+
+.aboutColumnTR {
+  display: flex;
+  flex-direction: column;
+  margin-top: -4px;
+  border-right: 1px solid #abd1ff;
+  border-radius: 0px 15px;
+  width: 50%;
+}
+
+.aboutColumnBL {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.pixImgBox {
+  width: 500px;
+  padding-left: 48px;
+  padding-top: 10px;
+}
+
+.aboutColumnBR {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  border-radius: 0px 40px 0px 40px;
+  border-left: 1px solid #abd1ff;
+}
+
+.leftTextWrapper {
+  padding: 0px 6px;
+}
+
+.leftTextWrapper > p {
+  margin: 4px 5px 0px 4px;
+  padding: 5px 25px 0px 5px;
+  line-height: 1.35rem;
+  text-align: justify;
+  text-justify: inter-word;
+  letter-spacing: -0.03rem;
+}
+
+.leftTextWrapper2 {
+  padding: 0px 8px;
+}
+
+.leftTextWrapper2 > p {
+  margin: 4px 5px 0px 4px;
+  padding: 5px 25px 0px 5px;
+  line-height: 1.35rem;
+  text-align: justify;
+  text-justify: inter-word;
+  letter-spacing: -0.03rem;
+}
+
+.aboutColumn > a {
+  text-decoration: none;
+}
+
+.rightBox {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  margin-right: 10px;
+  padding-right: 18px;
+}
+
+.rightBoxInner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+  padding-right: 10px;
+  margin-right: 5px;
+  margin-bottom: 12px;
+}
+
+.aboutHeading {
+  font-size: 24px;
+  margin-top: 0px;
+
+  color: #878787;
+  padding-left: 8px;
+  letter-spacing: -0.04rem;
+}
+
+.imageBoxOne {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 20%;
+  margin-top: 3px;
+}
+
+.imageBoxTwo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 12px;
+  width: 20%;
+}
+
+.imageBoxThree {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 23px;
+  width: 20%;
+}
+
+.imageBoxFour {
+  display: flex;
+  margin-top: 8px;
+  margin-right: 10px;
+  width: 20%;
+}
+
+.imageBoxFive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 23px;
+  width: 20%;
+}
+.colorCell1 {
+  border-radius: 8px;
+  height: fit-content;
+  background-color: #acacac;
+  opacity: 0.2;
+  margin-top: 17px;
+}
+
+.colorCell2 {
+  border-radius: 8px;
+  height: fit-content;
+  background-color: #0000ff;
+  opacity: 0.4;
+}
+
+.colorCell3 {
+  border-radius: 8px;
+  height: fit-content;
+  background-color: #ffff00;
+  opacity: 0.6;
+}
+
+.colorCell4 {
+  border-radius: 8px;
+  height: fit-content;
+  background-color: hsl(180, 66%, 49%);
+  opacity: 0.73;
+}
+
+.colorCell5 {
+  border-radius: 8px;
+  height: fit-content;
+  background-color: #ffc0cb;
+  opacity: 0.95;
+}
+
+.specialLink {
+  color: #2196f3;
+  text-decoration: none;
+}
+
+.hotBackBox {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-left: 18px;
+  padding-top: 25px;
+}
+
+.backBoxOne {
+  height: 350px;
+  width: 30%;
+}
+
+.backBoxTwo {
+  display: flex;
+  justify-content: flex-end;
+  height: 350px;
+  width: 40%;
+}
+
+.backBoxThree {
+  height: 350px;
+  width: 30%;
+}
+
+.aboutLink {
+  color: #2196f3;
+  text-decoration: none;
+}
+
+.about-italics-text {
+  font-style: italic;
+}
+
+.fast-text {
+  display: inline;
+}
+
+.aboutFastSection {
+  margin-top: 6px;
+  margin-left: 3px;
+  margin-right: 27px;
+  padding-left: 6px;
+  line-height: 1.35rem;
+  text-align: justify;
+  text-justify: inter-word;
+  letter-spacing: -0.03rem;
+}
+
+.pixelBlast {
+  width: 100%;
+  object-fit: contain;
+}
+
+@media only screen and (max-width: 1080px) {
+  .aboutRow {
+    height: 370px;
+  }
+
+  .imageBoxOne {
+    display: none;
+  }
+
+  .rightBox {
+    padding-top: 0px;
+  }
+
+  .pixImgBox {
+    display: flex;
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .hotBackBox {
+    padding-top: 1px;
+    padding-left: 20px;
+  }
+
+  .pixelBlast {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+@media only screen and (min-width: 430px) {
+  .burgerBox {
+    display: none;
+  }
+  .mobileTextOne {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .aboutHeadingOuter {
+    width: 100%;
+  }
+
+  .aboutHeading {
+    display: flex;
+    justify-content: center;
+  }
+
+  .aboutRow {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aboutColumnTL {
+    display: none;
+  }
+
+  .aboutColumnTR {
+    width: 100%;
+    border: none;
+  }
+
+  .imageBoxOne {
+    display: none;
+  }
+
+  .imageBoxTwo {
+    display: none;
+  }
+
+  .imageBoxThree {
+    width: unset;
+  }
+
+  .imageBoxFour {
+    width: unset;
+  }
+
+  .imageBoxFive {
+    width: unset;
+  }
+
+  .aboutColumnBL {
+    display: none;
+  }
+  .solutionsText {
+    display: none;
+  }
+  .leftTextWrapper2 {
+    display: none;
+  }
+  .aboutColumnBR {
+    display: none;
+  }
+  .colorCell3 {
+    margin-right: 2px;
+  }
+
+  .colorCell4 {
+    margin-right: 2px;
+  }
+  .mobileTextOne {
+    text-align: justify;
+  }
+  .mobileTextOne {
+    border-bottom: none;
+  }
+}
