@@ -1,3 +1,5 @@
+"use client";
+import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import homeStyles from "../app/styles.module.css";
 import aboutStyles from "./about.module.css";
@@ -151,16 +153,6 @@ export default function About() {
     <div className={roboto.className}>
       <div className={homeStyles.container}>
         <div className={homeStyles.innerContainer}>
-          <Header
-            navToggle={navToggle}
-            menuOpen={menuOpen}
-            setMenuOpen={setMenuOpen}
-          />
-          <Navpanel
-            navToggle={navToggle}
-            menuOpen={menuOpen}
-            setMenuOpen={setMenuOpen}
-          />
           <div className={aboutStyles.aboutContainer}>
             <div className={homeStyles.gridRow}>
               <div className={aboutStyles.aboutHeadingOuter}></div>
@@ -411,7 +403,6 @@ export default function About() {
               </div>
             </div>
           </div>
-          <Footer />
         </div>
       </div>
     </div>
