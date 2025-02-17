@@ -43,8 +43,8 @@ export default function Featured() {
           <a href="" className={homeStyles.cardTextRight}>
             <h3>Sales Flow</h3>
             <p>
-              Node/React app demo, created for an automotive retailer, with ML
-              processing of KPI and inventory data.
+              Node/React app demo, created for an automotive retailer, with KPI
+              and inventory insights via recursive ML analysis.
             </p>
           </a>
           <div className={homeStyles.cardImageLeft}>
