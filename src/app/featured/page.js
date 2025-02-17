@@ -48,7 +48,7 @@ export default function Featured() {
             </p>
           </a>
           <div className={homeStyles.cardImageLeft}>
-            <a href="https://github.com/kjannette/salesflow">
+            <a href="https://github.com/kjannette/salesflow" target="_blank">
               <Image
                 className={featuredStyles.featureImage}
                 src={salesFlow}
@@ -95,7 +95,7 @@ export default function Featured() {
             </p>
           </a>
           <div className={homeStyles.cardImageLeft}>
-            <a href="">
+            <a href="" target="_blank">
               <Image
                 className={featuredStyles.featureImage}
                 src={budget}
