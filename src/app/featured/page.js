@@ -1,3 +1,4 @@
+"use client";
 import homeStyles from "../styles.module.css";
 import featuredStyles from "./featured.module.css";
 import { Roboto } from "next/font/google";

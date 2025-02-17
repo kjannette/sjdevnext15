@@ -1,5 +1,5 @@
 "use client";
-import { useRouter } from "next/navigation";
+
 import { useState, useEffect } from "react";
 import homeStyles from "../styles.module.css";
 import aboutStyles from "./about.module.css";

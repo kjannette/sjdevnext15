@@ -1,3 +1,4 @@
+"use client";
 import styles from "../app/styles.module.css";
 import Image from "next/image";
 import seqTheFut from "../../public/seqTheFut.gif";

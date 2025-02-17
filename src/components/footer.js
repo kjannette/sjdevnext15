@@ -1,3 +1,4 @@
+"use client";
 import styles from "./component.module.css";
 import Image from "next/image";
 import nextLogo from "../../public/nextLogo.png";
