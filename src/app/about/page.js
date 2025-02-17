@@ -344,8 +344,8 @@ export default function About() {
                     <p>
                       {" "}
                       I’ve made it my business to develop practical LLM
-                      applications. One, using ML-augmented OCR and CoT
-                      prompting, generates contextually-precise
+                      applications. One application, using ML-augmented OCR and
+                      CoT prompting, generates contextually-precise, persuasive
                       <Link
                         className={aboutStyles.aboutLink}
                         href="https://www.novodraft.ai"

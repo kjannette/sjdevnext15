@@ -36,7 +36,7 @@
 /****    Header    ****/
 
 .headerContainer {
-  margin-top: 1px;
+  margin-top: 1px 8px;
   padding-top: 10px;
   padding-left: 16px;
   padding-right: 16px;
@@ -51,7 +51,7 @@
   display: flex;
   flex-direction: row;
   width: 50%;
-  margin-left: -4px;
+  margin: 0px 12px;
 }
 
 .headerBoxLeft {
