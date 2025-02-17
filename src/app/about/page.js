@@ -202,9 +202,10 @@ export default function About() {
                     <p> They help {`${textArray[index]}`}</p>
                   </>
                   <p>
-                    But, applying large language models (LLMs/AI) and machine
-                    learning (ML) to maximum effect in business requires not
-                    just technical skill, it requires imagination.
+                    Beguiling, certainly, but only a hint of the technoology's
+                    transformative potential. Applying AI and machine learning
+                    (ML) to maximum practical effect in business will require
+                    both technical prowess and imagination.
                   </p>
                 </div>
               </div>
