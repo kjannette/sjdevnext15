@@ -30,11 +30,7 @@ export default function Featured() {
               />
             </a>
           </div>
-          <a
-            className={homeStyles.cardTextLeft}
-            href="https://www.novodraft.ai"
-            target="_blank"
-          >
+          <a className={homeStyles.cardTextLeft} href="" target="_blank">
             <h3>Novdraft.ai </h3>
             <p>
               AI-assisted legal drafting. ML-augmented OCR plus CoT-prompt
@@ -44,10 +40,7 @@ export default function Featured() {
 
           {/****    EXF END    *****/}
           {/****    SF START    *****/}
-          <a
-            href="http://www.findandexec.com/sf"
-            className={homeStyles.cardTextRight}
-          >
+          <a href="" className={homeStyles.cardTextRight}>
             <h3>Sales Flow</h3>
             <p>
               Node/React app demo, created for an automotive retailer, with ML
@@ -69,7 +62,10 @@ export default function Featured() {
           {/****    BB START    *****/}
           <div className={homeStyles.cardImageRight}>
             <div className={featuredStyles.gitBoxRight}>View on Github</div>
-            <a href="http://www.findandexc.com/bb" target="_blank">
+            <a
+              href="https://github.com/kjannette/reactnd-project-bookbrowser"
+              target="_blank"
+            >
               <Image
                 className={featuredStyles.featureImage}
                 src={bookBrowser}
@@ -79,7 +75,7 @@ export default function Featured() {
             </a>
           </div>
           <a
-            href="http://www.findandexec.com/bb"
+            href="https://github.com/kjannette/reactnd-project-bookbrowser"
             target="_blank"
             className={homeStyles.cardTextLeft}
           >

@@ -380,9 +380,8 @@ export default function About() {
                       >
                         redefined what is operatiionally feasible.{" "}
                       </Link>
-                      AI and ML, by recognizing patterns in data once obfuscated
-                      by sheer voklume, has yielded actionable paths to new
-                      revenue.
+                      ML, by recognizing patterns in data once obfuscated by
+                      sheer volume, has yielded actionable paths to new revenue.
                     </p>{" "}
                   </>
                   <>
