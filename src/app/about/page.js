@@ -1,5 +1,5 @@
 "use client";
-import { useRouter } from "next/navigation";
+
 import { useState, useEffect } from "react";
 import homeStyles from "../styles.module.css";
 import aboutStyles from "./about.module.css";
@@ -187,12 +187,12 @@ export default function About() {
                     <p className={aboutStyles.solutionsText}>
                       I bring creativity to every solution I create for clients.
                       While “solution” might imply a problem, I use it here
-                      optimistically: an opportunity realized. Such as
+                      optimistically: an opportunity realized. One example:
                       leveraging technology in novel ways, to give professionals
                       an edge.
                     </p>
                     <p>
-                      Take, for example, the Artifical Intelligence (so-called
+                      Consider the Artifical Intelligence (so-called
                       "chatbots"), which, in this moment, have captivated our
                       popular attenion.
                     </p>
@@ -202,9 +202,10 @@ export default function About() {
                     <p> They help {`${textArray[index]}`}</p>
                   </>
                   <p>
-                    But, applying large language models (LLMs/AI) and machine
-                    learning (ML) to maximum effect in business requires not
-                    just technical skill, it requires imagination.
+                    Beguiling, certainly, but only a hint of the technoology's
+                    transformative potential. Applying AI and machine learning
+                    (ML) to maximum practical effect in business will require
+                    both technical prowess and imagination.
                   </p>
                 </div>
               </div>
@@ -343,8 +344,8 @@ export default function About() {
                     <p>
                       {" "}
                       I’ve made it my business to develop practical LLM
-                      applications. One, using ML-augmented OCR and CoT
-                      prompting, generates contextually-precise
+                      applications. One application, using ML-augmented OCR and
+                      CoT prompting, generates contextually-precise, persuasive
                       <Link
                         className={aboutStyles.aboutLink}
                         href="https://www.novodraft.ai"
@@ -379,9 +380,9 @@ export default function About() {
                       >
                         redefined what is operatiionally feasible.{" "}
                       </Link>
-                      AI and ML, by recognizing patterns in data previosuly
-                      obfuscated by sheer voklume and compleixty, has yielded
-                      actionable paths to once-hidden revenue.
+                      AI and ML, by recognizing patterns in data once obfuscated
+                      by sheer voklume, has yielded actionable paths to new
+                      revenue.
                     </p>{" "}
                   </>
                   <>

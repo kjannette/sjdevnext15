@@ -36,8 +36,10 @@
 /****    Header    ****/
 
 .headerContainer {
-  margin-top: 1px;
+  margin-top: 1px 8px;
   padding-top: 10px;
+  padding-left: 16px;
+  padding-right: 16px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -49,7 +51,7 @@
   display: flex;
   flex-direction: row;
   width: 50%;
-  margin-left: -4px;
+  margin: 0px 12px;
 }
 
 .headerBoxLeft {
@@ -96,7 +98,7 @@
 
 .nextLink {
   font-family: var(--font-roboto);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.25rem;
   text-decoration: none;
   color: #acacac;
@@ -104,10 +106,9 @@
 }
 
 .nextLink:hover {
-  font-size: 1.25rem;
+  cursor: pointer;
   text-decoration: none;
   color: #0070f3;
-  letter-spacing: -0.04rem;
 }
 
 .nextLink > a {
