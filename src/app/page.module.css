@@ -11,9 +11,24 @@
   align-items: center;
   justify-items: center;
   min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
+  padding: 10px 12px;
+  gap: 2px;
   font-family: var(--font-geist-sans);
+}
+
+.container {
+  height: 890px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+  color: #acacac;
+  background-color: #fff;
+}
+
+.innerContainer {
+  background-color: #fff;
+  width: 95%;
 }
 
 @media (prefers-color-scheme: dark) {
