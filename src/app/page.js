@@ -5,8 +5,8 @@ import Homeart from "@/components/homeart";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
+    <div className={styles.container}>
+      <main className={styles.innerContainer}>
         <Homeart />
       </main>
     </div>
