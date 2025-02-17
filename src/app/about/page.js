@@ -187,12 +187,12 @@ export default function About() {
                     <p className={aboutStyles.solutionsText}>
                       I bring creativity to every solution I create for clients.
                       While “solution” might imply a problem, I use it here
-                      optimistically: an opportunity realized. Such as
+                      optimistically: an opportunity realized. One example:
                       leveraging technology in novel ways, to give professionals
                       an edge.
                     </p>
                     <p>
-                      Take, for example, the Artifical Intelligence (so-called
+                      Consider the Artifical Intelligence (so-called
                       "chatbots"), which, in this moment, have captivated our
                       popular attenion.
                     </p>
@@ -380,9 +380,9 @@ export default function About() {
                       >
                         redefined what is operatiionally feasible.{" "}
                       </Link>
-                      AI and ML, by recognizing patterns in data previosuly
-                      obfuscated by sheer voklume and compleixty, has yielded
-                      actionable paths to once-hidden revenue.
+                      AI and ML, by recognizing patterns in data once obfuscated
+                      by sheer voklume, has yielded actionable paths to new
+                      revenue.
                     </p>{" "}
                   </>
                   <>
