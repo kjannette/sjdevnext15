@@ -12,6 +12,7 @@ export default function Homeart() {
             src={seqTheFut}
             className={styles.homeImg}
             alt="would you like to play a game?"
+	    priority={true}
           />
         </div>
       </div>

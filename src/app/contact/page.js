@@ -3,7 +3,7 @@ import homeStyles from "../styles.module.css";
 import contactStyles from "./contact.module.css";
 import Image from "next/image";
 import pixelToo from "../../../public/pixelToo.png";
-import { Roboto } from "@next/font/google";
+import { Roboto } from "next/font/google";
 
 const roboto = Roboto({
   subsets: ["latin"],
