@@ -2,7 +2,6 @@
 import { useRouter } from "next/navigation";
 import headerStyles from "./component.module.css";
 import { Roboto } from "next/font/google";
-import Script from "next/script";
 
 const roboto = Roboto({
   display: "swap",
@@ -21,7 +20,6 @@ export default function Header(props) {
 
   return (
     <main className={roboto.variable}>
-      <img src="https://sjdev.goatcounter.com/count?p=/test" />
       <div className={headerStyles.headerContainer}>
         <div className={headerStyles.headerBox}>
           <div>
