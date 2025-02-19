@@ -10,7 +10,7 @@ export default function Homeart() {
             src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739933776/seqTheFut_uepaah.gif"
             className={styles.homeImg}
             alt="An interesting cubist animation inspired by the Bauhaus school."
-            priority="true"
+            priority
           />
         </div>
       </div>
