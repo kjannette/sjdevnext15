@@ -19,10 +19,6 @@ export default function About() {
   const [index, setIndex] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  function navToggle() {
-    setMenuOpen(!menuOpen);
-  }
-
   let interval = null;
 
   interval = setInterval(log, 5000);

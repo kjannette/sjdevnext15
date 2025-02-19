@@ -11,8 +11,8 @@ export default function Homeart() {
           <Image
             src={seqTheFut}
             className={styles.homeImg}
-            alt="would you like to play a game?"
-	    priority={true}
+            alt="an interesting cubist animation inspired by the Bauhaus school."
+            priority={true}
           />
         </div>
       </div>

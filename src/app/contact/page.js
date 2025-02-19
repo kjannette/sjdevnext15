@@ -28,7 +28,7 @@ export default function Contact() {
                         className={contactStyles.pixImg}
                         src={pixelToo}
                         height={300}
-                        alt="sjDev logo"
+                        alt="artistic picture of a man in a suit"
                       />
                     </div>
                   </div>
