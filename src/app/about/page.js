@@ -211,11 +211,11 @@ export default function About() {
                     <div className={aboutStyles.imageBoxOne}>
                       {show ? (
                         <div className={aboutStyles.colorCell1}>
-                          <Image
+                          <img
                             className={aboutStyles.imgOne}
-                            src={purpleMe}
+                            src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739936788/purpleMe_rf5gpm.png"
                             height={130}
-                            alt="sjDev logo"
+                            alt="sjDev man"
                           />
                         </div>
                       ) : (
@@ -225,11 +225,11 @@ export default function About() {
                     <div className={aboutStyles.imageBoxTwo}>
                       {show1 ? (
                         <div className={aboutStyles.colorCell2}>
-                          <Image
+                          <img
                             className={aboutStyles.imgOne}
-                            src={purpleMe}
+                            src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739936788/purpleMe_rf5gpm.png"
                             height={190}
-                            alt="sjDev logo"
+                            alt="sjDev man"
                           />
                         </div>
                       ) : (
@@ -239,11 +239,11 @@ export default function About() {
                     <div className={aboutStyles.imageBoxThree}>
                       {show2 ? (
                         <div className={aboutStyles.colorCell3}>
-                          <Image
+                          <img
                             className={aboutStyles.imgTwo}
-                            src={purpleMe}
+                            src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739936788/purpleMe_rf5gpm.png"
                             height={230}
-                            alt="sjDev logo"
+                            alt="sjDev man"
                           />
                         </div>
                       ) : (
@@ -253,11 +253,11 @@ export default function About() {
                     <div className={aboutStyles.imageBoxFour}>
                       {show3 ? (
                         <div className={aboutStyles.colorCell4}>
-                          <Image
+                          <img
                             className={aboutStyles.imgThree}
-                            src={purpleMe}
+                            src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739936788/purpleMe_rf5gpm.png"
                             height={275}
-                            alt="sjDev logo"
+                            alt="sjDev man"
                           />
                         </div>
                       ) : (
@@ -267,9 +267,9 @@ export default function About() {
                     <div className={aboutStyles.imageBoxFive}>
                       {show4 ? (
                         <div className={aboutStyles.colorCell5}>
-                          <Image
+                          <img
                             className={aboutStyles.imgFour}
-                            src={purpleMe}
+                            src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739936788/purpleMe_rf5gpm.png"
                             height={310}
                             alt="sjDev logo"
                           />
@@ -324,9 +324,9 @@ export default function About() {
               <div className={aboutStyles.aboutColumnBL}>
                 <div className={aboutStyles.hotBackBox}>
                   <div className={aboutStyles.pixImgBox}>
-                    <Image
+                    <img
                       className={aboutStyles.pixelBlast}
-                      src={flipitFinalz}
+                      src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739937237/flipitFinalz_qktwbf.png"
                       height={350}
                       alt="beautiful javascript art deco picture"
                     />

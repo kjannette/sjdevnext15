@@ -2,11 +2,6 @@
 import homeStyles from "../styles.module.css";
 import featuredStyles from "./featured.module.css";
 import { Roboto } from "next/font/google";
-import Image from "next/image";
-import bookBrowser from "../../../public/bookBrowser.jpg";
-import logoMatrixUltrafav from "../../../public/logoMatrixUltrafav.png";
-import budget from "../../../public/budget.jpg";
-import salesFlow from "../../../public/salesFlow.jpg";
 
 const roboto = Roboto({
   weight: "300",
@@ -22,9 +17,9 @@ export default function Featured() {
           <div className={homeStyles.cardImageRight}>
             <div className={featuredStyles.gitBoxRight}>Visit Site</div>
             <a href="" target="_blank">
-              <Image
+              <img
                 className={featuredStyles.featureImage}
-                src={logoMatrixUltrafav}
+                src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739937570/logoMatrixUltrafav_nxpx29.png"
                 height={130}
                 alt="sjDev logo"
               />
@@ -49,9 +44,9 @@ export default function Featured() {
           </a>
           <div className={homeStyles.cardImageLeft}>
             <a href="https://github.com/kjannette/salesflow" target="_blank">
-              <Image
+              <img
                 className={featuredStyles.featureImage}
-                src={salesFlow}
+                src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739937601/salesFlow_mxqasx.jpg"
                 height={130}
                 alt="sjDev logo"
               />
@@ -66,9 +61,9 @@ export default function Featured() {
               href="https://github.com/kjannette/reactnd-project-bookbrowser"
               target="_blank"
             >
-              <Image
+              <img
                 className={featuredStyles.featureImage}
-                src={bookBrowser}
+                src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739937650/bookBrowser_tontzk.jpg"
                 height={130}
                 alt="sjDev logo"
               />
@@ -96,11 +91,11 @@ export default function Featured() {
           </a>
           <div className={homeStyles.cardImageLeft}>
             <a href="" target="_blank">
-              <Image
+              <img
                 className={featuredStyles.featureImage}
-                src={budget}
+                src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739937681/budget_cvvtbj.jpg"
                 height={130}
-                alt="sjDev logo"
+                alt="sjDev"
               />
             </a>
             <div className={featuredStyles.gitBox}>View on Github</div>

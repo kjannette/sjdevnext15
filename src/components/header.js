@@ -1,9 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
 import headerStyles from "./component.module.css";
-import styles from "../app/styles.module.css";
-import logo from "../../public/logo.png";
 import { Roboto } from "next/font/google";
 
 const roboto = Roboto({
@@ -31,7 +28,11 @@ export default function Header(props) {
                 onClick={() => handleClick("/")}
                 className={headerStyles.nextLink}
               >
-                <Image src={logo} height={110} alt="s.j. dev logo" />
+                <img
+                  src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739937348/logo_u7dxox.png"
+                  height={110}
+                  alt="s.j. dev logo"
+                />
               </div>
             ) : (
               <></>
@@ -43,7 +44,7 @@ export default function Header(props) {
                 className={headerStyles.nextLink}
                 onClick={() => handleClick("/about")}
               >
-                About
+                In re:
               </div>
             </div>
             <div>
