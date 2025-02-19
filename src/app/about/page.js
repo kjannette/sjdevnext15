@@ -211,11 +211,11 @@ export default function About() {
                     <div className={aboutStyles.imageBoxOne}>
                       {show ? (
                         <div className={aboutStyles.colorCell1}>
-                          <Image
+                          <img
                             className={aboutStyles.imgOne}
-                            src={purpleMe}
+                            src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739936788/purpleMe_rf5gpm.png"
                             height={130}
-                            alt="sjDev logo"
+                            alt="sjDev man"
                           />
                         </div>
                       ) : (

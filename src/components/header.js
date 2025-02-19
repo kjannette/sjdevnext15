@@ -43,7 +43,7 @@ export default function Header(props) {
                 className={headerStyles.nextLink}
                 onClick={() => handleClick("/about")}
               >
-                About
+                In re:
               </div>
             </div>
             <div>
