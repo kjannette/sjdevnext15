@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import Footer from "../components/footer";
 import Header from "../components/header";
+import Navpanel from "@/components/navpanel";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -17,10 +18,24 @@ const geistMono = Geist_Mono({
 });
 
 export default function RootLayout({ children }) {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  function navToggle() {
+    setMenuOpen(!menuOpen);
+  }
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Header />
+        <Header
+          navToggle={navToggle}
+          menuOpen={menuOpen}
+          setMenuOpen={setMenuOpen}
+        />
+        <Navpanel
+          navToggle={navToggle}
+          menuOpen={menuOpen}
+          setMenuOpen={setMenuOpen}
+        />
         {children}
         <Footer />
       </body>
