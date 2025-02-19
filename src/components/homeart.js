@@ -1,18 +1,16 @@
 "use client";
 import styles from "../app/styles.module.css";
-import Image from "next/image";
-import seqTheFut from "../../public/seqTheFut.gif";
 
 export default function Homeart() {
   return (
     <div className={styles.homeContainer}>
       <div className={styles.gridColumn}>
         <div className={styles.imgBox}>
-          <Image
-            src={seqTheFut}
+          <img
+            src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739933776/seqTheFut_uepaah.gif"
             className={styles.homeImg}
-            alt="would you like to play a game?"
-	    priority={true}
+            alt="An interesting cubist animation inspired by the Bauhaus school."
+            priority
           />
         </div>
       </div>
