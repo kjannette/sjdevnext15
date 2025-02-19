@@ -21,13 +21,6 @@ export default function Header(props) {
 
   return (
     <main className={roboto.variable}>
-      <Head>
-        <script
-          data-goatcounter="https://sjdev.goatcounter.com/count"
-          async
-          src="//gc.zgo.at/count.js"
-        ></script>
-      </Head>
       <div className={headerStyles.headerContainer}>
         <div className={headerStyles.headerBox}>
           <div>
