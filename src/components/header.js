@@ -3,7 +3,7 @@ import { useRouter } from "next/navigation";
 import headerStyles from "./component.module.css";
 import { Roboto } from "next/font/google";
 import Script from "next/script";
-
+import { Head, NextScript } from "next/document";
 const roboto = Roboto({
   display: "swap",
   variable: "--font-roboto",
@@ -21,7 +21,13 @@ export default function Header(props) {
 
   return (
     <main className={roboto.variable}>
-      <Script src="https://sjdev.goatcounter.com/count" />
+      <Head>
+        <script
+          data-goatcounter="https://sjdev.goatcounter.com/count"
+          async
+          src="//gc.zgo.at/count.js"
+        ></script>
+      </Head>
       <div className={headerStyles.headerContainer}>
         <div className={headerStyles.headerBox}>
           <div>
@@ -87,6 +93,7 @@ export default function Header(props) {
           </button>
         </div>
       </div>
+      <NextScript />
     </main>
   );
 }
