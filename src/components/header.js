@@ -2,8 +2,7 @@
 import { useRouter } from "next/navigation";
 import headerStyles from "./component.module.css";
 import { Roboto } from "next/font/google";
-import Script from "next/script";
-import { Head } from "next/document";
+
 const roboto = Roboto({
   display: "swap",
   variable: "--font-roboto",
