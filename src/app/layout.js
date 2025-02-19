@@ -19,11 +19,9 @@ const geistMono = Geist_Mono({
 
 export default function RootLayout({ children }) {
   const [menuOpen, setMenuOpen] = useState(false);
-
-  function () {
+  function navToggle() {
     setMenuOpen(!menuOpen);
   }
-  
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
