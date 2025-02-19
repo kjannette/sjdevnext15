@@ -1,8 +1,6 @@
 "use client";
 import homeStyles from "../styles.module.css";
 import contactStyles from "./contact.module.css";
-import Image from "next/image";
-import pixelToo from "../../../public/pixelToo.png";
 import { Roboto } from "next/font/google";
 
 const roboto = Roboto({
@@ -24,9 +22,9 @@ export default function Contact() {
                   <div className={contactStyles.imgBoxTwo}></div>
                   <div className={contactStyles.imgBoxThree}>
                     <div className={contactStyles.threeInner}>
-                      <Image
+                      <img
                         className={contactStyles.pixImg}
-                        src={pixelToo}
+                        src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739937493/pixelToo_s11w8u.png"
                         height={300}
                         alt="artistic picture of a man in a suit"
                       />

@@ -1,7 +1,5 @@
 "use client";
 import styles from "./component.module.css";
-import Image from "next/image";
-import nextLogo from "../../public/nextLogo.png";
 
 export default function Footer() {
   return (
@@ -11,9 +9,9 @@ export default function Footer() {
           |{"   "} © 2023 - 2024 sjDev{"   "} |
         </a>
         <div className={styles.nextLogoBox}>
-          <Image
+          <img
             className={styles.nextLogo}
-            src={nextLogo}
+            src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739937756/nextLogo_seodzo.png"
             height={30}
             alt="next js logo"
           />
