@@ -10,6 +10,7 @@ export default function Navpanel(props) {
 
   const handleClick = (route) => {
     router.push(route);
+    setMenuOpen(!menuOpen);
   };
 
   const mobileMainHeadingClass = menuOpen
