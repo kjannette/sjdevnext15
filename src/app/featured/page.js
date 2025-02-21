@@ -35,7 +35,10 @@ export default function Featured() {
 
           {/****    EXF END    *****/}
           {/****    SF START    *****/}
-          <a href="" className={homeStyles.cardTextRight}>
+          <a
+            href="https://sjdev.co/sfapp/build"
+            className={homeStyles.cardTextRight}
+          >
             <h3>Sales Flow</h3>
             <p>
               Node/React app demo, created for an automotive retailer, with KPI
