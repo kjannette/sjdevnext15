@@ -36,7 +36,7 @@ export default function Featured() {
           {/****    EXF END    *****/}
           {/****    SF START    *****/}
           <a
-            href="https://www.sjdev.co/sfapp"
+            href="https://sjdev.co/sfapp/build"
             className={homeStyles.cardTextRight}
           >
             <h3>Sales Flow</h3>
