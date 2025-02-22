@@ -24,6 +24,13 @@ export default function RootLayout({ children }) {
   }
   return (
     <html lang="en">
+      <head>
+        <script
+          data-goatcounter="https://sjdev.goatcounter.com/count"
+          async
+          src="//gc.zgo.at/count.js"
+        ></script>
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Header
           navToggle={navToggle}
