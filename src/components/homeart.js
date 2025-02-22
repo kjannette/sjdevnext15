@@ -5,14 +5,6 @@ import Head from "next/head";
 export default function Homeart() {
   return (
     <main>
-      <Head>
-        <script
-          data-goatcounter="https://sjdev.goatcounter.com/count"
-          async
-          src="//gc.zgo.at/count.js"
-          key="gc-1"
-        ></script>
-      </Head>
       <div className={styles.homeContainer}>
         <div className={styles.gridColumn}>
           <div className={styles.imgBox}>
