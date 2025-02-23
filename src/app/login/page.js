@@ -4,7 +4,7 @@ import Button from "../../../src/components/button";
 //import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 //import { Link, useNavigate, createSearchParams } from "react-router-dom";
 import Link from "next/link";
-import "./login.module.css";
+import loginStyles from "./login.module.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -69,13 +69,13 @@ const Login = () => {
   }
 
   return (
-    <div className="login-container">
-      <div className="login-form-wrapper">
+    <div className={loginStyles.loginContainer}>
+      <div className="loginForm-Wrapper">
         <form className="login-form">
-          <div className="login-header">
-            <h2 className="login-header-text">Login for Account Access</h2>
+          <div className="loginHeader">
+            <h2 className="loginHeaderText">Login to Your Account</h2>
           </div>
-          <div className="form-floating mb-3">
+          <div className="formFloating">
             <input
               type="email"
               className="form-control"
@@ -85,11 +85,11 @@ const Login = () => {
               onChange={(e) => setEmail(e.target.value)}
               disabled={isBusy}
             ></input>
-            <label htmlFor="emailInput" className="form-label">
+            <label htmlFor="emailInput" className="formLabel">
               Email
             </label>
           </div>
-          <div className="password-input-container">
+          <div className="passwordInputContainer">
             <div className="form-floating mb-3">
               <input
                 type="password"
@@ -100,15 +100,15 @@ const Login = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 disabled={isBusy}
               ></input>
-              <label htmlFor="passwordInput" className="form-label">
+              <label htmlFor="passwordInput" className="formLabel">
                 Password
               </label>
-              <button className="recover-link" onClick={handleClick}>
+              <button className="recoverLink" onClick={handleClick}>
                 Forgot password?
               </button>
             </div>
           </div>
-          <div className="alert-box">
+          <div className="alertBox">
             {"" !== notice && (
               <div className="login-alert" role="alert">
                 {notice}

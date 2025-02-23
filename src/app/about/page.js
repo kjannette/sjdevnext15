@@ -119,7 +119,7 @@ export default function About() {
     "understanding risk.",
     "setting stop losses.",
     "buying on margin.",
-    "de-leveraging assets.",
+    "deleveraging assets.",
     "understanding delta.",
     "spotting a breakout.",
   ];
