@@ -70,12 +70,14 @@ const Login = () => {
 
   return (
     <div className={loginStyles.loginContainer}>
-      <div className="loginForm-Wrapper">
-        <form className="login-form">
-          <div className="loginHeader">
-            <h2 className="loginHeaderText">Login to Your Account</h2>
+      <div className={loginStyles.loginFormWrapper}>
+        <form className={loginStyles.loginForm}>
+          <div className={loginStyles.loginHeader}>
+            <h2 className={loginStyles.loginHeaderText}>
+              Login to Your Account
+            </h2>
           </div>
-          <div className="formFloating">
+          <div className={loginStyles.formFloating}>
             <input
               type="email"
               className="form-control"
@@ -89,7 +91,7 @@ const Login = () => {
               Email
             </label>
           </div>
-          <div className="passwordInputContainer">
+          <div className={loginStyles.passwordInputContainer}>
             <div className="form-floating mb-3">
               <input
                 type="password"
@@ -103,7 +105,7 @@ const Login = () => {
               <label htmlFor="passwordInput" className="formLabel">
                 Password
               </label>
-              <button className="recoverLink" onClick={handleClick}>
+              <button className={loginStyles.recoverLink} onClick={handleClick}>
                 Forgot password?
               </button>
             </div>
