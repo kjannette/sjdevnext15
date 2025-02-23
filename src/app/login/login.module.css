@@ -14,9 +14,10 @@
   height: 400px;
 }
 
-.loginHeaderText {
+.loginHeader {
   letter-spacing: -0.6px;
   font-weight: 400;
+  color: #acacac;
 }
 
 .loginButtonWrapper {
@@ -28,11 +29,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 25px;
-  width: 600px;
+  width: 700px;
+  height: 400px;
   padding: 12px;
   border-radius: 10px;
-  background-color: var(--background-blue);
   border: 1px solid #e9e9e9;
 }
 
@@ -51,7 +51,26 @@
   letter-spacing: -0.1px;
 }
 
+.loginHeaderText {
+  font-family: var(--font-roboto);
+  font-weight: 400;
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: #acacac;
+  letter-spacing: 0.07rem;
+}
+
 .passwordInputContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: yellow;
+  margin-top: 6px;
+}
+
+.submitContainer {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
   background-color: yellow;
   margin-top: 6px;
 }

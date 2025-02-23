@@ -5,6 +5,14 @@ import Button from "../../../src/components/button";
 //import { Link, useNavigate, createSearchParams } from "react-router-dom";
 import Link from "next/link";
 import loginStyles from "./login.module.css";
+import { Roboto } from "next/font/google";
+
+const roboto = Roboto({
+  display: "swap",
+  variable: "--font-roboto",
+  weight: ["100", "300", "400", "500"],
+  subsets: ["latin"],
+});
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -69,16 +77,70 @@ const Login = () => {
   }
 
   return (
-    <div className={loginStyles.loginContainer}>
-      <div className={loginStyles.loginInnerContainer}>
-        <div className={loginStyles.loginFormWrapper}>
-          <form className={loginStyles.loginForm}>
+    <main className={roboto.variable}>
+      <div className={loginStyles.loginContainer}>
+        <div className={loginStyles.loginInnerContainer}>
+          <div className={loginStyles.loginFormWrapper}>
+            <form className={loginStyles.loginForm}>
+              <div className={loginStyles.loginHeader}>
+                <h2 className={loginStyles.loginHeaderText}>
+                  Login to Your Account
+                </h2>
+              </div>
+              <div className={loginStyles.passwordInputContainer}>
+                <label htmlFor="emailInput" className="formLabel">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  className="form-control"
+                  id="emailInput"
+                  placeholder="Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  disabled={isBusy}
+                ></input>
+              </div>
+              <div className={loginStyles.passwordInputContainer}>
+                <label htmlFor="emailInput" className="formLabel">
+                  Password
+                </label>
+                <input
+                  type="password"
+                  className="form-control"
+                  id="passwordInput"
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  disabled={isBusy}
+                ></input>
+              </div>
+              <div className={loginStyles.submitContainer}>
+                <Button
+                  //className="primary-button"
+                  onClick={(e) => userLogin(e)}
+                  labelText="Submit"
+                  disabled={isBusy}
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  );
+};
+
+export default Login;
+
+/*
+
             <div className={loginStyles.loginHeader}>
               <h2 className={loginStyles.loginHeaderText}>
                 Login to Your Account
               </h2>
             </div>
-            <div className={loginStyles.formFloating}>
+            <div className={loginStyles.passwordInputContainer}>
               <input
                 type="email"
                 className="form-control"
@@ -132,20 +194,4 @@ const Login = () => {
                 Forgot password?
               </button>
             </div>
-            {/* 
-          <div className="mt-3 text-center">
-            <div className="register-box">
-              <Link className="create-link" href="/signup">
-                Create an account.
-              </Link>
-            </div>
-          </div>
-         */}
-          </form>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default Login;
+*/
