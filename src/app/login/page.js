@@ -70,62 +70,69 @@ const Login = () => {
 
   return (
     <div className={loginStyles.loginContainer}>
-      <div className={loginStyles.loginFormWrapper}>
-        <form className={loginStyles.loginForm}>
-          <div className={loginStyles.loginHeader}>
-            <h2 className={loginStyles.loginHeaderText}>
-              Login to Your Account
-            </h2>
-          </div>
-          <div className={loginStyles.formFloating}>
-            <input
-              type="email"
-              className="form-control"
-              id="emailInput"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              disabled={isBusy}
-            ></input>
-            <label htmlFor="emailInput" className="formLabel">
-              Email
-            </label>
-          </div>
-          <div className={loginStyles.passwordInputContainer}>
+      <div className={loginStyles.loginInnerContainer}>
+        <div className={loginStyles.loginFormWrapper}>
+          <form className={loginStyles.loginForm}>
+            <div className={loginStyles.loginHeader}>
+              <h2 className={loginStyles.loginHeaderText}>
+                Login to Your Account
+              </h2>
+            </div>
             <div className={loginStyles.formFloating}>
               <input
-                type="password"
+                type="email"
                 className="form-control"
-                id="passwordInput"
-                placeholder="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                id="emailInput"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 disabled={isBusy}
               ></input>
-              <label htmlFor="passwordInput" className={loginStyles.formLabel}>
-                Password
+              <label htmlFor="emailInput" className="formLabel">
+                Email
               </label>
-              <button className={loginStyles.recoverLink} onClick={handleClick}>
-                Forgot password?
-              </button>
             </div>
-          </div>
-          <div className={loginStyles.alertBox}>
-            {"" !== notice && (
-              <div className={loginStyles.loginAlert} role="alert">
-                {notice}
+            <div className={loginStyles.passwordInputContainer}>
+              <div className={loginStyles.formFloating}>
+                <input
+                  type="password"
+                  className="form-control"
+                  id="passwordInput"
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  disabled={isBusy}
+                ></input>
+                <label
+                  htmlFor="passwordInput"
+                  className={loginStyles.formLabel}
+                >
+                  Password
+                </label>
+                <button
+                  className={loginStyles.recoverLink}
+                  onClick={handleClick}
+                >
+                  Forgot password?
+                </button>
               </div>
-            )}
-          </div>
-          <div className={loginStyles.loginButtonWrapper}>
-            <Button
-              //className="primary-button"
-              onClick={(e) => userLogin(e)}
-              labelText="Submit"
-              disabled={isBusy}
-            />
-          </div>
-          {/* 
+            </div>
+            <div className={loginStyles.alertBox}>
+              {"" !== notice && (
+                <div className={loginStyles.loginAlert} role="alert">
+                  {notice}
+                </div>
+              )}
+            </div>
+            <div className={loginStyles.loginButtonWrapper}>
+              <Button
+                //className="primary-button"
+                onClick={(e) => userLogin(e)}
+                labelText="Submit"
+                disabled={isBusy}
+              />
+            </div>
+            {/* 
           <div className="mt-3 text-center">
             <div className="register-box">
               <Link className="create-link" href="/signup">
@@ -134,7 +141,8 @@ const Login = () => {
             </div>
           </div>
          */}
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   );
