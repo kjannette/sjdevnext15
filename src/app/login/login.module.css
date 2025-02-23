@@ -63,7 +63,6 @@
 .passwordInputContainer {
   display: flex;
   flex-direction: column;
-  background-color: yellow;
   margin: 20px 10px;
 }
 
