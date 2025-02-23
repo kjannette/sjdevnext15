@@ -110,7 +110,7 @@ const Login = () => {
               </button>
             </div>
           </div>
-          <div className="alertBox">
+          <div className={loginStyles.alertBox}>
             {"" !== notice && (
               <div className={loginStyles.loginAlert} role="alert">
                 {notice}
@@ -119,12 +119,13 @@ const Login = () => {
           </div>
           <div className={loginStyles.loginButtonWrapper}>
             <Button
-              className="primary-button"
+              //className="primary-button"
               onClick={(e) => userLogin(e)}
               labelText="Submit"
               disabled={isBusy}
             />
           </div>
+          {/* 
           <div className="mt-3 text-center">
             <div className="register-box">
               <Link className="create-link" href="/signup">
@@ -132,6 +133,7 @@ const Login = () => {
               </Link>
             </div>
           </div>
+         */}
         </form>
       </div>
     </div>
