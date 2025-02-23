@@ -44,7 +44,7 @@ export default function Header(props) {
                 className={headerStyles.nextLink}
                 onClick={() => handleClick("/about")}
               >
-                In re:
+                Applied AI
               </div>
             </div>
             <div>
@@ -52,7 +52,7 @@ export default function Header(props) {
                 className={headerStyles.nextLink}
                 onClick={() => handleClick("/featured")}
               >
-                Featured Work
+                Web Applications
               </div>
             </div>
             <div>
@@ -68,9 +68,9 @@ export default function Header(props) {
         <div className={headerStyles.headerBoxLeft}>
           <div className={headerStyles.headerHead}>Steven Jannette</div>
           <p className={headerStyles.headerText}>
-            Se<span className={headerStyles.colorText}>q</span>u
+            Se<span className={headerStyles.colorText}>qu</span>
             <span className={headerStyles.colorText}>e</span>
-            ncing The F<span className={headerStyles.colorText}>u</span>ture
+            ncing The F<span className={headerStyles.colorText}></span>uture
           </p>
         </div>
         <div className={headerStyles.burgerBox}>
