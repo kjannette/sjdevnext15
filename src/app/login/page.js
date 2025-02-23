@@ -92,7 +92,7 @@ const Login = () => {
             </label>
           </div>
           <div className={loginStyles.passwordInputContainer}>
-            <div className="form-floating mb-3">
+            <div className={loginStyles.formFloating}>
               <input
                 type="password"
                 className="form-control"
@@ -102,7 +102,7 @@ const Login = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 disabled={isBusy}
               ></input>
-              <label htmlFor="passwordInput" className="formLabel">
+              <label htmlFor="passwordInput" className={loginStyles.formLabel}>
                 Password
               </label>
               <button className={loginStyles.recoverLink} onClick={handleClick}>
@@ -112,12 +112,12 @@ const Login = () => {
           </div>
           <div className="alertBox">
             {"" !== notice && (
-              <div className="login-alert" role="alert">
+              <div className={loginStyles.loginAlert} role="alert">
                 {notice}
               </div>
             )}
           </div>
-          <div className="login-button-wrapper">
+          <div className={loginStyles.loginButtonWrapper}>
             <Button
               className="primary-button"
               onClick={(e) => userLogin(e)}

@@ -118,6 +118,21 @@
   letter-spacing: -0.04rem;
 }
 
+/* BUTTONS */
+
+.primaryButton {
+  height: 25px;
+  padding: 10px 10px;
+  min-width: 150px;
+  background-color: #1a76c7;
+  color: #fff;
+  border-radius: 8px;
+  border-style: none;
+  &:hover {
+    border: 2px solid #f27300;
+  }
+}
+
 @media only screen and (min-width: 430px) {
   .burgerBox {
     display: none;

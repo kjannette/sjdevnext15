@@ -1,4 +1,4 @@
-import React from "react";
+import componentStyles from "./component.module.css";
 
 const Button = (props) => {
   const { className, variant, color, onClick, labelText, disabled } = props;
@@ -6,7 +6,7 @@ const Button = (props) => {
   return (
     <button
       disabled={disabled}
-      className={buttonClass}
+      className={componentStyles.primaryButton}
       variant={variant}
       color={color}
       onClick={onClick}
