@@ -70,8 +70,10 @@
 .submitContainer {
   display: flex;
   flex-direction: column;
-  width: 200px;
-  background-color: yellow;
+  align-items: center;
+  justify-content: center;
+  margin: 5px auto;
+  background-color: red;
   margin-top: 6px;
 }
 

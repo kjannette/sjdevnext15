@@ -115,13 +115,15 @@ const Login = () => {
                   disabled={isBusy}
                 ></input>
               </div>
-              <div className={loginStyles.submitContainer}>
-                <Button
-                  //className="primary-button"
-                  onClick={(e) => userLogin(e)}
-                  labelText="Submit"
-                  disabled={isBusy}
-                />
+              <div className={loginStyles.passwordInputContainer}>
+                <div className={loginStyles.submitContainer}>
+                  <Button
+                    //className="primary-button"
+                    onClick={(e) => userLogin(e)}
+                    labelText="Submit"
+                    disabled={isBusy}
+                  />
+                </div>
               </div>
             </form>
           </div>
