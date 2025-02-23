@@ -1,23 +1,25 @@
 "use client";
 import { useState } from "react";
-import Button from "../components/Button";
+import Button from "../../../src/components/button";
 //import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 //import { Link, useNavigate, createSearchParams } from "react-router-dom";
-import "../../styles/login.scss";
+import Link from "next/link";
+import "./login.module.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
-  /*
-  const navigate = useNavigate();
-
-  const auth = getAuth();
   const [isBusy, setIsBusy] = useState(false);
-
   const [password, setPassword] = useState("");
+
+  //const navigate = useNavigate();
+
+  //const auth = getAuth();
+
   const [notice, setNotice] = useState("");
   //const [searchParams, setSearchParams] = useSearchParams();
   const userLogin = async (e) => {
     e.preventDefault();
+    return;
     if (isBusy) {
       return;
     }
@@ -54,7 +56,7 @@ const Login = () => {
 
   function handleClick(e) {
     e.preventDefault();
-
+    return;
     //searchParams.set("mode", mode);
     //setSearchParams(searchParams);
     //navigate(`/passwordreset/?mode=enterEmail`);
@@ -65,7 +67,7 @@ const Login = () => {
       })}`,
     });
   }
-*/
+
   return (
     <div className="login-container">
       <div className="login-form-wrapper">
@@ -123,7 +125,7 @@ const Login = () => {
           </div>
           <div className="mt-3 text-center">
             <div className="register-box">
-              <Link className="create-link" to="/signup">
+              <Link className="create-link" href="/signup">
                 Create an account.
               </Link>
             </div>
