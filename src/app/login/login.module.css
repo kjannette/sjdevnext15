@@ -5,7 +5,6 @@
   align-items: center;
   justify-content: center;
   height: 600px;
-  background-color: red;
 }
 
 .loginInnerContainer {
@@ -13,7 +12,6 @@
   flex-direction: column;
   margin: auto;
   height: 400px;
-  background-color: blue;
 }
 
 .loginHeaderText {
@@ -54,6 +52,7 @@
 }
 
 .passwordInputContainer {
+  background-color: yellow;
   margin-top: 6px;
 }
 

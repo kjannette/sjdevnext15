@@ -109,12 +109,6 @@ const Login = () => {
                 >
                   Password
                 </label>
-                <button
-                  className={loginStyles.recoverLink}
-                  onClick={handleClick}
-                >
-                  Forgot password?
-                </button>
               </div>
             </div>
             <div className={loginStyles.alertBox}>
@@ -131,6 +125,12 @@ const Login = () => {
                 labelText="Submit"
                 disabled={isBusy}
               />
+            </div>
+            <div>
+              {" "}
+              <button className={loginStyles.recoverLink} onClick={handleClick}>
+                Forgot password?
+              </button>
             </div>
             {/* 
           <div className="mt-3 text-center">
