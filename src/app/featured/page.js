@@ -29,7 +29,8 @@ export default function Featured() {
             <h3>Novdraft.ai </h3>
             <p>
               AI-assisted legal drafting. ML-augmented OCR plus CoT-prompt
-              sequencing generates contextually-precise, persuasive content.
+              sequencing generates contextually-precise, persuasive rhetorical
+              content.
             </p>
           </a>
 
@@ -41,8 +42,8 @@ export default function Featured() {
           >
             <h3>Sales Flow</h3>
             <p>
-              Node/React app demo, created for an automotive retailer, with KPI
-              and inventory insights via recursive ML analysis.
+              Demo of React workflow app for an automotive retail chain. It
+              featured ML-derived inventory management insight.
             </p>
           </a>
           <div className={homeStyles.cardImageLeft}>
@@ -79,8 +80,8 @@ export default function Featured() {
           >
             <h3>Book Browser</h3>
             <p>
-              Node/React app. Use-case was a client in the rare, collectible and
-              new book retail space, with a youthful user base.
+              React app created for a client in the rare, collectible and new
+              book retail space, with a youthful user base.
             </p>
           </a>
           {/****    BB END    *****/}

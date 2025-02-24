@@ -1,0 +1,137 @@
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+}
+
+.loginInnerContainer {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  height: 400px;
+  background-color: #f9f9f9;
+}
+
+.loginHeader {
+  letter-spacing: -0.6px;
+  font-weight: 400;
+  color: #acacac;
+}
+
+.loginButtonWrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.loginFormWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 700px;
+  height: 400px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #e9e9e9;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.loginHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  letter-spacing: -0.1px;
+}
+
+.loginHeaderText {
+  font-family: var(--font-roboto);
+  font-weight: 400;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #acacac;
+  letter-spacing: 0.07rem;
+}
+
+.loginLabelText {
+  font-family: var(--font-roboto);
+  font-weight: 400;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #acacac;
+  letter-spacing: 0.07rem;
+  margin-bottom: 10px;
+}
+
+.passwordInputContainer {
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  margin: 30px 5px;
+}
+
+.submitContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5px auto;
+  margin-top: 6px;
+}
+
+.recoverLink {
+  font-size: 1rem;
+  margin: 4px 0px 0px 3px;
+  padding-left: 2px;
+  background-color: transparent;
+  color: #0d6efd;
+  border: none;
+  cursor: pointer;
+}
+
+.recoverLink:hover {
+  text-decoration: underline;
+}
+
+.register-box {
+  margin-top: 8px;
+}
+
+.input {
+  min-height: 40px;
+}
+
+.loginAlert {
+  color: red;
+}
+
+.createLink {
+  color: #0d6efd;
+}
+
+@media only screen and (max-width: 430px) {
+  .main-container {
+    margin-top: 0px;
+  }
+
+  .login-container {
+    margin-top: 0px;
+  }
+  .login-form-wrapper {
+    width: 400px;
+  }
+  .login-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+  }
+}

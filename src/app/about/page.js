@@ -3,9 +3,9 @@
 import { useState, useEffect } from "react";
 import homeStyles from "../styles.module.css";
 import aboutStyles from "./about.module.css";
-import Image from "next/image";
-import purpleMe from "../../../public/purpleMe.png";
-import flipitFinalz from "../../../public/flipitFinalz.png";
+//import Image from "next/image";
+//import purpleMe from "../../../public/purpleMe.png";
+//import flipitFinalz from "../../../public/flipitFinalz.png";
 import Link from "next/link";
 import { Roboto } from "next/font/google";
 
@@ -119,7 +119,7 @@ export default function About() {
     "understanding risk.",
     "setting stop losses.",
     "buying on margin.",
-    "de-leveraging assets.",
+    "deleveraging assets.",
     "understanding delta.",
     "spotting a breakout.",
   ];
