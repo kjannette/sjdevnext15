@@ -66,11 +66,14 @@ export default function Header(props) {
           </div>
         </div>
         <div className={headerStyles.headerBoxLeft}>
-          <div className={headerStyles.headerHead}>Steven Jannette</div>
+          <div className={headerStyles.headerLoginBox}>
+            <div className={headerStyles.headerLoginTextBox}>
+              <div className={headerStyles.headerLoginText}>→ Client Login</div>
+            </div>
+          </div>
           <p className={headerStyles.headerText}>
-            Se<span className={headerStyles.colorText}>qu</span>
-            <span className={headerStyles.colorText}>e</span>
-            ncing The F<span className={headerStyles.colorText}></span>uture
+            S. Jannette{" "}
+            <span className={headerStyles.colorText}> Development</span>
           </p>
         </div>
         <div className={headerStyles.burgerBox}>
@@ -87,4 +90,7 @@ export default function Header(props) {
       </div>
     </main>
   );
+}
+{
+  /** <div className={headerStyles.headerHead}>Steven Jannette</div>*/
 }

@@ -1,7 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import navStyles from "./navpanel.module.css";
-import contactStyles from "./contact.module.css";
+import contactStyles from "./foo.module.css";
 
 export default function Navpanel(props) {
   const { menuOpen, setMenuOpen, navToggle } = props;

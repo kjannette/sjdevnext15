@@ -18,6 +18,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [isBusy, setIsBusy] = useState(false);
   const [password, setPassword] = useState("");
+  const [showAlert, setShowAlert] = useState(false);
 
   //const navigate = useNavigate();
 
@@ -27,6 +28,7 @@ const Login = () => {
   //const [searchParams, setSearchParams] = useSearchParams();
   const userLogin = async (e) => {
     e.preventDefault();
+    setShowAlert(!showAlert);
     return;
     if (isBusy) {
       return;
@@ -84,33 +86,37 @@ const Login = () => {
             <form className={loginStyles.loginForm}>
               <div className={loginStyles.loginHeader}>
                 <h2 className={loginStyles.loginHeaderText}>
-                  Login to Your Account
+                  Login To Your Account
                 </h2>
               </div>
               <div className={loginStyles.passwordInputContainer}>
-                <label htmlFor="emailInput" className="formLabel">
+                <label
+                  htmlFor="emailInput"
+                  className={loginStyles.loginLabelText}
+                >
                   Email
                 </label>
                 <input
                   type="email"
-                  className="form-control"
+                  className={loginStyles.input}
                   id="emailInput"
-                  placeholder="Email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   disabled={isBusy}
                 ></input>
               </div>
               <div className={loginStyles.passwordInputContainer}>
-                <label htmlFor="emailInput" className="formLabel">
+                <label
+                  htmlFor="emailInput"
+                  className={loginStyles.loginLabelText}
+                >
                   Password
                 </label>
                 <input
                   type="password"
-                  className="form-control"
                   id="passwordInput"
-                  placeholder="Password"
                   value={password}
+                  className={loginStyles.input}
                   onChange={(e) => setPassword(e.target.value)}
                   disabled={isBusy}
                 ></input>

@@ -12,6 +12,7 @@
   flex-direction: column;
   margin: auto;
   height: 400px;
+  background-color: #f9f9f9;
 }
 
 .loginHeader {
@@ -54,16 +55,27 @@
 .loginHeaderText {
   font-family: var(--font-roboto);
   font-weight: 400;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   text-decoration: none;
   color: #acacac;
   letter-spacing: 0.07rem;
 }
 
+.loginLabelText {
+  font-family: var(--font-roboto);
+  font-weight: 400;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #acacac;
+  letter-spacing: 0.07rem;
+  margin-bottom: 10px;
+}
+
 .passwordInputContainer {
+  height: 40px;
   display: flex;
   flex-direction: column;
-  margin: 20px 10px;
+  margin: 30px 5px;
 }
 
 .submitContainer {
@@ -72,7 +84,6 @@
   align-items: center;
   justify-content: center;
   margin: 5px auto;
-  background-color: red;
   margin-top: 6px;
 }
 
@@ -92,6 +103,10 @@
 
 .register-box {
   margin-top: 8px;
+}
+
+.input {
+  min-height: 40px;
 }
 
 .loginAlert {
