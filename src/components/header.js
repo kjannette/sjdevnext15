@@ -68,7 +68,12 @@ export default function Header(props) {
         <div className={headerStyles.headerBoxLeft}>
           <div className={headerStyles.headerLoginBox}>
             <div className={headerStyles.headerLoginTextBox}>
-              <div className={headerStyles.headerLoginText}>→ Client Login</div>
+              <div
+                onClick={() => handleClick("/login")}
+                className={headerStyles.headerLoginText}
+              >
+                → Client Login
+              </div>
             </div>
           </div>
           <p className={headerStyles.headerText}>

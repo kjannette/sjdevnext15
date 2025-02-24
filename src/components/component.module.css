@@ -155,14 +155,14 @@
 
 .primaryButton {
   font-family: var(--font-roboto);
+  font-size: 1.06rem;
   height: 45px;
   min-width: 200px;
   background-color: #2196f3;
   color: #fff;
   border-radius: 12px;
-  border-style: 1px solid grey;
   &:hover {
-    border: 2px solid #f27300;
+    border: 1px solid #f27300;
   }
 }
 
