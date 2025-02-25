@@ -434,8 +434,7 @@ export default function About() {
                       <Link className={aboutStyles.aboutLink} href="/featured">
                         technology you already use{" "}
                       </Link>
-                      can grow your opportunities. Don't wait for the future to
-                      unfold, sequence it.
+                      can grow your opportunities.
                     </p>
                   </>
                 </div>
