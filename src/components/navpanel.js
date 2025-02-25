@@ -2,6 +2,13 @@
 import { useRouter } from "next/navigation";
 import navStyles from "./navpanel.module.css";
 import contactStyles from "./foo.module.css";
+import { Roboto } from "next/font/google";
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  style: ["italic", "normal"],
+});
 
 export default function Navpanel(props) {
   const { menuOpen, setMenuOpen, navToggle } = props;
@@ -38,7 +45,7 @@ export default function Navpanel(props) {
                 className={contactStyles.contactLink}
                 onClick={() => handleClick("/about")}
               >
-                about
+                Applied AI
               </div>
             </div>
             <div className={contactStyles.contactDetailTwo}>
@@ -46,7 +53,7 @@ export default function Navpanel(props) {
                 className={contactStyles.contactLinkTwo}
                 onClick={() => handleClick("/featured")}
               >
-                featured work
+                Web Applications
               </div>
             </div>
             <div className={contactStyles.contactDetailThree}>
@@ -54,7 +61,7 @@ export default function Navpanel(props) {
                 className={contactStyles.navLinkThree}
                 onClick={() => handleClick("/contact")}
               >
-                contact
+                Contact
               </div>
             </div>
           </div>

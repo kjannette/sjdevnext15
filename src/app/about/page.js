@@ -294,32 +294,61 @@ export default function About() {
 
                 <div className={aboutStyles.mobileTextOne}>
                   <>
-                    <p>
+                    <p className={aboutStyles.mobileParagraph}>
                       In a heuristically-generated, algorithmically-driven
                       world, creativity is the highest-value attribute.
                     </p>
                   </>
-                  <p>
-                    <span className="fast-text">
-                      I’ve created innovative solutions at companies from
-                      Fortune Top-20 Ford Motor, to a startup named alongside
-                      Apple as one of{" "}
-                      <span className="about-italics-text">Fast Company</span>{" "}
-                      magazine's
-                      <Link
-                        className={aboutStyles.aboutLink}
-                        href="https://www.fastcompany.com/90846903/most-innovative-companies-consumer-electronics-2023"
-                      >
-                        {" "}
-                        "World's Most Innovative 2023”.
-                      </Link>{" "}
-                    </span>
+                  <p className={aboutStyles.mobileParagraph}>
+                    I’ve created innovative solutions at companies from{" "}
+                    <i>Fortune</i> top-10 Ford Motor Company, to a startup named
+                    alongside Apple as one of{" "}
+                    <span className="about-italics-text">Fast Company</span>{" "}
+                    magazine's
+                    <Link
+                      className={aboutStyles.aboutLink}
+                      href="https://www.fastcompany.com/90846903/most-innovative-companies-consumer-electronics-2023"
+                    >
+                      {" "}
+                      "World's Most Innovative 2023”.
+                    </Link>{" "}
                   </p>
-
+                  <p className={aboutStyles.mobileParagraph}>
+                    Innovation is defined as "a new method or idea"; leveraging
+                    technology in novel ways.
+                  </p>
+                  <p className={aboutStyles.mobileParagraph}>
+                    Consider Artificial Intelligence (so-called "chatbots"),
+                    which captivate popular attention.
+                  </p>
+                  <p className={aboutStyles.mobileParagraph}>
+                    They help {`${textArray[index]}`}
+                  </p>
+                  <p className={aboutStyles.mobileParagraph}>
+                    Beguiling. But effectively, a conversational search engine
+                    only hinting at the technology's transformative potential.
+                  </p>
+                  <p className={aboutStyles.mobileParagraph}>
+                    Deep application of AI/ML
+                    <Link
+                      className={aboutStyles.aboutLink}
+                      href="https://arxiv.org/pdf/2208.04560"
+                    >
+                      {" "}
+                      to increase user satisfaction
+                    </Link>{" "}
+                    and realize growth demands both the passion of art and
+                    discipline of science: innovation guided by data.
+                  </p>
                   <>
-                    <p>
+                    <p className={aboutStyles.mobileParagraph}>
+                      From optimizing existing{" "}
+                      <Link className={aboutStyles.aboutLink} href="/featured">
+                        applications
+                      </Link>
+                      , to deploying AI and machine learning,{" "}
                       <Link className={aboutStyles.aboutLink} href="/contact">
-                        Let me show you{" "}
+                        let me show you{" "}
                       </Link>
                       how to leverage technology so your business can realize
                       its potential.

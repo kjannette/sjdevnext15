@@ -6,7 +6,7 @@ export default function Footer() {
     <div className={styles.footerContainer}>
       <div className={styles.footerInnerBox}>
         <a href="" className={styles.footerLink} rel="noopener noreferrer">
-          |{"   "} © 2023 - 2024 sjDev{"   "} |
+          |{"   "} © 2023 - 2025 sjDev{"   "} |
         </a>
         <div className={styles.nextLogoBox}>
           <img
