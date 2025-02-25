@@ -41,8 +41,7 @@ export default function About() {
     "adjusting coefficients.",
     "cardio interval training.",
     "calculating CAG.",
-    "with interview questions.",
-    "speaking Chinese.",
+    "with learning Mandarin.",
     "controlling concept drift.",
     "with learning calculus.",
     "with time-series analysis ",
@@ -160,37 +159,37 @@ export default function About() {
                   </p>
                   <p>
                     In an algorithmically-generated, heuristically-driven world,
-                    creativity is the highest-value attribute.
+                    creativity will become the highest-value attribute.
                   </p>
                   <div className={aboutStyles.aboutFastSection}>
                     <span className="fast-text">
-                      I’ve created innovative solutions at companies from
-                      Fortune Top-20 Ford Motor, to a startup named alongside
-                      Apple as one of{" "}
-                      <span className="about-italics-text">Fast Company</span>{" "}
-                      magazine's
+                      I have created innovative technology at companies from{" "}
+                      <i>Fortune</i> Top-10 Ford Motor Company, to a startup
+                      named alongside Apple as a{" "}
+                      <span className="about-italics-text">
+                        <i>FastCompany</i>{" "}
+                      </span>{" "}
                       <Link
                         className={aboutStyles.aboutLink}
                         href="https://www.fastcompany.com/90846903/most-innovative-companies-consumer-electronics-2023"
                       >
                         {" "}
                         “World's Most Innovative 2023”
-                      </Link>{" "}
+                      </Link>
+                      .{" "}
                     </span>
                   </div>
 
                   <>
                     <p className={aboutStyles.solutionsText}>
-                      I bring creativity to every solution I create for clients.
-                      While “solution” might imply a problem, I use it here
-                      optimistically: an opportunity realized. One example:
-                      leveraging technology in novel ways, to give professionals
-                      an edge.
+                      Innovation is defined as "a new method or idea";
+                      leveraging technology in novel ways. To proceed purely on
+                      statistical predictions from past events yields
+                      predictable results.
                     </p>
                     <p>
-                      Consider the Artifical Intelligence (so-called
-                      "chatbots"), which, in this moment, have captivated our
-                      popular attenion.
+                      Consider Artificial Intelligence (so-called "chatbots"),
+                      which captivate popular attention.
                     </p>
                   </>
 
@@ -198,10 +197,20 @@ export default function About() {
                     <p> They help {`${textArray[index]}`}</p>
                   </>
                   <p>
-                    Beguiling, certainly, but only a hint of the technoology's
-                    transformative potential. Applying AI and machine learning
-                    (ML) to maximum practical effect in business will require
-                    both technical prowess and imagination.
+                    Beguiling. But effectively, a conversational search engine
+                    only hinting at the technology's transformative potential.
+                  </p>
+                  <p>
+                    Deep application of AI/ML
+                    <Link
+                      className={aboutStyles.aboutLink}
+                      href="https://arxiv.org/pdf/2208.04560"
+                    >
+                      {" "}
+                      to increase user satisfaction
+                    </Link>{" "}
+                    and realize growth demands both the passion of art and
+                    discipline of science: innovation guided by data.
                   </p>
                 </div>
               </div>
@@ -339,19 +348,20 @@ export default function About() {
                   <>
                     <p>
                       {" "}
-                      I’ve made it my business to develop practical LLM
-                      applications. One application, using ML-augmented OCR and
-                      CoT prompting, generates contextually-precise, persuasive
+                      Developing practical LM applications is my passion.
+                      Consider{" "}
                       <Link
                         className={aboutStyles.aboutLink}
                         href="https://www.novodraft.ai"
                       >
-                        {" "}
-                        legal drafting,
-                      </Link>{" "}
-                      making the trial attorney's work more efficient. More
-                      broadly, It demonstartes that AI can be leveraged to do
-                      just about anything faster and smarter.
+                        Novodraft.
+                      </Link>
+                    </p>
+                    <p>
+                      Leveraging ML-augmented OCR and CoT LLM prompting, it
+                      generates contextually-precise, responsive legal content.
+                      It also demonstractes that intrepidly-applied AI can help
+                      do just about anything faster and smarter.
                     </p>
                     <p>
                       Do you retail? Imagine deploying a 24/7
@@ -391,9 +401,12 @@ export default function About() {
                       <Link className={aboutStyles.aboutLink} href="/contact">
                         Let's talk{" "}
                       </Link>
-                      about how AI and ML, along with technology you already
-                      use, can grow your opportunities. Don't wait for the
-                      future to unfold, sequence it.
+                      about how AI and ML, along with{" "}
+                      <Link className={aboutStyles.aboutLink} href="/featured">
+                        technology you already use{" "}
+                      </Link>
+                      can grow your opportunities. Don't wait for the future to
+                      unfold, sequence it.
                     </p>
                   </>
                 </div>

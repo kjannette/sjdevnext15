@@ -77,8 +77,7 @@ export default function Header(props) {
             </div>
           </div>
           <p className={headerStyles.headerText}>
-            S. Jannette{" "}
-            <span className={headerStyles.colorText}> Development</span>
+            S J <span className={headerStyles.colorText}> Development</span>
           </p>
         </div>
         <div className={headerStyles.burgerBox}>
