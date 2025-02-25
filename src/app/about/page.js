@@ -360,7 +360,7 @@ export default function About() {
                     <p>
                       Leveraging ML-augmented OCR and CoT LLM prompting, it
                       generates contextually-precise, responsive legal content.
-                      It also demonstractes that intrepidly-applied AI can help
+                      It also demonstrates that intrepidly-applied AI can help
                       do just about anything faster and smarter.
                     </p>
                     <p>
@@ -384,7 +384,7 @@ export default function About() {
                         className={aboutStyles.aboutLink}
                         href="https://www.forbes.com/sites/tomdavenport/2019/07/10/from-analytics-first-to-ai-first-at-capital-one/?sh=423a14372f1b"
                       >
-                        redefined what is operatiionally feasible.{" "}
+                        redefined what is operationally feasible.{" "}
                       </Link>
                       ML, by recognizing patterns in data once obfuscated by
                       sheer volume, has yielded actionable paths to new revenue.
