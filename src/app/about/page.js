@@ -197,20 +197,21 @@ export default function About() {
                     <p> They help {`${textArray[index]}`}</p>
                   </>
                   <p>
-                    Beguiling. But effectively, a conversational search engine
-                    only hinting at the technology's transformative potential.
+                    Beguiling. Flashy. But only a hint at the technology's
+                    transformative potential.
                   </p>
                   <p>
-                    Deep application of AI/ML
+                    Integrating AI presents uncharted opportunities for growth,
+                    and opportunities to
                     <Link
                       className={aboutStyles.aboutLink}
                       href="https://arxiv.org/pdf/2208.04560"
                     >
                       {" "}
-                      to increase user satisfaction
+                      increase user satisfaction.
                     </Link>{" "}
-                    and realize growth demands both the passion of art and
-                    discipline of science: innovation guided by data.
+                    But getting there demands inspiration and engineering
+                    discipline: discovery guided by method and data.
                   </p>
                 </div>
               </div>
