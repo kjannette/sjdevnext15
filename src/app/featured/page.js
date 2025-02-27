@@ -73,11 +73,7 @@ export default function Featured() {
               />
             </a>
           </div>
-          <a
-            href="https://github.com/kjannette/reactnd-project-bookbrowser"
-            target="_blank"
-            className={homeStyles.cardTextLeft}
-          >
+          <a href="" target="_blank" className={homeStyles.cardTextLeft}>
             <h3>Book Browser</h3>
             <p>
               React aplication created for rare, collectible and new book retail
@@ -86,7 +82,10 @@ export default function Featured() {
           </a>
           {/****    BB END    *****/}
           {/****    BT START    *****/}
-          <a href="" className={homeStyles.cardTextRight}>
+          <a
+            href="https://www.sjdev.co/bb/"
+            className={homeStyles.cardTextRight}
+          >
             <h3>Budgetize</h3>
             <p>
               JS app for member dashboard of a business assoc. site. Snippet
