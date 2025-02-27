@@ -37,6 +37,33 @@ export default function Featured() {
             <div className={featuredStyles.gitBox}>View on Github</div>
           </div>
           {/****    SF END    *****/}
+          {/****    BB START    *****/}
+          <div className={homeStyles.cardImageRight}>
+            <div className={featuredStyles.gitBoxRight}>View on Github</div>
+            <a
+              href="https://github.com/kjannette/reactnd-project-bookbrowser"
+              target="_blank"
+            >
+              <img
+                className={featuredStyles.featureImage}
+                src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739937650/bookBrowser_tontzk.jpg"
+                height={130}
+                alt="sjDev logo"
+              />
+            </a>
+          </div>
+          <a
+            href="https://www.sjdev.co/bb/"
+            target="_blank"
+            className={homeStyles.cardTextLeft}
+          >
+            <h3>Book Browser</h3>
+            <p>
+              React aplication created for rare, collectible and new book retail
+              seller, geared toward a youthful user base.
+            </p>
+          </a>
+          {/****    BB END    *****/}
           {/****    NOVODRAFT START    *****/}
           <div className={homeStyles.cardImageRight}>
             <div className={featuredStyles.gitBoxRight}>Visit Site</div>
@@ -58,34 +85,9 @@ export default function Featured() {
             </p>
           </a>
           {/****    NOVODRAFT END    *****/}
-          {/****    BB START    *****/}
-          <div className={homeStyles.cardImageRight}>
-            <div className={featuredStyles.gitBoxRight}>View on Github</div>
-            <a
-              href="https://github.com/kjannette/reactnd-project-bookbrowser"
-              target="_blank"
-            >
-              <img
-                className={featuredStyles.featureImage}
-                src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739937650/bookBrowser_tontzk.jpg"
-                height={130}
-                alt="sjDev logo"
-              />
-            </a>
-          </div>
-          <a href="" target="_blank" className={homeStyles.cardTextLeft}>
-            <h3>Book Browser</h3>
-            <p>
-              React aplication created for rare, collectible and new book retail
-              seller, geared toward a youthful user base.
-            </p>
-          </a>
-          {/****    BB END    *****/}
+
           {/****    BT START    *****/}
-          <a
-            href="https://www.sjdev.co/bb/"
-            className={homeStyles.cardTextRight}
-          >
+          <a href="" className={homeStyles.cardTextRight}>
             <h3>Budgetize</h3>
             <p>
               JS app for member dashboard of a business assoc. site. Snippet
