@@ -59,8 +59,8 @@ export default function Featured() {
           >
             <h3>Book Browser</h3>
             <p>
-              React app for rare, collectible/new book retailer. Legacy
-              inventory system migrated to MySQL.
+              React UI for rare, collectible/new book retailer. Project included
+              sales dashboard, API integrating MySql inventory management.
             </p>
           </a>
           {/****    BB END    *****/}
