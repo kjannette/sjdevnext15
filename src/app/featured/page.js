@@ -13,10 +13,34 @@ export default function Featured() {
     <div className={homeStyles.container}>
       <div className={homeStyles.innerContainer}>
         <div className={featuredStyles.featuredGrid}>
+          {/****    SF START    *****/}
+          <a
+            href="https://www.sjdev.co/sfapp/"
+            target="_blank"
+            className={homeStyles.cardTextRight}
+          >
+            <h3>Sales Flow</h3>
+            <p>
+              React UI for KPI-workflow application, created for automotive
+              retail sales enterprise. Demo shows vehicle history queue.
+            </p>
+          </a>
+          <div className={homeStyles.cardImageLeft}>
+            <a href="https://github.com/kjannette/salesflow" target="_blank">
+              <img
+                className={featuredStyles.featureImage}
+                src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739937601/salesFlow_mxqasx.jpg"
+                height={130}
+                alt="sjDev logo"
+              />
+            </a>
+            <div className={featuredStyles.gitBox}>View on Github</div>
+          </div>
+          {/****    SF END    *****/}
           {/****    NOVODRAFT START    *****/}
           <div className={homeStyles.cardImageRight}>
             <div className={featuredStyles.gitBoxRight}>Visit Site</div>
-            <a href="" target="_blank">
+            <a href="">
               <img
                 className={featuredStyles.featureImage}
                 src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739937570/logoMatrixUltrafav_nxpx29.png"
@@ -33,32 +57,7 @@ export default function Featured() {
               content.
             </p>
           </a>
-
-          {/****    EXF END    *****/}
-          {/****    SF START    *****/}
-          <a
-            href="https://www.sjdev.co/sfapp/"
-            target="_blank"
-            className={homeStyles.cardTextRight}
-          >
-            <h3>Sales Flow</h3>
-            <p>
-              Demo of React workflow app for an automotive retail chain. It
-              featured ML-derived inventory management insight.
-            </p>
-          </a>
-          <div className={homeStyles.cardImageLeft}>
-            <a href="https://github.com/kjannette/salesflow" target="_blank">
-              <img
-                className={featuredStyles.featureImage}
-                src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739937601/salesFlow_mxqasx.jpg"
-                height={130}
-                alt="sjDev logo"
-              />
-            </a>
-            <div className={featuredStyles.gitBox}>View on Github</div>
-          </div>
-          {/****    SF END    *****/}
+          {/****    NOVODRAFT END    *****/}
           {/****    BB START    *****/}
           <div className={homeStyles.cardImageRight}>
             <div className={featuredStyles.gitBoxRight}>View on Github</div>
@@ -81,8 +80,8 @@ export default function Featured() {
           >
             <h3>Book Browser</h3>
             <p>
-              React app created for a client in the rare, collectible and new
-              book retail space, with a youthful user base.
+              React aplication created for rare, collectible and new book retail
+              seller, geared toward a youthful user base.
             </p>
           </a>
           {/****    BB END    *****/}
