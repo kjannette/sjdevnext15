@@ -59,8 +59,8 @@ export default function Featured() {
           >
             <h3>Book Browser</h3>
             <p>
-              React aplication created for rare, collectible and new book retail
-              seller, geared toward a youthful user base.
+              React app for rare, collectible/new book retailer. Legacy
+              inventory system migrated to MySQL.
             </p>
           </a>
           {/****    BB END    *****/}
