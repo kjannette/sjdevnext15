@@ -39,8 +39,8 @@ const TextInput = (props) => {
           padding: ".5rem",
           fontSize: "1.5rem",
           border: "none",
-          backgroundColor: "#000",
-          color: "#fff",
+          backgroundColor: "#fff",
+          color: "#acacac",
         }}
       />
       {error ? <div className="textinput-error-box">{message}</div> : <></>}

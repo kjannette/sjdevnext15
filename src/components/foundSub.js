@@ -8,47 +8,6 @@ const FoundSub = (props) => {
     props;
   return (
     <div className={foundStyles.subContainer}>
-      <div
-        style={{
-          fontSize: "1.1rem",
-          letterSpacing: ".3rem",
-          textAlign: "left",
-          lineHeight: "1.32",
-          height: "540px",
-        }}
-      >
-        <div className={foundStyles.upperDialogBox}>
-          <div className={foundStyles.leftTextBox}>
-            <div className={foundStyles.foundScrollText}>
-              <div className={foundStyles.baz}>
-                {typewriterText?.split("\n").map((t, key) => {
-                  return (
-                    <p key={key} className={foundStyles.botGraph}>
-                      {t}
-                    </p>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-          <div className={foundStyles.rightTextBox}>
-            <div className={foundStyles.scrollText}>
-              <div className={foundStyles.imageContainer}>
-                <div className={foundStyles.imageContainer2}>
-                  <img
-                    style={{
-                      borderRadius: "22px 0px",
-                      margunRight: "5px",
-                      height: "170px",
-                    }}
-                    src=""
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <div className={foundStyles.formContainer}>
         <form className={foundStyles.inputForm} onSubmit={onSubmit}>
           <TextInput
@@ -64,3 +23,39 @@ const FoundSub = (props) => {
 };
 
 export default FoundSub;
+
+/*
+      <div className={foundStyles.upperDialogBox}>
+        <div className={foundStyles.leftTextBox}>
+          <div className={foundStyles.foundScrollText}>
+            <div className={foundStyles.baz}>
+              {typewriterText?.split("\n").map((t, key) => {
+                return (
+                  <p key={key} className={foundStyles.botGraph}>
+                    {t}
+                  </p>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+        <div className={foundStyles.rightTextBox}>
+          <div className={foundStyles.scrollText}>
+            <div className={foundStyles.imageContainer}>
+              <div className={foundStyles.imageContainer2}>
+                {/* 
+                  <img
+                    style={{
+                      borderRadius: "22px 0px",
+                      margunRight: "5px",
+                      height: "170px",
+                    }}
+                    src=""
+                  />
+                  
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            */

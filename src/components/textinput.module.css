@@ -6,9 +6,9 @@
   padding-left: 8px;
   align-items: center;
   margin: auto;
-  background-color: #000;
+  background-color: #fff;
   border-radius: 0px 0px 35px 0px;
-  border: 1px solid #46f6ff;
+  border: 1px solid #add8e6;
 }
 
 .textinput-error-box {
