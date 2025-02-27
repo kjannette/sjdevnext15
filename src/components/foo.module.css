@@ -1,21 +1,3 @@
-.contactContainer {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  height: 600px;
-}
-
-.contactInner {
-  display: flex;
-  flex-direction: row;
-  height: 350px;
-  width: 100%;
-  margin-top: 15px;
-  background-color: #fbfbfb;
-}
-
 .contactLeftColumn {
   display: flex;
   flex-direction: column;
@@ -105,15 +87,6 @@
   letter-spacing: -1rem;
 }
 
-.contactDetailThree {
-  display: flex;
-  flex-direction: row-reverse;
-  height: 20px;
-  background-color: pink;
-  letter-spacing: 0.37rem;
-  width: 84%;
-}
-
 .contactDetailFour {
   width: 40%;
   background-color: #9fe8ec;
@@ -173,10 +146,6 @@
 }
 
 @media only screen and (max-width: 430px) {
-  .contactInner {
-    display: flex;
-    flex-direction: column;
-  }
   .contactLeftColumn {
     width: 100%;
   }
@@ -191,10 +160,6 @@
 
   .contactDetailTwo {
     align-items: flex-end;
-  }
-
-  .contactDetailThree {
-    align-items: center;
   }
 
   .navLinkThree {
