@@ -1,9 +1,7 @@
 import React from "react";
-import styles from "./page.module.css";
-import foundStyles from "./founder.module.css";
-import TextInput from "./TextInput";
-import sjPic from "..//vector_art/sj_loop.jpg";
-import { DominoSpinner } from "react-spinners-kit";
+import foundStyles from "./foundsub.module.css";
+import TextInput from "./textinput";
+//import sjPic from "../vector_art/sj_loop.jpg";
 
 const FoundSub = (props) => {
   const { introRan, typewriterText, onSubmit, inputValue, onChange, isBusy } =
@@ -43,7 +41,7 @@ const FoundSub = (props) => {
                       margunRight: "5px",
                       height: "170px",
                     }}
-                    src={sjPic}
+                    src=""
                   />
                 </div>
               </div>
@@ -52,7 +50,7 @@ const FoundSub = (props) => {
         </div>
       </div>
       <div className={foundStyles.formContainer}>
-        <form className={styles.inputForm} onSubmit={onSubmit}>
+        <form className={foundStyles.inputForm} onSubmit={onSubmit}>
           <TextInput
             name="prompt"
             value={inputValue}

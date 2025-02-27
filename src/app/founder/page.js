@@ -1,7 +1,9 @@
+"use client";
 import { useEffect, useState, useCallback } from "react";
 import styles from "./founder.module.css";
-import homeStyles from "../../pageElements/Home.module.css";
-import FoundSub from "../../pageElements/foundSub.js";
+import founderStyles from "./founder.module.css";
+
+import FoundSub from "../../components/foundSub";
 
 const Founder = () => {
   const [typewriterText, setTypewriterText] = useState("");
@@ -60,12 +62,8 @@ const Founder = () => {
     setText(data);
   }
 
-  function navToggle() {
-    //pass
-  }
-
   return (
-    <div className={homeStyles.container}>
+    <div className={founderStyles.container}>
       <div className={styles.foundSubContainer}>
         <FoundSub
           onSubmit={onSubmit}
