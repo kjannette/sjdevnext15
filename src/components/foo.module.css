@@ -87,15 +87,6 @@
   letter-spacing: -1rem;
 }
 
-.contactDetailThree {
-  display: flex;
-  flex-direction: row-reverse;
-  height: 20px;
-  background-color: pink;
-  letter-spacing: 0.37rem;
-  width: 84%;
-}
-
 .contactDetailFour {
   width: 40%;
   background-color: #9fe8ec;
@@ -169,10 +160,6 @@
 
   .contactDetailTwo {
     align-items: flex-end;
-  }
-
-  .contactDetailThree {
-    align-items: center;
   }
 
   .navLinkThree {
