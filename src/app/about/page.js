@@ -210,8 +210,9 @@ export default function About() {
                       {" "}
                       increase user satisfaction.
                     </Link>{" "}
-                    But getting there demands inspiration and engineering
-                    discipline: discovery guided by method and data.
+                    But getting there demands a unique blend of disciplines:
+                    inspiration and passion, guided by data and sound
+                    engineering.
                   </p>
                 </div>
               </div>
@@ -378,8 +379,8 @@ export default function About() {
                   <>
                     <p>
                       {" "}
-                      Developing practical LM applications is my passion.
-                      Consider{" "}
+                      Developing practical LM applications is my passion, for
+                      example:{" "}
                       <Link
                         className={aboutStyles.aboutLink}
                         href="https://www.novodraft.ai"
@@ -422,10 +423,10 @@ export default function About() {
                   </>
                   <>
                     <p>
-                      For example, through ML analysis of customer behavior, a
-                      bank gained account-use insight that inspired novel loan
+                      Recently, through ML analysis of customer behavior, a bank
+                      gained account-use insight that inspired novel loan
                       products. The result was impressive YOY growth versus
-                      sector rivals.
+                      rivals.
                     </p>
                     <p>
                       <Link className={aboutStyles.aboutLink} href="/contact">
