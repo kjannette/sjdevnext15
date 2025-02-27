@@ -2,7 +2,6 @@
 import { useEffect, useState, useCallback } from "react";
 import styles from "./founder.module.css";
 import founderStyles from "./founder.module.css";
-
 import FoundSub from "../../components/foundSub";
 
 const Founder = () => {

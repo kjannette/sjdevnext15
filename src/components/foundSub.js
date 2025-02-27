@@ -1,6 +1,7 @@
 import React from "react";
 import foundStyles from "./foundsub.module.css";
 import TextInput from "./textinput";
+import vectorFlex from "../../public/vectorFlex.gif";
 //import sjPic from "../vector_art/sj_loop.jpg";
 
 const FoundSub = (props) => {
@@ -9,6 +10,28 @@ const FoundSub = (props) => {
   return (
     <div className={foundStyles.subContainer}>
       <div className={foundStyles.formContainer}>
+        <div className={foundStyles.upper}>
+          <div className={foundStyles.left}>
+            <div className={foundStyles.baz}>
+              {typewriterText?.split("\n").map((t, key) => {
+                return (
+                  <p key={key} className={foundStyles.botGraph}>
+                    {t}
+                  </p>
+                );
+              })}
+            </div>
+          </div>
+          <div className={foundStyles.right}>
+            <img
+              className={foundStyles.pixImg}
+              src="../../public/vectorFlex.gif"
+              height={300}
+              alt=""
+            />
+          </div>
+        </div>
+
         <form className={foundStyles.inputForm} onSubmit={onSubmit}>
           <TextInput
             name="prompt"

@@ -43,6 +43,8 @@
   font-family: Roboto;
   font-weight: 100;
   width: 1200px;
+  height: 640px;
+  background-color: red;
   padding: 40px 40px 10px 40px;
   margin-left: auto;
   margin-right: auto;
@@ -65,17 +67,50 @@
   color: #4e4747;
 }
 
-.formContainer {
+.upper {
   display: flex;
   flex-direction: row;
+  background-color: green;
+  width: 880px;
+}
+
+.left {
+  background-color: blue;
+  width: 70%;
+  padding: 15px;
+}
+
+.right {
+  background-color: yellow;
+  width: 70%;
+}
+
+.baz {
+  font-size: 16px;
+  min-height: 400px;
+  width: 620px;
+  line-height: 1.5rem;
+  margin-left: 6px;
+  color: #acacac;
+  overflow-x: scroll;
+  max-height: 400px;
+  overflow-wrap: break-word;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 1.5rem;
   letter-spacing: 0.58rem;
-  height: 100px;
+
   width: 900px;
 }
 
+.modelTextContainer {
+  height: 400px;
+}
 .inputForm {
   height: 100%;
   width: 100%;
