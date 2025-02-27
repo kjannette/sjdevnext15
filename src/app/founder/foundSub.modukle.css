@@ -1,0 +1,109 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  width: 1200px;
+  text-align: left;
+}
+
+.homeMainContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #000;
+}
+
+.homeImage {
+  display: flex;
+  flex-direction: column;
+  height: 900px;
+  background: url("../vector_art/stary.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.foo {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.subContainer {
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto;
+  font-weight: 100;
+  width: 1200px;
+  padding: 40px 40px 10px 40px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  text-align: left;
+  font-size: 1.6rem;
+}
+
+.lmTextContainer {
+  display: flex;
+}
+
+.scrollContainer {
+  color: #fff;
+}
+
+.textBox {
+  font-family: Roboto;
+  font-weight: 100;
+  color: #4e4747;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem;
+  letter-spacing: 0.58rem;
+  height: 100px;
+  width: 900px;
+}
+
+.inputForm {
+  height: 100%;
+  width: 100%;
+  background-color: #252525;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.scrollText {
+  width: 720px;
+  font-family: var(--roboto);
+  font-weight: 100;
+  padding: 30px;
+  color: #fff;
+  align-items: center;
+}
+
+.sharedBox {
+  border: 1px solid white;
+  background-color: yellow;
+}
+
+.textBus {
+  margin-top: 25px;
+  height: 100px;
+  min-width: 900px;
+}
