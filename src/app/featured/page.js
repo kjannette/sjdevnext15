@@ -59,11 +59,32 @@ export default function Featured() {
           >
             <h3>Book Browser</h3>
             <p>
-              React UI for rare, collectible/new book retailer. Project included
-              sales dashboard, API integrating MySql inventory management.
+              React UI for rare, collectible/new book retail enterprise. Project
+              included sales UI, inventory management solution (MySql API).
             </p>
           </a>
           {/****    BB END    *****/}
+
+          {/****    BT START    *****/}
+          <a href="" className={homeStyles.cardTextRight}>
+            <h3>Budgetize</h3>
+            <p>
+              Member dashboard SaaS for regional business association. Snippet
+              demos 'monthly net' budget view.
+            </p>
+          </a>
+          <div className={homeStyles.cardImageLeft}>
+            <a href="" target="_blank">
+              <img
+                className={featuredStyles.featureImage}
+                src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739937681/budget_cvvtbj.jpg"
+                height={130}
+                alt="sjDev"
+              />
+            </a>
+            <div className={featuredStyles.gitBox}>View on Github</div>
+          </div>
+          {/****    BT END    *****/}
           {/****    NOVODRAFT START    *****/}
           <div className={homeStyles.cardImageRight}>
             <div className={featuredStyles.gitBoxRight}>Visit Site</div>
@@ -85,27 +106,6 @@ export default function Featured() {
             </p>
           </a>
           {/****    NOVODRAFT END    *****/}
-
-          {/****    BT START    *****/}
-          <a href="" className={homeStyles.cardTextRight}>
-            <h3>Budgetize</h3>
-            <p>
-              JS app for member dashboard of a business assoc. site. Snippet
-              demos the 'monthly' budget view component.
-            </p>
-          </a>
-          <div className={homeStyles.cardImageLeft}>
-            <a href="" target="_blank">
-              <img
-                className={featuredStyles.featureImage}
-                src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739937681/budget_cvvtbj.jpg"
-                height={130}
-                alt="sjDev"
-              />
-            </a>
-            <div className={featuredStyles.gitBox}>View on Github</div>
-          </div>
-          {/****    BT END    *****/}
         </div>
       </div>
     </div>
