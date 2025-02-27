@@ -43,8 +43,8 @@ export default function Featured() {
           >
             <h3>Sales Flow</h3>
             <p>
-              Demo of React workflow app for an automotive retail chain. It
-              featured ML-derived inventory management insight.
+              React UI for KPI-workflow app, created for an automotive retail
+              sales enterprise. Demo is the individual sales history que.
             </p>
           </a>
           <div className={homeStyles.cardImageLeft}>
