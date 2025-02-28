@@ -69,7 +69,7 @@ const Founder = () => {
   }
 
   return (
-    <div className={founderStyles.container}>
+    <div className={founderStyles.foundContainer}>
       <div className={styles.foundSubContainer}>
         <FoundSub
           onSubmit={onSubmit}

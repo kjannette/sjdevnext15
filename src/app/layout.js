@@ -6,15 +6,13 @@ import Footer from "../components/footer";
 import Header from "../components/header";
 import Navpanel from "@/components/navpanel";
 import "./globals.css";
+import { Roboto } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const roboto = Roboto({
+  variable: "--font-roboto",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  style: ["italic", "normal"],
 });
 
 export default function RootLayout({ children }) {
@@ -31,7 +29,7 @@ export default function RootLayout({ children }) {
           src="//gc.zgo.at/count.js"
         ></script>
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${roboto.variable}`}>
         <Header
           navToggle={navToggle}
           menuOpen={menuOpen}

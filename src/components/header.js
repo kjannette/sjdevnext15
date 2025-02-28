@@ -42,7 +42,7 @@ export default function Header(props) {
             <div>
               <div
                 className={headerStyles.nextLink}
-                onClick={() => handleClick("/about")}
+                onClick={() => handleClick("/appliedai")}
               >
                 Applied AI
               </div>
@@ -50,7 +50,7 @@ export default function Header(props) {
             <div>
               <div
                 className={headerStyles.nextLink}
-                onClick={() => handleClick("/featured")}
+                onClick={() => handleClick("/webapps")}
               >
                 Web Applications
               </div>
