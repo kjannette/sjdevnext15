@@ -31,7 +31,7 @@ const FoundSub = (props) => {
           <div className={foundStyles.right}>
             {" "}
             <img
-              className={foundStyles.pixImg}
+              className={foundStyles.geoImg}
               src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1740705223/geo_fmr4v0.gif"
               height={120}
               alt="artistic picture of a man in a suit"

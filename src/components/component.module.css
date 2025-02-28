@@ -118,7 +118,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  min-width: 500px;
+  min-width: 580px;
   align-items: flex-end;
   margin-left: 10px;
   margin-bottom: 14px;
@@ -127,7 +127,7 @@
 .colorText {
   font-weight: 400;
   letter-spacing: 0.24rem;
-  color: blue;
+  color: #2fbeea;
 }
 
 .nextLink {
