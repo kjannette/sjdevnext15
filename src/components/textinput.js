@@ -35,7 +35,7 @@ const TextInput = (props) => {
         type={type}
         style={{
           height: "80%",
-          width: "90%",
+          width: "591px",
           padding: ".5rem",
           fontSize: "16px",
           border: "none",
