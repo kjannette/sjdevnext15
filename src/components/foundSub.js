@@ -1,8 +1,10 @@
-import React from "react";
+"use client";
+import { useState } from "react";
 import foundStyles from "./foundsub.module.css";
 import TextInput from "./textinput";
 //import sjPic from "../vector_art/sj_loop.jpg";
 import { Roboto } from "next/font/google";
+import DotLoader from "react-spinners/DotLoader";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -10,23 +12,42 @@ const roboto = Roboto({
   style: ["italic", "normal"],
 });
 
+const override = {
+  display: "block",
+  margin: "0 auto",
+  borderColor: "#2fbeea",
+};
+
 const FoundSub = (props) => {
   const { introRan, typewriterText, onSubmit, inputValue, onChange, isBusy } =
     props;
+
   return (
     <div className={foundStyles.subContainer}>
       <div className={foundStyles.formContainer}>
         <div className={foundStyles.upper}>
           <div className={foundStyles.left}>
-            <div className={foundStyles.baz}>
-              {typewriterText?.split("\n").map((t, key) => {
-                return (
-                  <p key={key} className={foundStyles.botGraph}>
-                    {t}
-                  </p>
-                );
-              })}
-            </div>
+            {isBusy ? (
+              <div className={foundStyles.loaderBox}>
+                <DotLoader
+                  color="aqua"
+                  loading={isBusy}
+                  cssOverride={override}
+                  size={40}
+                  aria-label="Loading Spinner"
+                />
+              </div>
+            ) : (
+              <div className={foundStyles.baz}>
+                {typewriterText?.split("\n").map((t, key) => {
+                  return (
+                    <p key={key} className={foundStyles.botGraph}>
+                      {t}
+                    </p>
+                  );
+                })}
+              </div>
+            )}
           </div>
           <div className={foundStyles.right}>
             {" "}
