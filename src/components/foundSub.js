@@ -28,7 +28,15 @@ const FoundSub = (props) => {
               })}
             </div>
           </div>
-          <div className={foundStyles.right}>TEST</div>
+          <div className={foundStyles.right}>
+            {" "}
+            <img
+              className={foundStyles.pixImg}
+              src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1740705223/geo_fmr4v0.gif"
+              height={120}
+              alt="artistic picture of a man in a suit"
+            />
+          </div>
         </div>
         <form className={foundStyles.inputForm} onSubmit={onSubmit}>
           <TextInput

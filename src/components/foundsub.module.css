@@ -83,7 +83,9 @@
 }
 
 .right {
-  background-color: red;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   width: 280px;
 }
 
