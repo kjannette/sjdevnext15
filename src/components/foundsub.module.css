@@ -1,0 +1,155 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  width: 1200px;
+  text-align: left;
+}
+
+.homeMainContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fff;
+}
+
+.homeImage {
+  display: flex;
+  flex-direction: column;
+  height: 900px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.foo {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.subContainer {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-roboto);
+  font-weight: 100;
+  width: 100px;
+  height: 640px;
+  padding: 40px 40px 10px 40px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  text-align: left;
+  font-size: 1.6rem;
+}
+
+.lmTextContainer {
+  display: flex;
+}
+
+.scrollContainer {
+  color: #fff;
+}
+
+.textBox {
+  font-weight: 100;
+  color: #4e4747;
+}
+
+.upper {
+  display: flex;
+  flex-direction: row;
+  width: 880px;
+  border-left: 1px solid #add8e6;
+  border-top: 1px solid #add8e6;
+  border-right: 1px solid #add8e6;
+  border-radius: 35px 0px 0px 0px;
+}
+
+.left {
+  display: flex;
+  flex-direction: row;
+  width: 600px;
+  padding: 15px;
+  border-right: 1px solid #add8e6;
+}
+
+.right {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 280px;
+}
+
+.geoImg {
+  margin-top: 12px;
+}
+.botGraph {
+  font-family: var(--font-roboto);
+}
+
+.baz {
+  font-size: 16px;
+  min-height: 400px;
+  width: 600px;
+  line-height: 1.5rem;
+  margin-left: 6px;
+  font-family: var(--font-roboto);
+  color: #acacac;
+  overflow-x: scroll;
+  max-height: 400px;
+  overflow-wrap: break-word;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem;
+  letter-spacing: 0.2rem;
+  width: 900px;
+}
+
+.modelTextContainer {
+  height: 400px;
+}
+
+.inputForm {
+  height: 100%;
+  width: 880px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.scrollText {
+  width: 720px;
+  height: 300px;
+  font-family: var(--roboto);
+  font-weight: 100;
+  padding: 30px;
+  color: #fff;
+  align-items: center;
+}
+
+.sharedBox {
+  border: 1px solid white;
+  background-color: yellow;
+}
+
+.textBus {
+  margin-top: 25px;
+  height: 100px;
+  min-width: 900px;
+}
