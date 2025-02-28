@@ -3,6 +3,13 @@ import { useEffect, useState, useCallback } from "react";
 import styles from "./founder.module.css";
 import founderStyles from "./founder.module.css";
 import FoundSub from "../../components/foundSub";
+import { Roboto } from "next/font/google";
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  style: ["italic", "normal"],
+});
 
 const Founder = () => {
   const [typewriterText, setTypewriterText] = useState("");

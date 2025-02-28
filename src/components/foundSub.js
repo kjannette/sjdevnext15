@@ -2,6 +2,13 @@ import React from "react";
 import foundStyles from "./foundsub.module.css";
 import TextInput from "./textinput";
 //import sjPic from "../vector_art/sj_loop.jpg";
+import { Roboto } from "next/font/google";
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  style: ["italic", "normal"],
+});
 
 const FoundSub = (props) => {
   const { introRan, typewriterText, onSubmit, inputValue, onChange, isBusy } =
@@ -21,8 +28,8 @@ const FoundSub = (props) => {
               })}
             </div>
           </div>
+          <div className={foundStyles.right}>TEST</div>
         </div>
-
         <form className={foundStyles.inputForm} onSubmit={onSubmit}>
           <TextInput
             name="prompt"

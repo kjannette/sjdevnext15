@@ -72,6 +72,7 @@
   border-left: 1px solid #add8e6;
   border-top: 1px solid #add8e6;
   border-right: 1px solid #add8e6;
+  border-radius: 35px 0px 0px 0px;
 }
 
 .left {
@@ -82,8 +83,12 @@
 }
 
 .right {
-  background-color: #fff;
+  background-color: red;
   width: 280px;
+}
+
+.botGraph {
+  font-family: var(--font-roboto);
 }
 
 .baz {
@@ -92,6 +97,7 @@
   width: 600px;
   line-height: 1.5rem;
   margin-left: 6px;
+  font-family: var(--font-roboto);
   color: #acacac;
   overflow-x: scroll;
   max-height: 400px;
