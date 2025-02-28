@@ -29,8 +29,7 @@ const Founder = () => {
     if (!didRun) {
       return false;
     } else {
-      console.log(" didRun ran");
-      return true;
+      return didRun;
     }
   }
 
@@ -38,8 +37,11 @@ const Founder = () => {
     if (!text || text.length < 2) {
       return;
     }
-    if (checkRan()) {
-      return;
+
+    const runCheck = checkRan();
+    console.log("runCheck", runCheck);
+    if (runCheck.ran === 1) {
+      setText("Pietho here!  How can I help you?");
     }
 
     const didRun = { ran: 1 };
