@@ -43,7 +43,7 @@ export default function Navpanel(props) {
             <div className={contactStyles.contactDetailOne}>
               <div
                 className={contactStyles.contactLink}
-                onClick={() => handleClick("/about")}
+                onClick={() => handleClick("/appliedai")}
               >
                 Applied AI
               </div>
@@ -51,7 +51,7 @@ export default function Navpanel(props) {
             <div className={contactStyles.contactDetailTwo}>
               <div
                 className={contactStyles.contactLinkTwo}
-                onClick={() => handleClick("/featured")}
+                onClick={() => handleClick("/webapps")}
               >
                 Web Applications
               </div>

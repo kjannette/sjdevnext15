@@ -183,9 +183,7 @@ export default function About() {
                   <>
                     <p className={aboutStyles.solutionsText}>
                       Innovation is defined as "a new method or idea";
-                      leveraging technology in novel ways. To proceed purely on
-                      statistical predictions from past events yields
-                      predictable results.
+                      leveraging technology in novel ways.
                     </p>
                     <p>
                       Consider Artificial Intelligence (so-called "chatbots"),
@@ -201,8 +199,8 @@ export default function About() {
                     transformative potential.
                   </p>
                   <p>
-                    Integrating AI presents uncharted opportunities for growth,
-                    and opportunities to
+                    Integrating AI into business processes presents uncharted
+                    opportunities for growth, and opportunities to
                     <Link
                       className={aboutStyles.aboutLink}
                       href="https://arxiv.org/pdf/2208.04560"
@@ -210,9 +208,8 @@ export default function About() {
                       {" "}
                       increase user satisfaction.
                     </Link>{" "}
-                    But getting there demands a unique blend of disciplines:
-                    inspiration and passion, guided by data and sound
-                    engineering.
+                    But use-cases that yield maximimum practical effect are not
+                    obvious.
                   </p>
                 </div>
               </div>
@@ -340,12 +337,12 @@ export default function About() {
                       to increase user satisfaction
                     </Link>{" "}
                     and realize growth demands both the passion of art and
-                    discipline of science: innovation guided by data.
+                    discipline of science: inspiration guided by data.
                   </p>
                   <>
                     <p className={aboutStyles.mobileParagraph}>
                       From optimizing existing{" "}
-                      <Link className={aboutStyles.aboutLink} href="/featured">
+                      <Link className={aboutStyles.aboutLink} href="/webapps">
                         applications
                       </Link>
                       , to deploying AI and machine learning,{" "}
@@ -379,8 +376,8 @@ export default function About() {
                   <>
                     <p>
                       {" "}
-                      Developing practical LM applications is my passion, for
-                      example:{" "}
+                      Discovering and developing practical AI applications is my
+                      business, for example:{" "}
                       <Link
                         className={aboutStyles.aboutLink}
                         href="https://www.novodraft.ai"
@@ -390,9 +387,9 @@ export default function About() {
                     </p>
                     <p>
                       Leveraging ML-augmented OCR and CoT LLM prompting, it
-                      generates contextually-precise, responsive legal content.
-                      It also demonstrates that intrepidly-applied AI can help
-                      do just about anything faster and smarter.
+                      generates contextually-precise rhetorical content for
+                      lawyers. It also demonstrates that intrepidly-applied AI
+                      can help do just about anything faster and smarter.
                     </p>
                     <p>
                       Do you retail? Imagine deploying a 24/7
@@ -433,7 +430,7 @@ export default function About() {
                         Let's talk{" "}
                       </Link>
                       about how AI and ML, along with{" "}
-                      <Link className={aboutStyles.aboutLink} href="/featured">
+                      <Link className={aboutStyles.aboutLink} href="/webapps">
                         technology you already use{" "}
                       </Link>
                       can grow your opportunities.

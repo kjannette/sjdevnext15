@@ -41,7 +41,7 @@
   display: flex;
   flex-direction: column;
   font-family: var(--font-roboto);
-  font-weight: 100;
+  font-weight: 300;
   width: 100px;
   height: 640px;
   padding: 40px 40px 10px 40px;
@@ -94,11 +94,13 @@
   margin-top: 12px;
 }
 .botGraph {
+  font-size: 1.05rem;
+  font-weight: 400;
   font-family: var(--font-roboto);
 }
 
 .baz {
-  font-size: 16px;
+  font-size: 1.15rem;
   min-height: 400px;
   width: 600px;
   line-height: 1.5rem;
@@ -137,7 +139,7 @@
   width: 720px;
   height: 300px;
   font-family: var(--roboto);
-  font-weight: 100;
+  font-weight: 400;
   padding: 30px;
   color: #fff;
   align-items: center;

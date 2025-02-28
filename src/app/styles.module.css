@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 16px;
+  font-size: 1.05rem;
   color: #acacac;
   background-color: #fff;
 }
@@ -175,11 +175,13 @@
 .cardTextLeft h3 {
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .cardTextLeft p {
+  font-family: var(--font-roboto);
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   line-height: 1.5;
 }
 
@@ -193,11 +195,13 @@
 .cardTextRight h3 {
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .cardTextRight p {
+  font-family: var(--font-roboto);
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   line-height: 1.5;
 }
 
