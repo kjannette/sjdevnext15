@@ -14,7 +14,7 @@ const roboto = Roboto({
 const Founder = () => {
   const [typewriterText, setTypewriterText] = useState("");
   const [text, setText] = useState(
-    "G reetings.  I'm Pietho, Steven Jannette's AI agent.  Steven is a technologist and full-stack engineer.  Ask me anything about him, I'm an expert."
+    "G reetings.  I'm Pietho, here to answer questions about sjDev or our founder, Steven. How can I help?"
   );
   const [isBusy, setIsBusy] = useState(false);
   const [inputValue, setInputValue] = useState("");
