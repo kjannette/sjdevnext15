@@ -88,7 +88,7 @@ const Founder = () => {
     });
     const data = await response.json();
 
-    setText(data);
+    setTypewriterText(data);
     setIsBusy(false);
   }
 
