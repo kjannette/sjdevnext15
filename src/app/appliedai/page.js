@@ -376,8 +376,8 @@ export default function About() {
                   <>
                     <p>
                       {" "}
-                      Discovering and developing practical AI applications is my
-                      business, for example:{" "}
+                      Developing practical AI applications is my business, for
+                      example:{" "}
                       <Link
                         className={aboutStyles.aboutLink}
                         href="https://www.novodraft.ai"

@@ -6,7 +6,7 @@
 .foundContainer::after {
   content: "";
   background: url("https://res.cloudinary.com/dd8ewixm7/image/upload/v1740719427/tranhum_lfzgnw.png");
-  opacity: 0.12;
+  opacity: 0.16;
   top: -1300;
   left: -500;
   bottom: 0;
