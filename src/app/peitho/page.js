@@ -14,7 +14,7 @@ const roboto = Roboto({
 const Founder = () => {
   const [typewriterText, setTypewriterText] = useState("");
   const [text, setText] = useState(
-    "G reetings.  I'm Pietho, Steven Jannette's AI agent.  Steven is a technologist and full-stack engineer.  Ask me anything about him, I'm an expert."
+    "G reetings.  I'm Pietho, an (AI) associate here at sjDev.  Our mission is to empower organizations to achieve their goals.  \n I’m here to answer questions about our services.  \n I can also discuss our founder, Steven Jannette's professional background and enthusiasm for technology as an engine of growth.  \n How can I help?"
   );
   const [isBusy, setIsBusy] = useState(false);
   const [inputValue, setInputValue] = useState("");
@@ -22,10 +22,29 @@ const Founder = () => {
     setInputValue(e.target.value);
   });
 
+  function checkRan() {
+    // Retrieve the object from storage
+    const temp = localStorage.getItem("didRun");
+    const didRun = JSON.parse(temp);
+    if (!didRun) {
+      return false;
+    } else {
+      console.log(" didRun ran");
+      return true;
+    }
+  }
+
   useEffect(() => {
     if (!text || text.length < 2) {
       return;
     }
+    if (checkRan()) {
+      return;
+    }
+
+    const didRun = { ran: 1 };
+    localStorage.setItem("didRun", JSON.stringify(didRun));
+
     let index = 0;
     const timer = setInterval(() => {
       setTypewriterText(
