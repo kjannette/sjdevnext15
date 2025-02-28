@@ -16,7 +16,7 @@ const Founder = () => {
   const [text, setText] = useState(
     "G reetings.  I'm Pietho, Steven Jannette's AI agent.  Steven is a technologist and full-stack engineer.  Ask me anything about him, I'm an expert."
   );
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [isBusy, setIsBusy] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const handleOnChange = useCallback((e) => {
     setInputValue(e.target.value);
@@ -41,8 +41,10 @@ const Founder = () => {
   }, [text]);
 
   function onSubmit(e) {
+    setIsBusy(true);
     e.preventDefault();
     if (!inputValue || inputValue.length < 2) {
+      setIsBusy(false);
       return;
     } else {
       const promptValue = inputValue;
@@ -66,6 +68,7 @@ const Founder = () => {
     const data = await response.json();
 
     setText(data);
+    setIsBusy(false);
   }
 
   return (
@@ -76,6 +79,7 @@ const Founder = () => {
           typewriterText={typewriterText}
           inputValue={inputValue}
           onChange={handleOnChange}
+          isBusy={isBusy}
         />
       </div>
     </div>
