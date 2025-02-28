@@ -54,9 +54,9 @@ const Founder = () => {
   }
 
   async function sendPrompt(promptValue) {
-    console.log("send prompt fired");
     const promptText = JSON.stringify({ prompt: promptValue });
-    const response = await fetch(`https://www.sjdev.co:3001/v1/lm-cr-query`, {
+    console.log("send prompt fired, request:", promptText);
+    const response = await fetch(`https://www.sjdev.co/v1/lm-cr-query/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
