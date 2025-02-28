@@ -59,6 +59,31 @@ const Founder = () => {
     }, 30); // adjust timing here
 
     return () => clearInterval(timer); // cleanup on unmount
+  }, []);
+
+  useEffect(() => {
+    if (!text || text.length < 2) {
+      return;
+    }
+    if (runCheck.ran < 1) {
+      return;
+    }
+
+    const didRun = { ran: 1 };
+    localStorage.setItem("didRun", JSON.stringify(didRun));
+
+    let index = 0;
+    const timer = setInterval(() => {
+      setTypewriterText(
+        (prevTypewriterText) => prevTypewriterText + text?.charAt(index)
+      );
+      index++;
+      if (index === text.length) {
+        clearInterval(timer);
+      }
+    }, 30); // adjust timing here
+
+    return () => clearInterval(timer); // cleanup on unmount
   }, [text]);
 
   function onSubmit(e) {
@@ -88,7 +113,7 @@ const Founder = () => {
     });
     const data = await response.json();
 
-    setTypewriterText(data);
+    setText(data);
     setIsBusy(false);
   }
 
