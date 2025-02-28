@@ -1,7 +1,6 @@
 import React from "react";
 import foundStyles from "./foundsub.module.css";
 import TextInput from "./textinput";
-import vectorFlex from "../../public/vectorFlex.gif";
 //import sjPic from "../vector_art/sj_loop.jpg";
 
 const FoundSub = (props) => {
@@ -21,14 +20,6 @@ const FoundSub = (props) => {
                 );
               })}
             </div>
-          </div>
-          <div className={foundStyles.right}>
-            <img
-              className={foundStyles.pixImg}
-              src="../../public/vectorFlex.gif"
-              height={300}
-              alt=""
-            />
           </div>
         </div>
 
@@ -81,4 +72,15 @@ export default FoundSub;
                 </div>
               </div>
             </div>
+
+                      <div className={foundStyles.right}>
+            <img
+              className={foundStyles.vector}
+              src="../../public/budget.jpg"
+              height={300}
+              width={300}
+              alt=""
+            />
+            test
+          </div>
             */
