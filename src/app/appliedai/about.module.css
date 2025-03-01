@@ -217,6 +217,15 @@
   text-decoration: none;
 }
 
+.peithoLink {
+  color: #2196f3;
+  text-decoration: none;
+}
+
+.peithoLink:hover {
+  cursor: pointer;
+}
+
 .about-italics-text {
   font-style: italic;
 }

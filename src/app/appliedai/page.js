@@ -1,5 +1,5 @@
 "use client";
-
+import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import homeStyles from "../styles.module.css";
 import aboutStyles from "./about.module.css";
@@ -17,8 +17,7 @@ const roboto = Roboto({
 
 export default function About() {
   const [index, setIndex] = useState(0);
-  const [menuOpen, setMenuOpen] = useState(false);
-
+  const router = useRouter();
   let interval = null;
 
   interval = setInterval(log, 5000);
@@ -141,6 +140,10 @@ export default function About() {
       clearTimeout(timer3);
     };
   }, []);
+
+  const handleClick = (route) => {
+    router.push(route);
+  };
 
   return (
     <div className={roboto.className}>
@@ -395,13 +398,20 @@ export default function About() {
                       Do you retail? Imagine deploying a 24/7
                       associate-force-multiplier with one purpose: widening your
                       mote. In sales, AI offers customers a
-                      conversion-increasing, bespoke concierge experience,{" "}
+                      conversion-increasing, bespoke{" "}
+                      <span
+                        className={aboutStyles.peithoLink}
+                        onClick={() => handleClick("/peitho")}
+                      >
+                        concierge experience,{" "}
+                      </span>
+                      superior to
                       <Link
                         className={aboutStyles.aboutLink}
                         href="https://arxiv.org/pdf/2304.03516.pdf"
                       >
                         {" "}
-                        superior to shopworn search bars.
+                        shopworn search bars.
                       </Link>{" "}
                     </p>
                   </>

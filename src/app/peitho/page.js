@@ -4,6 +4,7 @@ import styles from "./founder.module.css";
 import founderStyles from "./founder.module.css";
 import FoundSub from "../../components/foundSub";
 import { Roboto } from "next/font/google";
+import { useRouter } from "next/navigation";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -14,14 +15,17 @@ const roboto = Roboto({
 const Founder = () => {
   const [typewriterText, setTypewriterText] = useState("-");
   const [text, setText] = useState(
-    "Greetings.  I'm Peitho, here to answer questions about sjDev and its founder, Steven. How can I help?"
+    "G reetings.  I'm Peitho, here to answer questions about sjDev and its founder, Steven. How can I help?"
   );
   const [isBusy, setIsBusy] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const handleOnChange = useCallback((e) => {
     setInputValue(e.target.value);
   });
-
+  const router = useRouter();
+  const handleClick = (route) => {
+    router.push(route);
+  };
   useEffect(() => {
     if (!text || text.length < 2) {
       return;

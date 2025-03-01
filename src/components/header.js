@@ -52,7 +52,7 @@ export default function Header(props) {
                 className={headerStyles.nextLink}
                 onClick={() => handleClick("/webapps")}
               >
-                Web Applications
+                Web/Mobile Apps
               </div>
             </div>
             <div>
@@ -60,7 +60,7 @@ export default function Header(props) {
                 className={headerStyles.nextLink}
                 onClick={() => handleClick("/peitho")}
               >
-                Pietho
+                Peitho: Live Support
               </div>
             </div>
             <div>
