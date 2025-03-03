@@ -13,7 +13,7 @@
 .aboutColumnTL {
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid #abd1ff;
+
   border-top: 1px solid #abd1ff;
   width: 50%;
   border-radius: 40px 0px 0px 0px;
@@ -251,6 +251,66 @@
   opacity: 0.62;
 }
 
+.appContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 250px;
+  margin-top: 15px;
+  padding-top: 15px;
+}
+
+.novoLeft {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem;
+  width: 50%;
+  padding: 1.5rem;
+  text-align: right;
+  color: inherit;
+  text-decoration: none;
+  background-color: #e6f2ff;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  align-items: center;
+  justify-content: right;
+}
+
+.novoRight {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+}
+
+.foo {
+  margin: 1rem;
+  width: 95%;
+  height: 100%;
+  padding: 1.5rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.foo:hover,
+.foo:focus,
+.foo:active {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+.novoTitleText {
+  font-size: 1.5rem;
+  margin-bottom: 7px;
+}
+
+.novoGraph {
+  line-height: 1.5rem;
+}
 @media only screen and (max-width: 1080px) {
   .aboutRow {
     height: 370px;

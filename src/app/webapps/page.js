@@ -85,27 +85,6 @@ export default function Featured() {
             <div className={featuredStyles.gitBox}>View on Github</div>
           </div>
           {/****    BT END    *****/}
-          {/****    NOVODRAFT START    *****/}
-          <div className={homeStyles.cardImageRight}>
-            <div className={featuredStyles.gitBoxRight}>Visit Site</div>
-            <a href="">
-              <img
-                className={featuredStyles.featureImage}
-                src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739937570/logoMatrixUltrafav_nxpx29.png"
-                height={130}
-                alt="sjDev logo"
-              />
-            </a>
-          </div>
-          <a className={homeStyles.cardTextLeft} href="" target="_blank">
-            <h3>Novdraft.ai </h3>
-            <p>
-              AI-assisted legal drafting. ML-augmented OCR plus CoT-prompt
-              sequencing generates contextually-precise, persuasive rhetorical
-              content.
-            </p>
-          </a>
-          {/****    NOVODRAFT END    *****/}
         </div>
       </div>
     </div>

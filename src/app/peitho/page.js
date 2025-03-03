@@ -15,7 +15,7 @@ const roboto = Roboto({
 const Founder = () => {
   const [typewriterText, setTypewriterText] = useState("-");
   const [text, setText] = useState(
-    "G reetings.  I'm Peitho, here to answer questions about sjDev and its founder, Steven. How can I help?"
+    "G reetings.  I'm Peitho, here to answer questions about sjDev services and it's founder, Steven. How can I help?"
   );
   const [isBusy, setIsBusy] = useState(false);
   const [inputValue, setInputValue] = useState("");

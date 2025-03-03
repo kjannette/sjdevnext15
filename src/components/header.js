@@ -60,7 +60,7 @@ export default function Header(props) {
                 className={headerStyles.nextLink}
                 onClick={() => handleClick("/peitho")}
               >
-                Peitho: Live Support
+                Peitho[::]Support
               </div>
             </div>
             <div>
