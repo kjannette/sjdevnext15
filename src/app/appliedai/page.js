@@ -369,7 +369,7 @@ export default function About() {
             </div>
             <div className={aboutStyles.appContainer}>
               {/****    NOVODRAFT START    *****/}
-              <div className={homeStyles.cardImageRight}>
+              <div className={aboutStyles.novoLeft}>
                 <div className={featuredStyles.gitBoxRight}>Visit Site</div>
                 <a href="">
                   <img
@@ -380,14 +380,17 @@ export default function About() {
                   />
                 </a>
               </div>
-              <a className={homeStyles.cardTextLeft} href="" target="_blank">
-                <h3>Novdraft.ai </h3>
-                <p>
-                  AI-assisted legal drafting. ML-augmented OCR plus CoT-prompt
-                  sequencing generates contextually-precise, persuasive
-                  rhetorical content.
-                </p>
-              </a>
+              <div className={aboutStyles.novoRight}>
+                <a className={homeStyles.cardTextLeft} href="" target="_blank">
+                  <h3>Novdraft.ai </h3>
+                  <p>
+                    AI-assisted legal drafting. ML-augmented OCR plus CoT-prompt
+                    sequencing generates contextually-precise, persuasive
+                    rhetorical content.
+                  </p>
+                </a>
+              </div>
+
               {/****    NOVODRAFT END    *****/}
             </div>
           </div>
