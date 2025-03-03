@@ -224,4 +224,8 @@
     margin-bottom: 5px;
     border-radius: 10px;
   }
+
+  .footerContainer {
+    display: none;
+  }
 }
