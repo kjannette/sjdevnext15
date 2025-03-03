@@ -256,6 +256,8 @@
   flex-direction: row;
   width: 100%;
   height: 250px;
+  margin-top: 15px;
+  padding-top: 15px;
 }
 
 .novoLeft {
@@ -301,6 +303,13 @@
   border-color: #0070f3;
 }
 
+.novoTitleText {
+  margin-bottom: 4px;
+}
+
+.novoGraph {
+  line-height: 1.5rem;
+}
 @media only screen and (max-width: 1080px) {
   .aboutRow {
     height: 370px;

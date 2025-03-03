@@ -188,7 +188,7 @@ export default function About() {
                     <p className={aboutStyles.solutionsText}>
                       "Innovation" means "a new method or idea": consider
                       Artificial Intelligence, commonly-called "chatbots", which
-                      have captivated popular attention.
+                      has captivated popular attention.
                     </p>
                   </>
 
@@ -197,11 +197,11 @@ export default function About() {
                   </>
                   <p>
                     Beguiling. But only a hint at AI's potential to enrich our
-                    personal and professional lives.
+                    lives and professional pursuits.
                   </p>
                   <p>
                     I’m proud to introduce Novodraft, an application empowering
-                    Attorneys to draft persuasive briefs and precise discovery
+                    attorneys to draft persuasive briefs and precise discovery
                     responses at light speed. It also shows that
                     intrepidly-applied AI can help do anything faster and
                     smarter.
@@ -215,7 +215,7 @@ export default function About() {
                     <Link className={aboutStyles.aboutLink} href="/webapps">
                       technology you already use{" "}
                     </Link>
-                    can help your business realize its potential, too.
+                    can empower your business, too.
                   </p>
                 </div>
               </div>
@@ -378,11 +378,15 @@ export default function About() {
               </div>
               <div className={aboutStyles.novoRight}>
                 <a className={aboutStyles.foo} href="" target="_blank">
-                  <h3>Novdraft.ai </h3>
-                  <p>
-                    AI-assisted legal drafting. ML-augmented OCR plus CoT-prompt
-                    sequencing generates contextually-precise, persuasive
-                    rhetorical content.
+                  <h3 className={aboutStyles.novoTitleText}>Novdraft.ai </h3>
+                  <p className={aboutStyles.novoGraph}>
+                    {" "}
+                    AI-assisted legal document drafting.
+                  </p>
+                  <p className={aboutStyles.novoGraph}>
+                    Machine-learning-augmented optical character recognition
+                    plus chain of thought LLM prompt sequencing generates
+                    contextually-precise, persuasive rhetorical content.
                   </p>
                 </a>
               </div>
