@@ -3,6 +3,7 @@ import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import homeStyles from "../styles.module.css";
 import aboutStyles from "./about.module.css";
+import featuredStyles from "../webapps/featured.module.css";
 //import Image from "next/image";
 //import purpleMe from "../../../public/purpleMe.png";
 //import flipitFinalz from "../../../public/flipitFinalz.png";
@@ -162,13 +163,13 @@ export default function About() {
                   </p>
                   <p>
                     In an algorithmically-generated, heuristically-driven world,
-                    creativity will become the highest-value attribute.
+                    creativity is the highest-value attribute.
                   </p>
                   <div className={aboutStyles.aboutFastSection}>
                     <span className="fast-text">
-                      I have created innovative technology at companies from{" "}
-                      <i>Fortune</i> Top-10 Ford Motor Company, to a startup
-                      named alongside Apple as a{" "}
+                      I've created innovative technology at companies from{" "}
+                      <i>Fortune</i> Top-10 Ford Motor, to a startup named
+                      alongside Apple as a{" "}
                       <span className="about-italics-text">
                         <i>FastCompany</i>{" "}
                       </span>{" "}
@@ -177,7 +178,7 @@ export default function About() {
                         href="https://www.fastcompany.com/90846903/most-innovative-companies-consumer-electronics-2023"
                       >
                         {" "}
-                        “World's Most Innovative 2023”
+                        “World's Most Innovative”
                       </Link>
                       .{" "}
                     </span>
@@ -185,34 +186,31 @@ export default function About() {
 
                   <>
                     <p className={aboutStyles.solutionsText}>
-                      Innovation is defined as "a new method or idea";
-                      leveraging technology in novel ways.
+                      Innovation is defined as "a new method or idea": consider
+                      Artificial Intelligence (so-called "chatbots"), which
+                      captivate popular attention.
                     </p>
-                    <p>
-                      Consider Artificial Intelligence (so-called "chatbots"),
-                      which captivate popular attention.
-                    </p>
+                    <p></p>
                   </>
 
                   <>
                     <p> They help {`${textArray[index]}`}</p>
                   </>
                   <p>
-                    Beguiling. Flashy. But only a hint at the technology's
+                    Beguiling. But only a hint at the technology's
                     transformative potential.
                   </p>
                   <p>
-                    Integrating AI into business processes presents uncharted
-                    opportunities for growth, and opportunities to
+                    Integrating AI into business presents uncharted
+                    opportunities for growth, and
                     <Link
                       className={aboutStyles.aboutLink}
                       href="https://arxiv.org/pdf/2208.04560"
                     >
                       {" "}
-                      increase user satisfaction.
+                      increased user satisfaction.
                     </Link>{" "}
-                    But use-cases that yield maximimum practical effect are not
-                    obvious.
+                    Getting there takes skill and imagination.
                   </p>
                 </div>
               </div>
@@ -360,6 +358,38 @@ export default function About() {
                 {/**********************************   END MOBILE ONLY TEXT BLOCK    ****/}
               </div>
             </div>
+            {/****    NOVODRAFT START    *****/}
+            <div className={homeStyles.cardImageRight}>
+              <div className={featuredStyles.gitBoxRight}>Visit Site</div>
+              <a href="">
+                <img
+                  className={featuredStyles.featureImage}
+                  src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739937570/logoMatrixUltrafav_nxpx29.png"
+                  height={130}
+                  alt="sjDev logo"
+                />
+              </a>
+            </div>
+            <a className={homeStyles.cardTextLeft} href="" target="_blank">
+              <h3>Novdraft.ai </h3>
+              <p>
+                AI-assisted legal drafting. ML-augmented OCR plus CoT-prompt
+                sequencing generates contextually-precise, persuasive rhetorical
+                content.
+              </p>
+            </a>
+            {/****    NOVODRAFT END    *****/}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/*
+
+
+
             <div className={aboutStyles.aboutRow}>
               <div className={aboutStyles.aboutColumnBL}>
                 <div className={aboutStyles.hotBackBox}>
@@ -449,9 +479,6 @@ export default function About() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+
+
+*/
