@@ -54,6 +54,7 @@ export default function Contact() {
                     <a
                       className={contactStyles.contactLinkThree}
                       href="https://www.novodraft.ai"
+                      target="_blank"
                     >
                       novodraft.ai
                     </a>
