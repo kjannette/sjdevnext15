@@ -167,7 +167,7 @@ export default function About() {
                   </p>
                   <div className={aboutStyles.aboutFastSection}>
                     <span className="fast-text">
-                      I've created innovative technology at companies from{" "}
+                      I've created innovative technology for companies from{" "}
                       <i>Fortune</i> Top-10 Ford Motor, to a startup named
                       alongside Apple as a{" "}
                       <span className="about-italics-text">
@@ -186,31 +186,40 @@ export default function About() {
 
                   <>
                     <p className={aboutStyles.solutionsText}>
-                      Innovation is defined as "a new method or idea": consider
-                      Artificial Intelligence (so-called "chatbots"), which
-                      captivate popular attention.
+                      "Innovation" means "a new method or idea": consider
+                      Artificial Intelligence, commonly-called "chatbots", which
+                      have captivated popular attention.
                     </p>
-                    <p></p>
                   </>
 
                   <>
-                    <p> They help {`${textArray[index]}`}</p>
+                    <p> It helps with {`${textArray[index]}`} </p>
                   </>
                   <p>
-                    Beguiling. But only a hint at the technology's
-                    transformative potential.
+                    Beguiling. But only a hint at AI's potential to enrich our
+                    personal and professional lives.
                   </p>
                   <p>
-                    Integrating AI into business presents uncharted
-                    opportunities for growth, and
-                    <Link
-                      className={aboutStyles.aboutLink}
-                      href="https://arxiv.org/pdf/2208.04560"
-                    >
-                      {" "}
-                      increased user satisfaction.
-                    </Link>{" "}
-                    Getting there takes skill and imagination.
+                    I’m proud to introduce Novodraft, an application that
+                    empowers Attorneys to create persuasive briefs and precise
+                    litigation-discovery in a fraction of the regular time.
+                  </p>
+
+                  <p>
+                    {" "}
+                    Novodraft also demonstrates that intrepidly-applied AI can
+                    help do anything faster and smarter.
+                  </p>
+                  <p>
+                    {" "}
+                    <Link className={aboutStyles.aboutLink} href="/contact">
+                      Let's talk{" "}
+                    </Link>
+                    about how AI and ML, along with{" "}
+                    <Link className={aboutStyles.aboutLink} href="/webapps">
+                      technology you already use{" "}
+                    </Link>
+                    can help your business realize its potential, too.
                   </p>
                 </div>
               </div>
@@ -358,27 +367,29 @@ export default function About() {
                 {/**********************************   END MOBILE ONLY TEXT BLOCK    ****/}
               </div>
             </div>
-            {/****    NOVODRAFT START    *****/}
-            <div className={homeStyles.cardImageRight}>
-              <div className={featuredStyles.gitBoxRight}>Visit Site</div>
-              <a href="">
-                <img
-                  className={featuredStyles.featureImage}
-                  src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739937570/logoMatrixUltrafav_nxpx29.png"
-                  height={130}
-                  alt="sjDev logo"
-                />
+            <div className={aboutStyles.appContainer}>
+              {/****    NOVODRAFT START    *****/}
+              <div className={homeStyles.cardImageRight}>
+                <div className={featuredStyles.gitBoxRight}>Visit Site</div>
+                <a href="">
+                  <img
+                    className={featuredStyles.featureImage}
+                    src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739937570/logoMatrixUltrafav_nxpx29.png"
+                    height={130}
+                    alt="sjDev logo"
+                  />
+                </a>
+              </div>
+              <a className={homeStyles.cardTextLeft} href="" target="_blank">
+                <h3>Novdraft.ai </h3>
+                <p>
+                  AI-assisted legal drafting. ML-augmented OCR plus CoT-prompt
+                  sequencing generates contextually-precise, persuasive
+                  rhetorical content.
+                </p>
               </a>
+              {/****    NOVODRAFT END    *****/}
             </div>
-            <a className={homeStyles.cardTextLeft} href="" target="_blank">
-              <h3>Novdraft.ai </h3>
-              <p>
-                AI-assisted legal drafting. ML-augmented OCR plus CoT-prompt
-                sequencing generates contextually-precise, persuasive rhetorical
-                content.
-              </p>
-            </a>
-            {/****    NOVODRAFT END    *****/}
           </div>
         </div>
       </div>
