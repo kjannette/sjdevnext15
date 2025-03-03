@@ -366,7 +366,7 @@ export default function About() {
               {/****    NOVODRAFT START    *****/}
               <div className={aboutStyles.novoLeft}>
                 <div className={featuredStyles.gitBoxRight}>Visit Site</div>
-                <a href="">
+                <a href="https://www.novodraft.ai" target="_blank">
                   <img
                     className={featuredStyles.featureImage}
                     src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739937570/logoMatrixUltrafav_nxpx29.png"
@@ -376,7 +376,11 @@ export default function About() {
                 </a>
               </div>
               <div className={aboutStyles.novoRight}>
-                <a className={aboutStyles.foo} href="" target="_blank">
+                <a
+                  className={aboutStyles.foo}
+                  href="https://www.novodraft.ai"
+                  target="_blank"
+                >
                   <h3 className={aboutStyles.novoTitleText}>Novdraft.ai </h3>
                   <p className={aboutStyles.novoGraph}>
                     {" "}
