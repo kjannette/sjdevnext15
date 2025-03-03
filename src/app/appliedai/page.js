@@ -200,15 +200,11 @@ export default function About() {
                     personal and professional lives.
                   </p>
                   <p>
-                    I’m proud to introduce Novodraft, an application that
-                    empowers Attorneys to create persuasive briefs and precise
-                    litigation-discovery in a fraction of the regular time.
-                  </p>
-
-                  <p>
-                    {" "}
-                    Novodraft also demonstrates that intrepidly-applied AI can
-                    help do anything faster and smarter.
+                    I’m proud to introduce Novodraft, an application empowering
+                    Attorneys to draft persuasive briefs and precise discovery
+                    responses at light speed. It also shows that
+                    intrepidly-applied AI can help do anything faster and
+                    smarter.
                   </p>
                   <p>
                     {" "}
@@ -381,7 +377,7 @@ export default function About() {
                 </a>
               </div>
               <div className={aboutStyles.novoRight}>
-                <a className={homeStyles.cardTextLeft} href="" target="_blank">
+                <a className={aboutStyles.foo} href="" target="_blank">
                   <h3>Novdraft.ai </h3>
                   <p>
                     AI-assisted legal drafting. ML-augmented OCR plus CoT-prompt
