@@ -200,11 +200,10 @@ export default function About() {
                     lives and professional pursuits.
                   </p>
                   <p>
-                    I’m proud to introduce Novodraft, an application empowering
-                    attorneys to draft persuasive briefs and precise discovery
-                    responses at light speed. It also shows that
-                    intrepidly-applied AI can help do anything faster and
-                    smarter.
+                    I’m proud to introduce Novodraft, created to empower
+                    attorneys to draft persuasive and precise content at light
+                    speed. It also shows that intrepidly-applied AI can help do
+                    anything faster and smarter.
                   </p>
                   <p>
                     {" "}
@@ -213,9 +212,9 @@ export default function About() {
                     </Link>
                     about how AI and ML, along with{" "}
                     <Link className={aboutStyles.aboutLink} href="/webapps">
-                      technology you already use{" "}
+                      technology your business already uses{" "}
                     </Link>
-                    can empower your business, too.
+                    can empower you, too.
                   </p>
                 </div>
               </div>
