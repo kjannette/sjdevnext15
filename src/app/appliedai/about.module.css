@@ -312,6 +312,12 @@
   line-height: 1.5rem;
 }
 
+@media only screen and (min-width: 520px) {
+  .mobileTextOne {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 1080px) {
   .aboutRow {
     height: 370px;
@@ -342,14 +348,13 @@
   }
 }
 
-@media only screen and (min-width: 430px) {
+@media only screen and (min-width: 430px) and (max-width: 490px) {
   .burgerBox {
     display: none;
   }
 
   .mobileTextOne {
     width: 400px !important;
-    background-color: red;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -366,6 +371,7 @@
   }
   .mobileTextOne {
     display: flex;
+    flex-direction: column;
   }
 }
 
@@ -433,10 +439,12 @@
     margin-right: 2px;
   }
   .mobileTextOne {
+    flex-direction: column;
     text-align: justify;
   }
   .mobileTextOne {
     border-bottom: none;
+    flex-direction: column;
   }
 
   .mobileParagraph {
