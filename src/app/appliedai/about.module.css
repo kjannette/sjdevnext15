@@ -348,15 +348,15 @@
   }
 
   .mobileTextOne {
+    width: 400px !important;
     background-color: red;
     display: flex;
     flex-direction: column;
+    text-align: center;
   }
 
   .mobileParagraph {
-    display: flex;
-    flex-direction: column;
-    width: 360px !important;
+    width: 400px !important;
   }
 }
 
