@@ -137,3 +137,35 @@
 .ks-mobile_heading_submenu_links {
   width: 100%;
 }
+
+@media only screen and (max-width: 380px) {
+  .mobileHeadingWrapperShow {
+    width: 329px;
+  }
+
+  .mobileHeadingClose {
+    padding-left: 8px;
+  }
+}
+
+@media only screen and (min-width: 381px) and (max-width: 415px) {
+  .mobileHeadingWrapperShow {
+    width: 340px;
+  }
+
+  .mobileHeadingClose {
+    padding-left: 0px;
+    padding-right: 12px;
+  }
+}
+
+@media only screen and (min-width: 430px) and (max-width: 515px) {
+  .mobileHeadingWrapperShow {
+    width: 375px;
+  }
+
+  .mobileHeadingClose {
+    padding-left: 0px;
+    padding-right: 12px;
+  }
+}
