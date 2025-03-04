@@ -187,8 +187,8 @@ export default function About() {
                   <>
                     <p className={aboutStyles.solutionsText}>
                       "Innovation" means "a new method or idea": consider
-                      Artificial Intelligence, commonly-called "chatbots", which
-                      has captivated popular attention.
+                      Artificial Intelligence (commonly called the "chatbot")
+                      which has captivated popular attention.
                     </p>
                   </>
 
@@ -200,9 +200,15 @@ export default function About() {
                     lives and professional pursuits.
                   </p>
                   <p>
-                    I’m proud to introduce Novodraft, created to empower
-                    attorneys to draft persuasive and precise content at light
-                    speed. It also shows that intrepidly-applied AI can help do
+                    Introducing{" "}
+                    <Link className={aboutStyles.aboutLink} href="/contact">
+                      Novodraft
+                    </Link>
+                    , an AI application empowering attorneys to draft persuasive
+                    content at light speed.
+                  </p>
+                  <p>
+                    It also shows that intrepidly-applied AI can help do
                     anything faster and smarter.
                   </p>
                   <p>
