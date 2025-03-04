@@ -348,7 +348,9 @@
   }
 
   .mobileTextOne {
-    display: none;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
   }
 
   .mobileParagraph {
