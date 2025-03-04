@@ -311,6 +311,7 @@
 .novoGraph {
   line-height: 1.5rem;
 }
+
 @media only screen and (max-width: 1080px) {
   .aboutRow {
     height: 370px;
@@ -345,8 +346,24 @@
   .burgerBox {
     display: none;
   }
+
   .mobileTextOne {
     display: none;
+  }
+
+  .mobileParagraph {
+    display: flex;
+    flex-direction: column;
+    width: 360px !important;
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 430) {
+  .burgerBox {
+    display: none;
+  }
+  .mobileTextOne {
+    display: flex;
   }
 }
 
