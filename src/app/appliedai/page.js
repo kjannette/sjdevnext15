@@ -183,22 +183,37 @@ export default function About() {
                       .{" "}
                     </span>
                   </div>
-
                   <>
                     <p className={aboutStyles.solutionsText}>
-                      "Innovation" means "a new method or idea": consider
-                      Artificial Intelligence (commonly called the "chatbot")
-                      which has captivated popular attention.
+                      Innovation means "a new method or idea": consider
+                      Artificial Intelligence (aka the "chatbot") which has
+                      captivated popular attention.
                     </p>
                   </>
-
                   <>
                     <p> It helps with {`${textArray[index]}`} </p>
                   </>
                   <p>
                     Beguiling. But only a hint at AI's potential to enrich our
-                    lives and professional pursuits.
+                    lives and professional pursuits. From{" "}
+                    <Link
+                      className={aboutStyles.aboutLink}
+                      href="https://arxiv.org/pdf/2304.03516.pdf"
+                    >
+                      {" "}
+                      increasing conversions
+                    </Link>
+                    , to{" "}
+                    <Link
+                      className={aboutStyles.aboutLink}
+                      href="https://www.forbes.com/sites/tomdavenport/2019/07/10/from-analytics-first-to-ai-first-at-capital-one/?sh=423a14372f1b"
+                    >
+                      revealing new revenue streams{" "}
+                    </Link>
+                    by recognizing patterns in complex data, AI empowers amazing
+                    outcomes...
                   </p>
+
                   <p>
                     Introducing{" "}
                     <Link className={aboutStyles.aboutLink} href="/contact">
@@ -208,7 +223,7 @@ export default function About() {
                     content at light speed.
                   </p>
                   <p>
-                    It also shows that intrepidly-applied AI can help do
+                    Novodraft also shows that intrepidly-applied AI can help do
                     anything faster and smarter.
                   </p>
                   <p>
