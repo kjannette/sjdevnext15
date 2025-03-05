@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+secrets*
+secrets.js
+./secrets
+./secrets*
+./secrets.js
