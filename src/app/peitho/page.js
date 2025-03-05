@@ -5,6 +5,8 @@ import founderStyles from "./founder.module.css";
 import FoundSub from "../../components/foundSub";
 import { Roboto } from "next/font/google";
 import { useRouter } from "next/navigation";
+import { collection, setDoc, doc } from "firebase/firestore";
+import { v4 as uuidv4 } from "uuid";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -26,6 +28,17 @@ const Founder = () => {
   const handleClick = (route) => {
     router.push(route);
   };
+
+  async function saveQueryData(data) {
+    const queryId = uuidv4();
+    try {
+      const collecRef = collection(db, "signupLeads");
+      await setDoc(doc(collecRef, `${queryId}`), data);
+    } catch (error) {
+      console.log(`Error saving new user to db: ${error}`);
+    }
+  }
+
   useEffect(() => {
     if (!text || text.length < 2) {
       return;
