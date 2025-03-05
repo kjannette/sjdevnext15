@@ -27,9 +27,22 @@ const Founder = () => {
   });
 
   async function savePromptData(data) {
-    console.log("prompt in savePromptData for firebase", data);
+    const currentdate = new Date();
+    const datetime =
+      "Posted: " +
+      currentdate.getDate() +
+      "/" +
+      (currentdate.getMonth() + 1) +
+      "/" +
+      currentdate.getFullYear() +
+      " @ " +
+      currentdate.getHours() +
+      ":" +
+      currentdate.getMinutes() +
+      ":" +
+      currentdate.getSeconds();
     const promptString = JSON.stringify(data);
-    const promptObj = { promptValue: promptString };
+    const promptObj = { promptValue: promptString, date: datetime };
     const queryId = uuidv4();
     try {
       const collecRef = collection(db, "peitho");

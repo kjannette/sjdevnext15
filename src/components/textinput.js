@@ -15,7 +15,6 @@ const TextInput = (props) => {
     type,
     disabled,
   } = props;
-  console.log("value in text input", value);
 
   return (
     <div className={styles.inputContainer}>
