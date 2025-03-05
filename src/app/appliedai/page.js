@@ -405,16 +405,15 @@ export default function About() {
                   <h3 className={aboutStyles.novoTitleText}>Novdraft.ai </h3>
                   <p className={aboutStyles.novoGraph}>
                     {" "}
-                    AI-assisted legal drafting for attorney use in litigation
-                    and discovery.
+                    AI-enhanced legal drafting for attorneys.
+                  </p>
+                  <p className={aboutStyles.novoGraph}>
+                    Discovery and motions, ready to serve, done in minutes.
                   </p>
                   <p className={aboutStyles.novoGraph}>
                     Machine-learning-augmented optical character recognition
                     plus chain of thought LLM prompt sequencing generates
                     contextually-precise, persuasive content.
-                  </p>
-                  <p className={aboutStyles.novoGraph}>
-                    Discovery and motions, ready to serve, done in minutes.
                   </p>
                 </a>
               </div>
