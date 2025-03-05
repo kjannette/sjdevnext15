@@ -1,17 +1,28 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
+import {
+  apiKey,
+  authDomain,
+  projectId,
+  storageBucket,
+  messagingSenderId,
+  appId,
+} from "./secrets";
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCjcMmQmTtoqV90jltkSFoqcP0a0Wkdw2c",
-  authDomain: "peitho-e69dc.firebaseapp.com",
-  projectId: "peitho-e69dc",
-  storageBucket: "peitho-e69dc.firebasestorage.app",
-  messagingSenderId: "237955047524",
-  appId: "1:237955047524:web:7252afd767a32ee70f3f71",
+  apiKey: apiKey,
+  authDomain: authDomain,
+  projectId: projectId,
+  storageBucket: storageBucket,
+  messagingSenderId: messagingSenderId,
+  appId: appId,
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+export { db };
