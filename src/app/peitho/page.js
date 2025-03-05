@@ -25,16 +25,15 @@ const Founder = () => {
   const handleOnChange = useCallback((e) => {
     setInputValue(e.target.value);
   });
-  const router = useRouter();
-  const handleClick = (route) => {
-    router.push(route);
-  };
 
-  async function saveQueryData(data) {
+  async function savePromptData(data) {
+    console.log("prompt in savePromptData for firebase", data);
+    const promptString = JSON.stringify(data);
+    const promptObj = { promptValue: promptString };
     const queryId = uuidv4();
     try {
-      const collecRef = collection(db, "signupLeads");
-      await setDoc(doc(collecRef, `${queryId}`), data);
+      const collecRef = collection(db, "peitho");
+      await setDoc(doc(collecRef, `${queryId}`), promptObj);
     } catch (error) {
       console.log(`Error saving new user to db: ${error}`);
     }
@@ -69,13 +68,15 @@ const Founder = () => {
       setInputValue("");
       setText(" ");
       setTypewriterText(" ");
+      savePromptData(promptValue);
       sendPrompt(promptValue);
     }
   }
 
   async function sendPrompt(promptValue) {
     const promptText = JSON.stringify({ prompt: promptValue });
-    console.log("send prompt fired, request:", promptText);
+
+    //console.log("send prompt fired, request:", promptText);
     const response = await fetch(`https://www.sjdev.co/v1/lm-cr-query/`, {
       method: "POST",
       headers: {
