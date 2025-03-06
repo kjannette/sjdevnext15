@@ -16,9 +16,9 @@ const roboto = Roboto({
 });
 
 const Founder = () => {
-  const [typewriterText, setTypewriterText] = useState("-");
+  const [typewriterText, setTypewriterText] = useState(" ");
   const [text, setText] = useState(
-    "G reetings.  I'm Peitho, here to answer questions about sjDev services and our founder, Steven. How can I help?"
+    "Greetings.  I'm Peitho, here to answer questions about sjDev services and our founder, Steven. How can I help?"
   );
   const [isBusy, setIsBusy] = useState(false);
   const [inputValue, setInputValue] = useState("");
@@ -56,7 +56,7 @@ const Founder = () => {
     if (!text || text.length < 2) {
       return;
     }
-    let index = 0;
+    let index = -1;
     const timer = setInterval(() => {
       setTypewriterText(
         (prevTypewriterText) => prevTypewriterText + text?.charAt(index)
