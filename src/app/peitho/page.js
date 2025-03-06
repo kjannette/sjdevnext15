@@ -16,16 +16,16 @@ const roboto = Roboto({
 });
 
 const Founder = () => {
-  const [typewriterText, setTypewriterText] = useState("-");
+  const [typewriterText, setTypewriterText] = useState(" ");
   const [text, setText] = useState(
-    "G reetings.  I'm Peitho, here to answer questions about sjDev services and our founder, Steven. How can I help?"
+    "Greetings.  I'm Peitho, here to answer questions about sjDev, the servcies we offer and our founder, Steven. How can I help?"
   );
   const [isBusy, setIsBusy] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const handleOnChange = useCallback((e) => {
     setInputValue(e.target.value);
   });
-
+  const [visted, setVisited] = useState(false);
   async function savePromptData(data) {
     const currentdate = new Date();
     const datetime =
@@ -56,7 +56,17 @@ const Founder = () => {
     if (!text || text.length < 2) {
       return;
     }
-    let index = 0;
+    const visited = localStorage.getItem("visited");
+    if (visited) {
+      setVisited({ visited });
+    } else {
+      localStorage.setItem("visited", true);
+    }
+    console.log("visited:", visited);
+    if (visited) {
+      setText("How can I help?");
+    }
+    let index = -1;
     const timer = setInterval(() => {
       setTypewriterText(
         (prevTypewriterText) => prevTypewriterText + text?.charAt(index)
