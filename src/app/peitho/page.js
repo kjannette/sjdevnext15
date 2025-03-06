@@ -17,9 +17,7 @@ const roboto = Roboto({
 
 const Founder = () => {
   const [typewriterText, setTypewriterText] = useState(" ");
-  const [text, setText] = useState(
-    "Greetings.  I'm Peitho, here to answer questions about the services offered by sjDev and founder, Steven. How can I help?"
-  );
+  const [text, setText] = useState("");
   const [isBusy, setIsBusy] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const handleOnChange = useCallback((e) => {
@@ -67,13 +65,14 @@ const Founder = () => {
   useEffect(() => {
     const visited = localStorage.getItem("visited");
     if (visited) {
+      setText(" ");
+      setText("How can I help?");
       return;
     } else {
       localStorage.setItem("visited", true);
-    }
-    console.log("visited:", visited);
-    if (visited) {
-      setText("How can I help?");
+      setText(
+        "Greetings.  I'm Peitho, here to answer questions about the services offered by sjDev and founder, Steven. How can I help?"
+      );
     }
   }, []);
 
