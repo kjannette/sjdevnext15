@@ -17,14 +17,18 @@ const roboto = Roboto({
 
 const Founder = () => {
   const [typewriterText, setTypewriterText] = useState(" ");
+  /*
   const [text, setText] = useState(
     "G reetings.  I'm Peitho, here to answer questions about sjDev services and our founder, Steven. How can I help?"
   );
+  */
   const [isBusy, setIsBusy] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const handleOnChange = useCallback((e) => {
     setInputValue(e.target.value);
   });
+
+  const [visited, setVisited] = useState(null);
 
   async function savePromptData(data) {
     const currentdate = new Date();
@@ -52,7 +56,7 @@ const Founder = () => {
     }
   }
 
-  function type() {
+  function type(text) {
     let index = -1;
     const timer = setInterval(() => {
       setTypewriterText(
@@ -71,8 +75,13 @@ const Founder = () => {
     if (!text || text.length < 2) {
       return;
     }
+    if (visited) {
+      return;
+    }
     type();
   }, []);
+
+  useEffect(() => {}, []);
 
   function onSubmit(e) {
     setIsBusy(true);
@@ -83,7 +92,7 @@ const Founder = () => {
     } else {
       const promptValue = inputValue;
       setInputValue("");
-      setText(" ");
+      //setText(" ");
       setTypewriterText(" ");
       savePromptData(promptValue);
       sendPrompt(promptValue);
@@ -92,7 +101,6 @@ const Founder = () => {
 
   async function sendPrompt(promptValue) {
     const promptText = JSON.stringify({ prompt: promptValue });
-
     //console.log("send prompt fired, request:", promptText);
     const response = await fetch(`https://www.sjdev.co/v1/lm-cr-query/`, {
       method: "POST",
@@ -102,9 +110,9 @@ const Founder = () => {
       body: promptText,
     });
     const data = await response.json();
-
-    setText(data);
+    //setText(data);
     setIsBusy(false);
+    type(data);
   }
 
   return (
