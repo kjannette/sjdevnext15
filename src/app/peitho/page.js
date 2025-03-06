@@ -52,10 +52,7 @@ const Founder = () => {
     }
   }
 
-  useEffect(() => {
-    if (!text || text.length < 2) {
-      return;
-    }
+  function type() {
     let index = -1;
     const timer = setInterval(() => {
       setTypewriterText(
@@ -68,7 +65,14 @@ const Founder = () => {
     }, 30); // adjust timing here
 
     return () => clearInterval(timer); // cleanup on unmount
-  }, [text]);
+  }
+
+  useEffect(() => {
+    if (!text || text.length < 2) {
+      return;
+    }
+    type();
+  }, []);
 
   function onSubmit(e) {
     setIsBusy(true);
