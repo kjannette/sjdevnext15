@@ -18,14 +18,14 @@ const roboto = Roboto({
 const Founder = () => {
   const [typewriterText, setTypewriterText] = useState(" ");
   const [text, setText] = useState(
-    "Greetings.  I'm Peitho, here to answer questions about sjDev, the servcies we offer and our founder, Steven. How can I help?"
+    "Greetings.  I'm Peitho, here to answer questions about the services offered by sjDev and founder, Steven. How can I help?"
   );
   const [isBusy, setIsBusy] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const handleOnChange = useCallback((e) => {
     setInputValue(e.target.value);
   });
-  const [visted, setVisited] = useState(false);
+  const [visited, setVisited] = useState(false);
   async function savePromptData(data) {
     const currentdate = new Date();
     const datetime =
@@ -52,19 +52,37 @@ const Founder = () => {
     }
   }
 
+  function type(newText) {
+    const timer = setInterval(() => {
+      setTypewriterText(
+        (prevTypewriterText) => prevTypewriterText + newText?.charAt(index)
+      );
+      index++;
+      if (index === text.length) {
+        clearInterval(timer);
+      }
+    }, 30); // adjust timing here
+  }
+
   useEffect(() => {
-    if (!text || text.length < 2) {
-      return;
-    }
     const visited = localStorage.getItem("visited");
     if (visited) {
-      setVisited({ visited });
+      return;
     } else {
       localStorage.setItem("visited", true);
     }
     console.log("visited:", visited);
     if (visited) {
       setText("How can I help?");
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!text || text.length < 2) {
+      return;
+    }
+    if (visited) {
+      return;
     }
     let index = -1;
     const timer = setInterval(() => {
@@ -109,8 +127,10 @@ const Founder = () => {
     });
     const data = await response.json();
 
-    setText(data);
+    //setText(data);
+
     setIsBusy(false);
+    type(data);
   }
 
   return (
@@ -129,3 +149,20 @@ const Founder = () => {
 };
 
 export default Founder;
+
+/*
+
+    const visited = localStorage.getItem("visited");
+    if (visited) {
+      setVisited({ visited });
+    } else {
+      localStorage.setItem("visited", true);
+    }
+    console.log("visited:", visited);
+    if (visited) {
+      setText("How can I help?");
+    }
+
+
+    https://stackoverflow.com/questions/57693120/show-specific-text-when-first-page-loads-up
+      */
