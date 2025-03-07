@@ -104,15 +104,21 @@
   height: 20px;
   background-color: yellow;
   letter-spacing: -1rem;
+  a {
+    letter-spacing: 0.42rem;
+  }
 }
 
 .contactDetailThree {
   display: flex;
   flex-direction: row-reverse;
   height: 20px;
-  background-color: pink;
+  background-color: #ffd6dd;
   letter-spacing: 0.37rem;
   width: 84%;
+  a {
+    color: #000;
+  }
 }
 
 .contactDetailFour {
