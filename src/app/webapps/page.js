@@ -19,9 +19,9 @@ export default function Featured() {
             target="_blank"
             className={homeStyles.cardTextRight}
           >
-            <h3>Sales Flow</h3>
+            <h3>Demo: Sales Flow</h3>
             <p>
-              React UI for KPI-workflow application, created for automotive
+              React UI for KPI/workflow application, created for automotive
               retail sales enterprise. Demo shows vehicle history queue.
             </p>
           </a>
@@ -57,7 +57,7 @@ export default function Featured() {
             target="_blank"
             className={homeStyles.cardTextLeft}
           >
-            <h3>Book Browser</h3>
+            <h3>Demo: Book Browser</h3>
             <p>
               React UI for rare, collectible/new book retail enterprise. Project
               included sales UI, inventory management solution (MySql API).
