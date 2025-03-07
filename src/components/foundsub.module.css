@@ -86,9 +86,37 @@
 
 .right {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   width: 280px;
+}
+
+.rightUpper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 30%;
+  background-color: red;
+}
+
+.rightLower {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 70%;
+  width: 100%;
+  background-color: blue;
+}
+
+.rightLowerTextBox {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  background-color: pink;
 }
 
 .loaderBox {
@@ -99,6 +127,7 @@
   margin: auto;
   min-height: 400px;
 }
+
 .geoImg {
   margin-top: 22px;
 }
