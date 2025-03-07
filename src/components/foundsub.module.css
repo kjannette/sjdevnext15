@@ -44,7 +44,7 @@
   font-weight: 300;
   width: 100px;
   height: 640px;
-  padding: 40px 40px 10px 40px;
+  padding: 20px 20px 10px 20px;
   margin-left: auto;
   margin-right: auto;
   align-items: center;
@@ -86,9 +86,50 @@
 
 .right {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   width: 280px;
+}
+
+.rightUpper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 30%;
+}
+
+.rightLower {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  height: 70%;
+  width: 100%;
+  font-family: var(--font-roboto);
+}
+
+.rightLowerTextBox {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-roboto);
+  color: #acacac;
+  padding-top: 10px;
+  font-size: 1rem;
+  font-weight: 400;
+  height: 300px;
+  width: 250px;
+  text-align: justify;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.rightLowerGraph {
+  margin-top: 12px;
+  text-justify: inter-character;
+  padding: 0px 10px;
+  letter-spacing: 1px;
 }
 
 .loaderBox {
@@ -99,6 +140,7 @@
   margin: auto;
   min-height: 400px;
 }
+
 .geoImg {
   margin-top: 22px;
 }

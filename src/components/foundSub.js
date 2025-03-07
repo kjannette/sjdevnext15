@@ -23,52 +23,71 @@ const FoundSub = (props) => {
     props;
 
   return (
-    <div className={foundStyles.subContainer}>
-      <div className={foundStyles.formContainer}>
-        <div className={foundStyles.upper}>
-          <div className={foundStyles.left}>
-            {isBusy ? (
-              <div className={foundStyles.loaderBox}>
-                <DotLoader
-                  color="aqua"
-                  loading={isBusy}
-                  cssOverride={override}
-                  size={40}
-                  aria-label="Loading Spinner"
+    <main className={roboto.className}>
+      <div className={foundStyles.subContainer}>
+        <div className={foundStyles.formContainer}>
+          <div className={foundStyles.upper}>
+            <div className={foundStyles.left}>
+              {isBusy ? (
+                <div className={foundStyles.loaderBox}>
+                  <DotLoader
+                    color="aqua"
+                    loading={isBusy}
+                    cssOverride={override}
+                    size={40}
+                    aria-label="Loading Spinner"
+                  />
+                </div>
+              ) : (
+                <div className={foundStyles.baz}>
+                  {typewriterText?.split("\n").map((t, key) => {
+                    return (
+                      <p key={key} className={foundStyles.botGraph}>
+                        {t}
+                      </p>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+            <div className={foundStyles.right}>
+              <div className={foundStyles.rightUpper}>
+                <img
+                  className={foundStyles.geoImg}
+                  src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1740705223/geo_fmr4v0.gif"
+                  height={120}
+                  alt="artistic picture of a man in a suit"
                 />
               </div>
-            ) : (
-              <div className={foundStyles.baz}>
-                {typewriterText?.split("\n").map((t, key) => {
-                  return (
-                    <p key={key} className={foundStyles.botGraph}>
-                      {t}
-                    </p>
-                  );
-                })}
+              <div className={foundStyles.rightLower}>
+                <div className={foundStyles.rightLowerTextBox}>
+                  <p className={foundStyles.rightLowerGraph}>
+                    Peitho is a RAG-enhanced, agentic LLM cluster. Tool access
+                    includes web search, circumscribed for domain-specific use
+                    and supplemented with a vector database.
+                  </p>
+                  <p className={foundStyles.rightLowerGraph}>
+                    Chain of Thought and proprietary prompt sequencing optimize
+                    introspective, critical-logical reasoning.
+                  </p>
+                  <p className={foundStyles.rightLowerGraph}>
+                    Ask Peitho how sjDev can help your organization grow.
+                  </p>
+                </div>
               </div>
-            )}
+            </div>
           </div>
-          <div className={foundStyles.right}>
-            {" "}
-            <img
-              className={foundStyles.geoImg}
-              src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1740705223/geo_fmr4v0.gif"
-              height={120}
-              alt="artistic picture of a man in a suit"
+          <form className={foundStyles.inputForm} onSubmit={onSubmit}>
+            <TextInput
+              name="prompt"
+              value={inputValue}
+              onChange={onChange}
+              id="target-element"
             />
-          </div>
+          </form>
         </div>
-        <form className={foundStyles.inputForm} onSubmit={onSubmit}>
-          <TextInput
-            name="prompt"
-            value={inputValue}
-            onChange={onChange}
-            id="target-element"
-          />
-        </form>
       </div>
-    </div>
+    </main>
   );
 };
 
