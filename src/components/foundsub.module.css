@@ -98,7 +98,6 @@
   align-items: center;
   margin: auto;
   height: 30%;
-  background-color: red;
 }
 
 .rightLower {
@@ -109,15 +108,16 @@
   height: 70%;
   width: 100%;
   font-family: var(--font-roboto);
-  background-color: blue;
 }
 
 .rightLowerTextBox {
   display: flex;
   flex-direction: column;
   font-family: var(--font-roboto);
+  color: #acacac;
   padding-top: 10px;
   font-size: 1rem;
+  font-weight: 400;
   height: 300px;
   width: 250px;
   text-align: justify;

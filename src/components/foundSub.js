@@ -67,8 +67,11 @@ const FoundSub = (props) => {
                     and supplemented with a vector database.
                   </p>
                   <p className={foundStyles.rightLowerGraph}>
-                    Chain of Thought and proprietary prompt sequencing methods
-                    optimize introspective, critical-logical reasoning.
+                    Chain of Thought and proprietary prompt sequencing optimize
+                    introspective, critical-logical reasoning.
+                  </p>
+                  <p className={foundStyles.rightLowerGraph}>
+                    Ask Peitho how sjDev can help your organization grow.
                   </p>
                 </div>
               </div>
