@@ -23,7 +23,7 @@ export default function Contact() {
                   <div className={contactStyles.imgBoxThree}>
                     <div className={contactStyles.threeInner}>
                       <img
-                        className={contactStyles.pixImg}
+                        className={contactStyles.fadeInUpAnimation}
                         src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739937493/pixelToo_s11w8u.png"
                         height={300}
                         alt="artistic picture of a man in a suit"
