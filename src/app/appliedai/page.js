@@ -196,7 +196,7 @@ export default function About() {
                   </>
                   <p>
                     Beguiling. But only a hint at AI's potential to enrich our
-                    lives and professional pursuits. From{" "}
+                    professional pursuits. From{" "}
                     <Link
                       className={aboutStyles.aboutLink}
                       href="https://arxiv.org/pdf/2304.03516.pdf"
