@@ -37,6 +37,38 @@
   text-decoration: none;
 }
 
+@keyframes fadeInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.fadeInFromRightAnimation {
+  animation: 1.5s fadeInFromRight;
+  border-radius: 6px;
+}
+
+@keyframes fadeInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-180px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeInFromLeftAnimation {
+  animation: 1.5s fadeInFromLeft;
+  border-radius: 6px;
+}
+
 @media only screen and (max-width: 430px) {
   .cardImageRight {
     width: 300px;

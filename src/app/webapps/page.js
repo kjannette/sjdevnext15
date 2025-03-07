@@ -28,7 +28,7 @@ export default function Featured() {
           <div className={homeStyles.cardImageLeft}>
             <a href="https://github.com/kjannette/salesflow" target="_blank">
               <img
-                className={featuredStyles.featureImage}
+                className={featuredStyles.fadeInFromRightAnimation}
                 src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739937601/salesFlow_mxqasx.jpg"
                 height={130}
                 alt="sjDev logo"
@@ -45,7 +45,7 @@ export default function Featured() {
               target="_blank"
             >
               <img
-                className={featuredStyles.featureImage}
+                className={featuredStyles.fadeInFromLeftAnimation}
                 src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739937650/bookBrowser_tontzk.jpg"
                 height={130}
                 alt="sjDev logo"
@@ -76,7 +76,7 @@ export default function Featured() {
           <div className={homeStyles.cardImageLeft}>
             <a href="" target="_blank">
               <img
-                className={featuredStyles.featureImage}
+                className={featuredStyles.fadeInFromRightAnimation}
                 src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739937681/budget_cvvtbj.jpg"
                 height={130}
                 alt="sjDev"
