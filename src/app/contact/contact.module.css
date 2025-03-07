@@ -50,7 +50,7 @@
 
 .contactLinkTwo {
   font-size: 0.95rem;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.42rem;
   color: #acacac;
   text-decoration: none;
   padding-right: 25px;
@@ -59,6 +59,7 @@
 .contactLinkThree {
   letter-spacing: 1rem;
   text-decoration: none;
+  color: #000;
 }
 
 .contactLinkFour {
@@ -104,9 +105,6 @@
   height: 20px;
   background-color: yellow;
   letter-spacing: -1rem;
-  a {
-    letter-spacing: 0.42rem;
-  }
 }
 
 .contactDetailThree {
@@ -116,9 +114,6 @@
   background-color: #ffd6dd;
   letter-spacing: 0.37rem;
   width: 84%;
-  a {
-    color: #000;
-  }
 }
 
 .contactDetailFour {
