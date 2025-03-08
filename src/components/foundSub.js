@@ -62,13 +62,17 @@ const FoundSub = (props) => {
               <div className={foundStyles.rightLower}>
                 <div className={foundStyles.rightLowerTextBox}>
                   <p className={foundStyles.rightLowerGraph}>
-                    Peitho is a RAG-enhanced, agentic LLM cluster. Tool access
-                    includes web search, circumscribed for domain-specific use
-                    and supplemented with a vector database.
+                    Peitho is a RAG-enhanced, agentic LLM cluster.
                   </p>
+
                   <p className={foundStyles.rightLowerGraph}>
-                    Chain of Thought and proprietary prompt sequencing optimize
-                    introspective, critical-logical reasoning.
+                    Tool access includes web search, limited to domain-specific
+                    queries, plus a local vector database.
+                  </p>
+
+                  <p className={foundStyles.rightLowerGraph}>
+                    Chain of Thought plus proprietary prompt sequencing and
+                    context provisioning optimize critical reasoning.
                   </p>
                   <p className={foundStyles.rightLowerGraph}>
                     Ask Peitho how sjDev can help your organization grow.

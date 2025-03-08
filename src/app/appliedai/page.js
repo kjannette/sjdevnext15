@@ -214,7 +214,6 @@ export default function About() {
                     by recognizing patterns in complex data, AI empowers amazing
                     outcomes...
                   </p>
-
                   <p>
                     Introducing{" "}
                     <Link className={aboutStyles.aboutLink} href="/contact">
