@@ -71,8 +71,8 @@ const FoundSub = (props) => {
                   </p>
 
                   <p className={foundStyles.rightLowerGraph}>
-                    Chain of Thought plus proprietary prompt sequencing and
-                    context provisioning optimize critical reasoning.
+                    Chain of Thought, proprietary prompt sequencing and context
+                    provisioning optimize critical reasoning.
                   </p>
                   <p className={foundStyles.rightLowerGraph}>
                     Ask Peitho how sjDev can help your organization grow.
