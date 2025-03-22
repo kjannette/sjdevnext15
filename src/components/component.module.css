@@ -162,8 +162,9 @@
   background-color: #2196f3;
   color: #fff;
   border-radius: 12px;
+  border: 1px solid white;
   &:hover {
-    border: 1px solid #f27300;
+    border: 2px solid #f27300;
   }
 }
 
