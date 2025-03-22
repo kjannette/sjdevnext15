@@ -29,7 +29,7 @@ export default function Header(props) {
                 className={headerStyles.nextLink}
               >
                 <img
-                  src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739937348/logo_u7dxox.png"
+                  src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1742677128/logoMedLight_hldv0e.png"
                   height={110}
                   alt="s.j. dev logo"
                 />
@@ -60,7 +60,7 @@ export default function Header(props) {
                 className={headerStyles.nextLink}
                 onClick={() => handleClick("/peitho")}
               >
-                Peitho[::]Support
+                Agentic Support
               </div>
             </div>
             <div>
@@ -80,7 +80,7 @@ export default function Header(props) {
                 onClick={() => handleClick("/login")}
                 className={headerStyles.headerLoginText}
               >
-                → Client Login
+                Login | グイン | 登入
               </div>
             </div>
           </div>

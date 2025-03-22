@@ -209,10 +209,9 @@ export default function About() {
                       className={aboutStyles.aboutLink}
                       href="https://www.forbes.com/sites/tomdavenport/2019/07/10/from-analytics-first-to-ai-first-at-capital-one/?sh=423a14372f1b"
                     >
-                      revealing new revenue streams{" "}
+                      revealing revenue streams{" "}
                     </Link>
-                    by recognizing patterns in complex data, AI empowers amazing
-                    outcomes...
+                    hidden in complex data, AI empowers amazing outcomes:
                   </p>
                   <p>
                     Introducing{" "}
@@ -220,11 +219,9 @@ export default function About() {
                       Novodraft
                     </Link>
                     , an AI application empowering attorneys to draft persuasive
-                    content at light speed.
-                  </p>
-                  <p>
-                    Novodraft also shows that intrepidly-applied AI can help do
-                    anything faster and smarter.
+                    content at light speed. It also shows that
+                    intrepidly-applied AI can help do anything faster and
+                    smarter.
                   </p>
                   <p>
                     {" "}
