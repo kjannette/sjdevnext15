@@ -12,7 +12,8 @@
   flex-direction: column;
   margin: auto;
   height: 400px;
-  background-color: #f9f9f9;
+  background-color: #e8e8e8;
+  border-radius: 15px;
 }
 
 .loginHeader {
