@@ -24,15 +24,15 @@
 .contactLink {
   font-size: 1rem;
   letter-spacing: -0.1rem;
-  color: #e59dac;
+  color: black;
   text-decoration: none;
   padding-right: 5px;
 }
 
 .contactLinkTwo {
-  font-size: 0.95rem;
+  font-size: 1rem;
   letter-spacing: 0.1rem;
-  color: #acacac;
+  color: black;
   text-decoration: none;
   padding-right: 25px;
 }
@@ -49,7 +49,7 @@
 }
 
 .contactLinkFive {
-  font-size: 0.95rem;
+  font-size: 1rem;
   letter-spacing: 0.45rem;
   color: #acacac;
   text-decoration: none;
@@ -58,7 +58,7 @@
 }
 
 .contactLinkSix {
-  font-size: 0.95rem;
+  font-size: 1rem;
   letter-spacing: 0.1rem;
   color: #fff;
   text-decoration: none;
@@ -88,8 +88,9 @@
 }
 
 .contactDetailFour {
-  width: 40%;
-  background-color: #9fe8ec;
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: aqua;
   color: #000;
 }
 
@@ -169,6 +170,14 @@
     letter-spacing: 1.2rem;
     background-color: pink;
   }
+
+  .navLinkFour {
+    color: black;
+    letter-spacing: 0.62rem;
+    text-decoration: none;
+    padding-right: 18px;
+  }
+
   .contactLinkTwo {
     letter-spacing: 0.15rem;
   }
