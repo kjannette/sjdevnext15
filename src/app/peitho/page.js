@@ -4,7 +4,6 @@ import styles from "./founder.module.css";
 import founderStyles from "./founder.module.css";
 import FoundSub from "../../components/foundSub";
 import { Roboto } from "next/font/google";
-import { useRouter } from "next/navigation";
 import { collection, setDoc, doc } from "firebase/firestore";
 import { db, auth } from "../../firebase";
 import { v4 as uuidv4 } from "uuid";

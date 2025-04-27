@@ -207,3 +207,21 @@
   height: 100px;
   min-width: 900px;
 }
+
+@media only screen and (max-width: 430px) {
+  .subContainer {
+    width: 380px;
+  }
+  .upper {
+    width: 380px;
+  }
+  .left {
+    width: 380px;
+  }
+  .right {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 395px) {
+}

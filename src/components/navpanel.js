@@ -64,6 +64,14 @@ export default function Navpanel(props) {
                 Contact
               </div>
             </div>
+            <div className={contactStyles.contactDetailFour}>
+              <div
+                className={contactStyles.navLinkFour}
+                onClick={() => handleClick("/peitho")}
+              >
+                Agentic Tech
+              </div>
+            </div>
           </div>
         </div>
       </div>
