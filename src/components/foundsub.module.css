@@ -212,6 +212,9 @@
   .subContainer {
     width: 380px;
   }
+  .formContainer {
+    width: 380px;
+  }
   .upper {
     width: 380px;
   }
@@ -220,6 +223,11 @@
   }
   .right {
     display: none;
+  }
+  .inputForm {
+    width: 380px;
+    margin-top: 12px;
+    padding-top: 10px;
   }
 }
 
