@@ -15,7 +15,7 @@ export default function Homeart() {
   const [isVisible, setIsVisible] = useState(true);
   const [spinReverse, setSpinReverse] = useState(false);
   const [fadeDuration, setFadeDuration] = useState(1);
-  const [spinDuration, setSpinDuration] = useState(45);
+  const [spinDuration, setSpinDuration] = useState(90);
   const [isShrinking, setIsShrinking] = useState(false);
   const [isFastSpin, setIsFastSpin] = useState(false);
   const [showFlashImage, setShowFlashImage] = useState(false);
@@ -57,18 +57,18 @@ export default function Homeart() {
           setSpinReverse(prev => !prev);
           setIsShrinking(false);
           
-          // Dramatic speed changes: very fast (8-15s) or very slow (45-70s)
+          // Dramatic speed changes: very fast (16-30s) or very slow (90-140s)
           const speedChoice = Math.random();
           let newSpinDuration;
           let isFast = false;
           
           if (speedChoice < 0.5) {
-            // Fast spin: 8-15 seconds
-            newSpinDuration = Math.random() * 7 + 8;
+            // Fast spin: 16-30 seconds
+            newSpinDuration = Math.random() * 14 + 16;
             isFast = true;
           } else {
-            // Slow spin: 45-70 seconds
-            newSpinDuration = Math.random() * 25 + 45;
+            // Slow spin: 90-140 seconds
+            newSpinDuration = Math.random() * 50 + 90;
             isFast = false;
           }
           
@@ -109,12 +109,12 @@ export default function Homeart() {
                 let isAntlers = false;
                 
                 if (nextPosition === 0) {
-                  displayDuration = 500; // poke.png: 0.5s
+                  displayDuration = 250; // poke.png: 0.25s
                 } else if (nextPosition === 3 || nextPosition === 4) {
-                  displayDuration = 600; // antlers: 0.6s (to allow fade)
+                  displayDuration = 300; // antlers: 0.3s (to allow fade)
                   isAntlers = true;
                 } else {
-                  displayDuration = 400; // girls_laughing: 0.4s
+                  displayDuration = 200; // girls_laughing: 0.2s
                 }
                 
                 // If antlers, trigger screen flash before hiding
@@ -181,7 +181,7 @@ export default function Homeart() {
                 currentFlashImage === "/girls_laughing.png" ? styles.girlsLaughingContainer : ''
               }`}
               style={{
-                animationDuration: currentFlashImage === "/antlers.png" ? "0.6s" : (currentFlashImage === "/poke.png" ? "0.5s" : "0.4s")
+                animationDuration: currentFlashImage === "/antlers.png" ? "0.3s" : (currentFlashImage === "/poke.png" ? "0.25s" : "0.2s")
               }}
             >
               <img
