@@ -55,8 +55,8 @@
 }
 
 .imgBox {
-  width: 900px;
-  margin-top: 3px;
+  width: 1000px;
+  margin-top: 1px;
   -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 8%, rgba(0,0,0,0.3) 12%, rgba(0,0,0,0.7) 16%, black 20%);
   mask-image: linear-gradient(to bottom, transparent 0%, transparent 8%, rgba(0,0,0,0.3) 12%, rgba(0,0,0,0.7) 16%, black 20%);
   overflow: visible;
@@ -72,7 +72,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 24px auto;
+  margin: 8px auto 24px auto;
   max-width: 1000px;
   position: relative;
   overflow: visible;
@@ -143,6 +143,24 @@
   height: auto;
   opacity: 0.5;
   object-fit: contain;
+}
+
+.antlersShadowContainer {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  z-index: 9;
+  animation: driftLeftFlash 0.3s linear forwards;
+}
+
+.antlersShadowImage {
+  width: 100%;
+  height: auto;
+  opacity: 0.5;
+  object-fit: contain;
+  transform: scale(0.5);
 }
 
 .screenFlash {
@@ -315,6 +333,34 @@
   }
 }
 
+@keyframes driftLeftFlash {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  16.67% {
+    opacity: 0;
+  }
+  33.33% {
+    transform: translate(-60%, -50%);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  66.67% {
+    transform: translate(-70%, -50%);
+    opacity: 1;
+  }
+  83.33% {
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-80%, -50%);
+    opacity: 1;
+  }
+}
+
 /****    About    ****/
 
 .cardTextLeft {
@@ -430,13 +476,17 @@
 @media only screen and (min-width: 1100px) {
   .imgBox {
     width: 1100px;
-    margin-top: 25px;
+    margin-top: 12åßpx;
     -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 5%, rgba(0,0,0,0.3) 8%, rgba(0,0,0,0.7) 11%, black 14%);
     mask-image: linear-gradient(to bottom, transparent 0%, transparent 5%, rgba(0,0,0,0.3) 8%, rgba(0,0,0,0.7) 11%, black 14%);
     overflow: visible;
   }
 
   .flashImageContainer {
+    width: 1100px;
+  }
+
+  .antlersShadowContainer {
     width: 1100px;
   }
 
@@ -461,14 +511,17 @@
     height: 600px;
   }
   .imgBox {
-    margin-top: 20px;
-    width: 420px;
+    margin-top: 12åpx;
+    width: 520px;
     -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 10%, rgba(0,0,0,0.3) 15%, rgba(0,0,0,0.7) 20%, black 25%);
     mask-image: linear-gradient(to bottom, transparent 0%, transparent 10%, rgba(0,0,0,0.3) 15%, rgba(0,0,0,0.7) 20%, black 25%);
     overflow: visible;
   }
   .flashImageContainer {
-    width: 420px;
+    width: 520px;
+  }
+  .antlersShadowContainer {
+    width: 520px;
   }
   .cardImageRight {
     width: 350px;

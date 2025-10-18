@@ -15,12 +15,14 @@ export default function Homeart() {
   const [isVisible, setIsVisible] = useState(true);
   const [spinReverse, setSpinReverse] = useState(false);
   const [fadeDuration, setFadeDuration] = useState(1);
-  const [spinDuration, setSpinDuration] = useState(120);
+  const [spinDuration, setSpinDuration] = useState(240);
   const [isShrinking, setIsShrinking] = useState(false);
   const [isFastSpin, setIsFastSpin] = useState(false);
   const [showFlashImage, setShowFlashImage] = useState(false);
   const [flashImageCounter, setFlashImageCounter] = useState(0);
   const [currentFlashImage, setCurrentFlashImage] = useState("/girls_laughing.png");
+  const [antlersCount, setAntlersCount] = useState(0);
+  const [showAntlersShadow, setShowAntlersShadow] = useState(false);
 
   // Image rotation effect
   useEffect(() => {
@@ -30,9 +32,9 @@ export default function Homeart() {
       setTimeout(() => {
         setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
         setIsTransitioning(false);
-      }, 400);
+      }, 500);
       
-    }, 3500);
+    }, 4500);
 
     return () => clearInterval(interval);
   }, []);
@@ -41,7 +43,7 @@ export default function Homeart() {
   useEffect(() => {
     const scheduleNextDisappear = () => {
       // Random interval between 2-6 seconds (more frequent)
-      const randomInterval = Math.random() * 4000 + 2000;
+      const randomInterval = Math.random() * 4000 + 4000;
       
       setTimeout(() => {
         // Random fade duration between 0.2s and 1.5s
@@ -56,18 +58,18 @@ export default function Homeart() {
           setSpinReverse(prev => !prev);
           setIsShrinking(false);
           
-          // Dramatic speed changes: very fast (21-40s) or very slow (120-187s)
+          // Dramatic speed changes: very fast (42-80s) or very slow (240-374s)
           const speedChoice = Math.random();
           let newSpinDuration;
           let isFast = false;
           
           if (speedChoice < 0.5) {
-            // Fast spin: 21-40 seconds
-            newSpinDuration = Math.random() * 19 + 21;
+            // Fast spin: 42-80 seconds
+            newSpinDuration = Math.random() * 38 + 42;
             isFast = true;
           } else {
-            // Slow spin: 120-187 seconds
-            newSpinDuration = Math.random() * 67 + 120;
+            // Slow spin: 240-374 seconds
+            newSpinDuration = Math.random() * 134 + 240;
             isFast = false;
           }
           
@@ -93,6 +95,8 @@ export default function Homeart() {
                     setCurrentFlashImage("/poke.png");
                   } else if (position === 3 || position === 4) { // 3rd and 4th
                     setCurrentFlashImage("/antlers.png");
+                    // Track antlers count for shadow display
+                    setAntlersCount(prev => prev + 1);
                   } else { // 1st and 2nd
                     setCurrentFlashImage("/girls_laughing.png");
                   }
@@ -105,11 +109,20 @@ export default function Homeart() {
                 // Determine display duration based on image type
                 const nextPosition = (flashImageCounter + 1) % 5;
                 let displayDuration;
+                let isAntlers = false;
                 
                 if (nextPosition === 0) {
                   displayDuration = 250; // poke.png: 0.25s
                 } else if (nextPosition === 3 || nextPosition === 4) {
                   displayDuration = 300; // antlers: 0.3s (to allow fade)
+                  isAntlers = true;
+                  // Show shadow every other time antlers appears
+                  if (antlersCount % 2 === 1) {
+                    setShowAntlersShadow(true);
+                    setTimeout(() => {
+                      setShowAntlersShadow(false);
+                    }, displayDuration);
+                  }
                 } else {
                   displayDuration = 200; // girls_laughing: 0.2s
                 }
@@ -175,6 +188,15 @@ export default function Homeart() {
                 src={currentFlashImage}
                 className={styles.flashImage}
                 alt="Flash"
+              />
+            </div>
+          )}
+          {showAntlersShadow && (
+            <div className={styles.antlersShadowContainer}>
+              <img
+                src="/antlers_shadow.png"
+                className={styles.antlersShadowImage}
+                alt="Shadow"
               />
             </div>
           )}
