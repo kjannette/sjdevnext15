@@ -99,19 +99,10 @@
   width: 100%;
   height: 100%;
   margin-top: 5px;
-  animation: slowSpin 20s linear infinite;
-}
-
-.spinReverse {
-  animation: slowSpinReverse 20s linear infinite !important;
 }
 
 .fadeFlash {
-  animation: slowSpin 20s linear infinite, brightnessFlash 0.4s ease-in-out;
-}
-
-.fadeFlash.spinReverse {
-  animation: slowSpinReverse 20s linear infinite, brightnessFlash 0.4s ease-in-out;
+  animation: brightnessFlash 0.4s ease-in-out;
 }
 
 .shrinkWrapper {
