@@ -19,6 +19,9 @@ export default function Homeart() {
   const [isShrinking, setIsShrinking] = useState(false);
   const [isFastSpin, setIsFastSpin] = useState(false);
   const [showFlashImage, setShowFlashImage] = useState(false);
+  const [flashImageCounter, setFlashImageCounter] = useState(0);
+  const [currentFlashImage, setCurrentFlashImage] = useState("/girls_laughing.png");
+  const [showScreenFlash, setShowScreenFlash] = useState(false);
 
   // Image rotation effect
   useEffect(() => {
@@ -81,12 +84,52 @@ export default function Homeart() {
               
               // Show flash image briefly during shrink
               setTimeout(() => {
+                // Increment counter and determine which image to show
+                setFlashImageCounter(prev => {
+                  const newCount = prev + 1;
+                  const position = newCount % 5;
+                  
+                  // Flashes 1-2: girls_laughing, 3-4: antlers, 5: poke
+                  if (position === 0) { // Every 5th
+                    setCurrentFlashImage("/poke.png");
+                  } else if (position === 3 || position === 4) { // 3rd and 4th
+                    setCurrentFlashImage("/antlers.png");
+                  } else { // 1st and 2nd
+                    setCurrentFlashImage("/girls_laughing.png");
+                  }
+                  
+                  return newCount;
+                });
+                
                 setShowFlashImage(true);
                 
-                // Hide flash image after brief display
+                // Determine display duration based on image type
+                const nextPosition = (flashImageCounter + 1) % 5;
+                let displayDuration;
+                let isAntlers = false;
+                
+                if (nextPosition === 0) {
+                  displayDuration = 500; // poke.png: 0.5s
+                } else if (nextPosition === 3 || nextPosition === 4) {
+                  displayDuration = 600; // antlers: 0.6s (to allow fade)
+                  isAntlers = true;
+                } else {
+                  displayDuration = 400; // girls_laughing: 0.4s
+                }
+                
+                // If antlers, trigger screen flash before hiding
+                if (isAntlers) {
+                  setTimeout(() => {
+                    setShowScreenFlash(true);
+                    setTimeout(() => {
+                      setShowScreenFlash(false);
+                    }, 5); // Flash for 5ms (0.005 seconds)
+                  }, displayDuration - 50); // Flash 50ms before hiding
+                }
+                
                 setTimeout(() => {
                   setShowFlashImage(false);
-                }, 400); // Show for 0.4 seconds
+                }, displayDuration);
               }, 400); // Start flash 0.4s into the shrink
               
               // Disappear after shrinking (shrink takes 1.5s)
@@ -132,13 +175,24 @@ export default function Homeart() {
             />
           </div>
           {showFlashImage && (
-            <div className={styles.flashImageContainer}>
+            <div 
+              className={`${styles.flashImageContainer} ${
+                currentFlashImage === "/antlers.png" ? styles.antlersContainer : 
+                currentFlashImage === "/girls_laughing.png" ? styles.girlsLaughingContainer : ''
+              }`}
+              style={{
+                animationDuration: currentFlashImage === "/antlers.png" ? "0.6s" : (currentFlashImage === "/poke.png" ? "0.5s" : "0.4s")
+              }}
+            >
               <img
-                src="/girls_laughing.png"
+                src={currentFlashImage}
                 className={styles.flashImage}
                 alt="Flash"
               />
             </div>
+          )}
+          {showScreenFlash && (
+            <div className={styles.screenFlash}></div>
           )}
         </div>
       </div>

@@ -125,11 +125,30 @@
   animation: flashAppear 0.4s ease-in-out;
 }
 
+.antlersContainer {
+  animation: antlersFade 0.6s ease-in-out !important;
+}
+
+.girlsLaughingContainer {
+  animation: girlsFade 0.4s ease-in-out !important;
+}
+
 .flashImage {
   width: 100%;
   height: auto;
   opacity: 0.5;
   object-fit: contain;
+}
+
+.screenFlash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #FF13F0;
+  z-index: 9999;
+  pointer-events: none;
 }
 
 @keyframes slowSpin {
@@ -246,6 +265,48 @@
   100% {
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.55);
+  }
+}
+
+@keyframes antlersFade {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.4);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  80% {
+    opacity: 0.3;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.55);
+  }
+}
+
+@keyframes girlsFade {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.45);
+  }
+  25% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  75% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
   }
 }
 
