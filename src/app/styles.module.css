@@ -57,6 +57,8 @@
 .imgBox {
   width: 680px;
   margin-top: 3px;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 8%, rgba(0,0,0,0.3) 12%, rgba(0,0,0,0.7) 16%, black 20%);
+  mask-image: linear-gradient(to bottom, transparent 0%, transparent 8%, rgba(0,0,0,0.3) 12%, rgba(0,0,0,0.7) 16%, black 20%);
 }
 
 .homeImg {
@@ -71,6 +73,7 @@
   align-items: center;
   margin: 24px auto;
   max-width: 800px;
+  position: relative;
 }
 
 .gridRow {
@@ -93,6 +96,157 @@
   width: 100%;
   height: 100%;
   margin-top: 5px;
+  animation: slowSpin 20s linear infinite;
+}
+
+.spinReverse {
+  animation: slowSpinReverse 20s linear infinite !important;
+}
+
+.fadeFlash {
+  animation: slowSpin 20s linear infinite, brightnessFlash 0.4s ease-in-out;
+}
+
+.fadeFlash.spinReverse {
+  animation: slowSpinReverse 20s linear infinite, brightnessFlash 0.4s ease-in-out;
+}
+
+.shrinkWrapper {
+  animation: shrinkAway 1.5s ease-in forwards;
+}
+
+.flashImageContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  width: 680px;
+  z-index: 10;
+  animation: flashAppear 0.4s ease-in-out;
+}
+
+.flashImage {
+  width: 100%;
+  height: auto;
+  opacity: 0.5;
+  object-fit: contain;
+}
+
+@keyframes slowSpin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  40% {
+    transform: rotate(68deg);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(90deg);
+    opacity: 0.5;
+  }
+  90% {
+    transform: rotate(162deg);
+    opacity: 0.1;
+  }
+  100% {
+    transform: rotate(170deg);
+    opacity: 0;
+  }
+}
+
+@keyframes slowSpinReverse {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  40% {
+    transform: rotate(-68deg);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(-90deg);
+    opacity: 0.5;
+  }
+  90% {
+    transform: rotate(-162deg);
+    opacity: 0.1;
+  }
+  100% {
+    transform: rotate(-170deg);
+    opacity: 0;
+  }
+}
+
+@keyframes flashFade {
+  0% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+  25% {
+    opacity: 0.7;
+    filter: brightness(1.5);
+  }
+  50% {
+    opacity: 0.3;
+    filter: brightness(2);
+  }
+  75% {
+    opacity: 0.5;
+    filter: brightness(1.5);
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+}
+
+@keyframes brightnessFlash {
+  0% {
+    filter: brightness(1);
+  }
+  25% {
+    filter: brightness(1.5);
+  }
+  50% {
+    filter: brightness(2.5);
+  }
+  75% {
+    filter: brightness(1.5);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+@keyframes shrinkAway {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(0.3);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes flashAppear {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.4);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.55);
+  }
 }
 
 /****    About    ****/
@@ -211,6 +365,12 @@
   .imgBox {
     width: 940px;
     margin-top: 25px;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 5%, rgba(0,0,0,0.3) 8%, rgba(0,0,0,0.7) 11%, black 14%);
+    mask-image: linear-gradient(to bottom, transparent 0%, transparent 5%, rgba(0,0,0,0.3) 8%, rgba(0,0,0,0.7) 11%, black 14%);
+  }
+
+  .flashImageContainer {
+    width: 940px;
   }
 
   .footerContainer {
@@ -230,6 +390,11 @@
   }
   .imgBox {
     margin-top: 20px;
+    width: 350px;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 10%, rgba(0,0,0,0.3) 15%, rgba(0,0,0,0.7) 20%, black 25%);
+    mask-image: linear-gradient(to bottom, transparent 0%, transparent 10%, rgba(0,0,0,0.3) 15%, rgba(0,0,0,0.7) 20%, black 25%);
+  }
+  .flashImageContainer {
     width: 350px;
   }
   .cardImageRight {
