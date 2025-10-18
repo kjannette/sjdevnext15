@@ -15,13 +15,12 @@ export default function Homeart() {
   const [isVisible, setIsVisible] = useState(true);
   const [spinReverse, setSpinReverse] = useState(false);
   const [fadeDuration, setFadeDuration] = useState(1);
-  const [spinDuration, setSpinDuration] = useState(90);
+  const [spinDuration, setSpinDuration] = useState(120);
   const [isShrinking, setIsShrinking] = useState(false);
   const [isFastSpin, setIsFastSpin] = useState(false);
   const [showFlashImage, setShowFlashImage] = useState(false);
   const [flashImageCounter, setFlashImageCounter] = useState(0);
   const [currentFlashImage, setCurrentFlashImage] = useState("/girls_laughing.png");
-  const [showScreenFlash, setShowScreenFlash] = useState(false);
 
   // Image rotation effect
   useEffect(() => {
@@ -57,18 +56,18 @@ export default function Homeart() {
           setSpinReverse(prev => !prev);
           setIsShrinking(false);
           
-          // Dramatic speed changes: very fast (16-30s) or very slow (90-140s)
+          // Dramatic speed changes: very fast (21-40s) or very slow (120-187s)
           const speedChoice = Math.random();
           let newSpinDuration;
           let isFast = false;
           
           if (speedChoice < 0.5) {
-            // Fast spin: 16-30 seconds
-            newSpinDuration = Math.random() * 14 + 16;
+            // Fast spin: 21-40 seconds
+            newSpinDuration = Math.random() * 19 + 21;
             isFast = true;
           } else {
-            // Slow spin: 90-140 seconds
-            newSpinDuration = Math.random() * 50 + 90;
+            // Slow spin: 120-187 seconds
+            newSpinDuration = Math.random() * 67 + 120;
             isFast = false;
           }
           
@@ -106,25 +105,13 @@ export default function Homeart() {
                 // Determine display duration based on image type
                 const nextPosition = (flashImageCounter + 1) % 5;
                 let displayDuration;
-                let isAntlers = false;
                 
                 if (nextPosition === 0) {
                   displayDuration = 250; // poke.png: 0.25s
                 } else if (nextPosition === 3 || nextPosition === 4) {
                   displayDuration = 300; // antlers: 0.3s (to allow fade)
-                  isAntlers = true;
                 } else {
                   displayDuration = 200; // girls_laughing: 0.2s
-                }
-                
-                // If antlers, trigger screen flash before hiding
-                if (isAntlers) {
-                  setTimeout(() => {
-                    setShowScreenFlash(true);
-                    setTimeout(() => {
-                      setShowScreenFlash(false);
-                    }, 5); // Flash for 5ms (0.005 seconds)
-                  }, displayDuration - 50); // Flash 50ms before hiding
                 }
                 
                 setTimeout(() => {
@@ -190,9 +177,6 @@ export default function Homeart() {
                 alt="Flash"
               />
             </div>
-          )}
-          {showScreenFlash && (
-            <div className={styles.screenFlash}></div>
           )}
         </div>
       </div>

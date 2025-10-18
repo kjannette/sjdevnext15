@@ -130,6 +130,8 @@
 
 .antlersContainer {
   animation: antlersFade 0.3s ease-in-out !important;
+  top: 45% !important;
+  transform: translate(-50%, -50%) scale(0.5) !important;
 }
 
 .girlsLaughingContainer {
