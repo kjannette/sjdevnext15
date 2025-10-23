@@ -228,12 +228,24 @@ export default function About() {
                     <Link className={aboutStyles.aboutLink} href="/contact">
                       Let's talk{" "}
                     </Link>
-                    about how AI and ML, along with{" "}
+                    about how AI and ML, integrated with and enhancing{" "}
                     <Link className={aboutStyles.aboutLink} href="/webapps">
-                      technology your business already uses{" "}
+                      technology your business already uses,{" "}
                     </Link>
                     can empower you, too.
-                  </p>
+               
+                      {" "}
+                      Creating these synergies - developing practical AI applications - is
+                      my business. For example:{" "}
+                      <Link
+                        className={aboutStyles.aboutLink}
+                        href=""
+                      >
+                        Novodraft.
+                      </Link>
+                    </p>
+
+
                 </div>
               </div>
               <div className={aboutStyles.aboutColumnTR}>
@@ -380,20 +392,6 @@ export default function About() {
                 {/**********************************   END MOBILE ONLY TEXT BLOCK    ****/}
               </div>
             </div>
-            <div className={aboutStyles.appContainer}>
-              <div>PLACE HOLEDER</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-/*
-
-
-
             <div className={aboutStyles.aboutRow}>
               <div className={aboutStyles.aboutColumnBL}>
                 <div className={aboutStyles.hotBackBox}>
@@ -412,26 +410,32 @@ export default function About() {
                   <></>
                   <>
                     <p>
-                      {" "}
-                      Finding them, and developing practical AI applications is
-                      my business. For example:{" "}
+                      Novodraft employs tech created here at sjDev:
+                      1) ML-augmented optical character recognition and 
+                      2) Proprietary Chain of Thought prompting, developed here, in 2021: a byproduct of      <Link
+                        className={aboutStyles.aboutLink}
+                        href="https://arxiv.org/pdf/2201.11903"
+                      >
+                        {" "}
+                        exciting findings published on an increasingly-regular basis,
+                      </Link>{" "} and my studies in recursive algorithms to manage routing in
                       <Link
                         className={aboutStyles.aboutLink}
-                        href="https://www.novodraft.ai"
+                        href="https://www.egr.msu.edu/annweb/REF_ControlV1Oct09.pdf"
                       >
-                        Novodraft.
-                      </Link>
+                        {" "}
+                        telecommunications systems.
+                      </Link>{" "}
                     </p>
                     <p>
-                      Leveraging ML-augmented OCR and CoT LLM prompting, it
-                      generates contextually-precise rhetorical content for
-                      lawyers. It also demonstrates that intrepidly-applied AI
-                      can help do just about anything faster and smarter.
+                      Novodraft generates contextually-precise rhetorical content for
+                      lawyers, and also demonstrates that  AI, as an applied science
+                       do just about anything faster and smarter.
                     </p>
                     <p>
-                      Do you retail? Imagine deploying a 24/7
+                      Are you in sales? Imagine deploying a 24/7
                       associate-force-multiplier with one purpose: widening your
-                      mote. In sales, AI offers customers a
+                      mote. Integrated into sales, AI offers customers a
                       conversion-increasing, bespoke{" "}
                       <span
                         className={aboutStyles.peithoLink}
@@ -451,7 +455,7 @@ export default function About() {
                   </>
                   <>
                     <p>
-                      Do you finance? Machine-learning has{" "}
+                      Perhaps you are in finance. Machine-learning has{" "}
                       <Link
                         className={aboutStyles.aboutLink}
                         href="https://www.forbes.com/sites/tomdavenport/2019/07/10/from-analytics-first-to-ai-first-at-capital-one/?sh=423a14372f1b"
@@ -464,8 +468,8 @@ export default function About() {
                   </>
                   <>
                     <p>
-                      Recently, through ML analysis of customer behavior, a bank
-                      gained account-use insight that inspired novel loan
+                      Recently, using recursively-defined ML analysis of customer behavior, a bank
+                      gained user insight that inspired novel financial
                       products. The result was impressive YOY growth versus
                       rivals.
                     </p>
@@ -473,7 +477,7 @@ export default function About() {
                       <Link className={aboutStyles.aboutLink} href="/contact">
                         Let's talk{" "}
                       </Link>
-                      about how AI and ML, along with{" "}
+                      about how AI and ML, integrated with{" "}
                       <Link className={aboutStyles.aboutLink} href="/webapps">
                         technology you already use{" "}
                       </Link>
@@ -483,6 +487,10 @@ export default function About() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
-
-*/

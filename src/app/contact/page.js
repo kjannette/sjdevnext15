@@ -45,7 +45,7 @@ export default function Contact() {
                   <div className={contactStyles.contactDetailTwo}>
                     <a
                       className={contactStyles.contactLinkTwo}
-                      href="https://www.findandexec.com"
+                      href=""
                     >
                       findandexec.com
                     </a>
@@ -53,8 +53,8 @@ export default function Contact() {
                   <div className={contactStyles.contactDetailThree}>
                     <a
                       className={contactStyles.contactLinkThree}
-                      href="https://www.novodraft.ai"
-                      target="_blank"
+                      href=""
+               
                     >
                       novodraft.ai
                     </a>
