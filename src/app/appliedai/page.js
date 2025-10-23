@@ -211,29 +211,29 @@ export default function About() {
                     >
                       revealing revenue streams{" "}
                     </Link>
-                    hidden in complex data, AI empowers amazing outcomes:
-                  </p>
-                  <p>
-                    Introducing{" "}
-                    <Link className={aboutStyles.aboutLink} href="/contact">
-                      Novodraft
-                    </Link>
-                    , an AI application empowering attorneys to draft persuasive
-                    content at light speed. It also shows that
-                    intrepidly-applied AI can help do anything faster and
-                    smarter.
+                    hidden in complex data, AI empowers impressive outcomes.
                   </p>
                   <p>
                     {" "}
-                    <Link className={aboutStyles.aboutLink} href="/contact">
-                      Let's talk{" "}
-                    </Link>
-                    about how AI and ML, along with{" "}
+                   
+                    AI and ML, integrated with - and enhancing -{" "}
                     <Link className={aboutStyles.aboutLink} href="/webapps">
-                      technology your business already uses{" "}
+                      technology your business already uses,{" "}
                     </Link>
                     can empower you, too.
-                  </p>
+               
+                      {" "}
+                      Creating these synergies - developing practical AI applications - is
+                      my business. A recent example:{" "}
+                      <Link
+                        className={aboutStyles.aboutLink}
+                        href=""
+                      >
+                        Novodraft.
+                      </Link>
+                    </p>
+
+
                 </div>
               </div>
               <div className={aboutStyles.aboutColumnTR}>
@@ -380,54 +380,6 @@ export default function About() {
                 {/**********************************   END MOBILE ONLY TEXT BLOCK    ****/}
               </div>
             </div>
-            <div className={aboutStyles.appContainer}>
-              {/****    NOVODRAFT START    *****/}
-              <div className={aboutStyles.novoLeft}>
-                <div className={featuredStyles.gitBoxRight}>Visit Site</div>
-                <a href="https://www.novodraft.ai" target="_blank">
-                  <img
-                    className={featuredStyles.featureImage}
-                    src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739937570/logoMatrixUltrafav_nxpx29.png"
-                    height={130}
-                    alt="sjDev logo"
-                  />
-                </a>
-              </div>
-              <div className={aboutStyles.novoRight}>
-                <a
-                  className={aboutStyles.foo}
-                  href="https://www.novodraft.ai"
-                  target="_blank"
-                >
-                  <h3 className={aboutStyles.novoTitleText}>Novdraft.ai </h3>
-                  <p className={aboutStyles.novoGraph}>
-                    {" "}
-                    AI-enhanced legal drafting for attorneys.
-                  </p>
-                  <p className={aboutStyles.novoGraph}>
-                    Discovery and motions, ready to serve, done in minutes.
-                  </p>
-                  <p className={aboutStyles.novoGraph}>
-                    Machine-learning-augmented optical character recognition
-                    plus chain of thought LLM prompt sequencing generates
-                    contextually-precise, persuasive content.
-                  </p>
-                </a>
-              </div>
-
-              {/****    NOVODRAFT END    *****/}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-/*
-
-
-
             <div className={aboutStyles.aboutRow}>
               <div className={aboutStyles.aboutColumnBL}>
                 <div className={aboutStyles.hotBackBox}>
@@ -446,26 +398,32 @@ export default function About() {
                   <></>
                   <>
                     <p>
-                      {" "}
-                      Finding them, and developing practical AI applications is
-                      my business. For example:{" "}
+                      Novodraft employs tech created at sjDev:
+                      1) ML-augmented optical character recognition and 
+                      2) Proprietary Chain of Thought prompting, developed here in 2021: a byproduct of      <Link
+                        className={aboutStyles.aboutLink}
+                        href="https://arxiv.org/pdf/2201.11903"
+                      >
+                        {" "}
+                        increasingly regular, highly compelling research,
+                      </Link>{" "} and my studies in recursive algorithms to manage routing in
                       <Link
                         className={aboutStyles.aboutLink}
-                        href="https://www.novodraft.ai"
+                        href="https://www.egr.msu.edu/annweb/REF_ControlV1Oct09.pdf"
                       >
-                        Novodraft.
-                      </Link>
+                        {" "}
+                        telecommunications systems.
+                      </Link>{" "}
                     </p>
                     <p>
-                      Leveraging ML-augmented OCR and CoT LLM prompting, it
-                      generates contextually-precise rhetorical content for
-                      lawyers. It also demonstrates that intrepidly-applied AI
-                      can help do just about anything faster and smarter.
+                      Novodraft generates contextually-precise rhetorical content for
+                      lawyers, and also demonstrates that applied AI
+                       can do anything faster and smarter. AI will not take jobs - it will create wealth and efficiency
                     </p>
                     <p>
-                      Do you retail? Imagine deploying a 24/7
+                      Are you in sales? Imagine deploying a 24/7
                       associate-force-multiplier with one purpose: widening your
-                      mote. In sales, AI offers customers a
+                      mote. Integrated into lead generation, discovery dialogues, AI offers customers a
                       conversion-increasing, bespoke{" "}
                       <span
                         className={aboutStyles.peithoLink}
@@ -479,13 +437,13 @@ export default function About() {
                         href="https://arxiv.org/pdf/2304.03516.pdf"
                       >
                         {" "}
-                        shopworn search bars.
+                        shopworn search bars and cold calling.
                       </Link>{" "}
                     </p>
                   </>
                   <>
                     <p>
-                      Do you finance? Machine-learning has{" "}
+                      Perhaps you are in finance. Machine-learning has{" "}
                       <Link
                         className={aboutStyles.aboutLink}
                         href="https://www.forbes.com/sites/tomdavenport/2019/07/10/from-analytics-first-to-ai-first-at-capital-one/?sh=423a14372f1b"
@@ -498,8 +456,8 @@ export default function About() {
                   </>
                   <>
                     <p>
-                      Recently, through ML analysis of customer behavior, a bank
-                      gained account-use insight that inspired novel loan
+                      One example (and a fintech app you probably have on your mobile device) employed  recursive ML analysis of customer behavior, giving the bank
+                       insight that inspired novel financial
                       products. The result was impressive YOY growth versus
                       rivals.
                     </p>
@@ -507,7 +465,7 @@ export default function About() {
                       <Link className={aboutStyles.aboutLink} href="/contact">
                         Let's talk{" "}
                       </Link>
-                      about how AI and ML, along with{" "}
+                      about how AI and ML, integrated with{" "}
                       <Link className={aboutStyles.aboutLink} href="/webapps">
                         technology you already use{" "}
                       </Link>
@@ -517,6 +475,10 @@ export default function About() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
-
-*/

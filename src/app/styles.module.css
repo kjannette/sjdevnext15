@@ -55,8 +55,11 @@
 }
 
 .imgBox {
-  width: 680px;
-  margin-top: 3px;
+  width: 1000px;
+  margin-top: 1px;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 8%, rgba(0,0,0,0.3) 12%, rgba(0,0,0,0.7) 16%, black 20%);
+  mask-image: linear-gradient(to bottom, transparent 0%, transparent 8%, rgba(0,0,0,0.3) 12%, rgba(0,0,0,0.7) 16%, black 20%);
+  overflow: visible;
 }
 
 .homeImg {
@@ -69,8 +72,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 24px auto;
-  max-width: 800px;
+  margin: 8px auto 24px auto;
+  max-width: 1000px;
+  position: relative;
+  overflow: visible;
 }
 
 .gridRow {
@@ -82,7 +87,8 @@
 
 .homeContainer {
   width: 100%;
-  height: 600px;
+  height: 700px;
+  overflow: visible;
 }
 
 .homeImgBox {
@@ -93,6 +99,265 @@
   width: 100%;
   height: 100%;
   margin-top: 5px;
+  transform: none;
+  animation: none;
+}
+
+.homeImg.spinReverse,
+.homeImg:not(.spinReverse) {
+  animation: none !important;
+  transform: none !important;
+}
+
+.fadeFlash {
+  animation: brightnessFlash 0.4s ease-in-out;
+}
+
+.shrinkWrapper {
+  animation: shrinkAway .2s ease-in forwards;
+}
+
+.flashImageContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  width: 900px;
+  z-index: 10;
+  animation: flashAppear 0.25s ease-in-out;
+}
+
+.antlersContainer {
+  animation: antlersFade 0.1s ease-in-out !important;
+  top: 45% !important;
+  transform: translate(-50%, -50%) scale(0.5) !important;
+}
+
+.girlsLaughingContainer {
+  animation: girlsFade 0.5s ease-in-out !important;
+}
+
+.flashImage {
+  width: 100%;
+  height: auto;
+  opacity: 0.5;
+  object-fit: contain;
+}
+
+.antlersShadowContainer {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  z-index: 9;
+  animation: driftLeftFlash 0.3s linear forwards;
+}
+
+.antlersShadowImage {
+  width: 100%;
+  height: auto;
+  opacity: 0.5;
+  object-fit: contain;
+  transform: scale(0.5);
+}
+
+.screenFlash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ff00ff;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+@keyframes slowSpin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  40% {
+    transform: rotate(68deg);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(90deg);
+    opacity: 0.5;
+  }
+  90% {
+    transform: rotate(162deg);
+    opacity: 0.1;
+  }
+  100% {
+    transform: rotate(170deg);
+    opacity: 0;
+  }
+}
+
+@keyframes slowSpinReverse {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  40% {
+    transform: rotate(-68deg);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(-90deg);
+    opacity: 0.5;
+  }
+  90% {
+    transform: rotate(-162deg);
+    opacity: 0.1;
+  }
+  100% {
+    transform: rotate(-170deg);
+    opacity: 0;
+  }
+}
+
+@keyframes flashFade {
+  0% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+  25% {
+    opacity: 0.7;
+    filter: brightness(1.5);
+  }
+  50% {
+    opacity: 0.3;
+    filter: brightness(2);
+  }
+  75% {
+    opacity: 0.5;
+    filter: brightness(1.5);
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+}
+
+@keyframes brightnessFlash {
+  0% {
+    filter: brightness(1);
+  }
+  25% {
+    filter: brightness(1.5);
+  }
+  50% {
+    filter: brightness(2.5);
+  }
+  75% {
+    filter: brightness(1.5);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+@keyframes shrinkAway {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(0.3);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes flashAppear {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.4);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.55);
+  }
+}
+
+@keyframes antlersFade {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.4);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  80% {
+    opacity: 0.3;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.55);
+  }
+}
+
+@keyframes girlsFade {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.45);
+  }
+  25% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  75% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+}
+
+@keyframes driftLeftFlash {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  16.67% {
+    opacity: 0;
+  }
+  33.33% {
+    transform: translate(-60%, -50%);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  66.67% {
+    transform: translate(-70%, -50%);
+    opacity: 1;
+  }
+  83.33% {
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-80%, -50%);
+    opacity: 1;
+  }
 }
 
 /****    About    ****/
@@ -209,8 +474,23 @@
 
 @media only screen and (min-width: 1100px) {
   .imgBox {
-    width: 940px;
-    margin-top: 25px;
+    width: 1100px;
+    margin-top: 12åßpx;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 5%, rgba(0,0,0,0.3) 8%, rgba(0,0,0,0.7) 11%, black 14%);
+    mask-image: linear-gradient(to bottom, transparent 0%, transparent 5%, rgba(0,0,0,0.3) 8%, rgba(0,0,0,0.7) 11%, black 14%);
+    overflow: visible;
+  }
+
+  .flashImageContainer {
+    width: 1100px;
+  }
+
+  .antlersShadowContainer {
+    width: 1100px;
+  }
+
+  .gridColumn {
+    max-width: 1200px;
   }
 
   .footerContainer {
@@ -224,13 +504,23 @@
   }
   .homeContainer {
     height: 100%;
+    overflow: visible;
   }
   .homeImgBox {
     height: 600px;
   }
   .imgBox {
-    margin-top: 20px;
-    width: 350px;
+    margin-top: 12åpx;
+    width: 520px;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 10%, rgba(0,0,0,0.3) 15%, rgba(0,0,0,0.7) 20%, black 25%);
+    mask-image: linear-gradient(to bottom, transparent 0%, transparent 10%, rgba(0,0,0,0.3) 15%, rgba(0,0,0,0.7) 20%, black 25%);
+    overflow: visible;
+  }
+  .flashImageContainer {
+    width: 520px;
+  }
+  .antlersShadowContainer {
+    width: 520px;
   }
   .cardImageRight {
     width: 350px;

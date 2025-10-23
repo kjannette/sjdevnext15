@@ -1,21 +1,22 @@
 "use client";
+import { useState, useEffect } from "react";
 import styles from "../app/styles.module.css";
 import Head from "next/head";
+import Image from "next/image";
+import seqTheFut from "../../public/seqTheFut.gif";
 
 export default function Homeart() {
   return (
-    <main>
-      <div className={styles.homeContainer}>
-        <div className={styles.gridColumn}>
-          <div className={styles.imgBox}>
-            <img
-              src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739933776/seqTheFut_uepaah.gif"
-              className={styles.homeImg}
-              alt="An interesting cubist animation inspired by the Bauhaus school."
-            />
-          </div>
+    <div className={styles.homeContainer}>
+      <div className={styles.gridColumn}>
+        <div className={styles.imgBox}>
+          <Image
+            src={seqTheFut}
+            className={styles.homeImg}
+            alt="Would you like to play a game?"
+          />
         </div>
       </div>
-    </main>
+    </div>
   );
 }

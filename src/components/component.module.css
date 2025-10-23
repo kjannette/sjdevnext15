@@ -45,6 +45,9 @@
   align-items: center;
   height: 120px;
   font-size: 1.3rem;
+  position: relative;
+  z-index: 100;
+  background-color: #fff;
 }
 
 .headerBox {
