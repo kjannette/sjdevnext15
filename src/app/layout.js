@@ -1,10 +1,5 @@
-"use client";
-
-import { useState, useEffect } from "react";
-import { Geist, Geist_Mono } from "next/font/google";
 import Footer from "../components/footer";
-import Header from "../components/header";
-import Navpanel from "@/components/navpanel";
+import ClientNavigationWrapper from "../components/ClientNavigationWrapper";
 import "./globals.css";
 import { Roboto } from "next/font/google";
 
@@ -16,10 +11,6 @@ const roboto = Roboto({
 });
 
 export default function RootLayout({ children }) {
-  const [menuOpen, setMenuOpen] = useState(false);
-  function navToggle() {
-    setMenuOpen(!menuOpen);
-  }
   return (
     <html lang="en">
       <head>
@@ -30,17 +21,9 @@ export default function RootLayout({ children }) {
         ></script>
       </head>
       <body className={`${roboto.variable}`}>
-        <Header
-          navToggle={navToggle}
-          menuOpen={menuOpen}
-          setMenuOpen={setMenuOpen}
-        />
-        <Navpanel
-          navToggle={navToggle}
-          menuOpen={menuOpen}
-          setMenuOpen={setMenuOpen}
-        />
-        {children}
+        <ClientNavigationWrapper>
+          {children}
+        </ClientNavigationWrapper>
         <Footer />
       </body>
     </html>

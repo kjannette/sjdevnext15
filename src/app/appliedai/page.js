@@ -211,24 +211,12 @@ export default function About() {
                     >
                       revealing revenue streams{" "}
                     </Link>
-                    hidden in complex data, AI empowers amazing outcomes:
-                  </p>
-                  <p>
-                    Introducing{" "}
-                    <Link className={aboutStyles.aboutLink} href="/contact">
-                      Novodraft
-                    </Link>
-                    , an AI application empowering attorneys to draft persuasive
-                    content at light speed. It also shows that
-                    intrepidly-applied AI can help do anything faster and
-                    smarter.
+                    hidden in complex data, AI empowers impressive outcomes.
                   </p>
                   <p>
                     {" "}
-                    <Link className={aboutStyles.aboutLink} href="/contact">
-                      Let's talk{" "}
-                    </Link>
-                    about how AI and ML, integrated with and enhancing{" "}
+                   
+                    AI and ML, integrated with - and enhancing -{" "}
                     <Link className={aboutStyles.aboutLink} href="/webapps">
                       technology your business already uses,{" "}
                     </Link>
@@ -236,7 +224,7 @@ export default function About() {
                
                       {" "}
                       Creating these synergies - developing practical AI applications - is
-                      my business. For example:{" "}
+                      my business. A recent example:{" "}
                       <Link
                         className={aboutStyles.aboutLink}
                         href=""
@@ -410,14 +398,14 @@ export default function About() {
                   <></>
                   <>
                     <p>
-                      Novodraft employs tech created here at sjDev:
+                      Novodraft employs tech created at sjDev:
                       1) ML-augmented optical character recognition and 
-                      2) Proprietary Chain of Thought prompting, developed here, in 2021: a byproduct of      <Link
+                      2) Proprietary Chain of Thought prompting, developed here in 2021: a byproduct of      <Link
                         className={aboutStyles.aboutLink}
                         href="https://arxiv.org/pdf/2201.11903"
                       >
                         {" "}
-                        exciting findings published on an increasingly-regular basis,
+                        increasingly regular, highly compelling research,
                       </Link>{" "} and my studies in recursive algorithms to manage routing in
                       <Link
                         className={aboutStyles.aboutLink}
@@ -429,13 +417,13 @@ export default function About() {
                     </p>
                     <p>
                       Novodraft generates contextually-precise rhetorical content for
-                      lawyers, and also demonstrates that  AI, as an applied science
-                       do just about anything faster and smarter.
+                      lawyers, and also demonstrates that  AI, as applied science
+                       can do just anything faster and smarter. AI will not take jobs - it will create wealth and efficiency
                     </p>
                     <p>
                       Are you in sales? Imagine deploying a 24/7
                       associate-force-multiplier with one purpose: widening your
-                      mote. Integrated into sales, AI offers customers a
+                      mote. Integrated into lead generation, discovery dialogues, AI offers customers a
                       conversion-increasing, bespoke{" "}
                       <span
                         className={aboutStyles.peithoLink}
@@ -449,7 +437,7 @@ export default function About() {
                         href="https://arxiv.org/pdf/2304.03516.pdf"
                       >
                         {" "}
-                        shopworn search bars.
+                        shopworn search bars and cold calling.
                       </Link>{" "}
                     </p>
                   </>
@@ -468,8 +456,8 @@ export default function About() {
                   </>
                   <>
                     <p>
-                      Recently, using recursively-defined ML analysis of customer behavior, a bank
-                      gained user insight that inspired novel financial
+                      One example (and a fintech app you probably have on your mobile device) employed  recursive ML analysis of customer behavior, giving the bank
+                       insight that inspired novel financial
                       products. The result was impressive YOY growth versus
                       rivals.
                     </p>
