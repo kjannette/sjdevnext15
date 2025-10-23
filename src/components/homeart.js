@@ -167,10 +167,7 @@ export default function Homeart() {
           >
             <img
               src={images[currentImageIndex]}
-              className={`${styles.homeImg} ${isTransitioning ? styles.fadeFlash : ''} ${spinReverse ? styles.spinReverse : ''}`}
-              style={{
-                animationDuration: `${isTransitioning ? '0.4s, ' : ''}${spinDuration}s`
-              }}
+              className={`${styles.homeImg} ${isTransitioning ? styles.fadeFlash : ''}`}
               alt="An interesting cubist animation inspired by the Bauhaus school."
             />
           </div>

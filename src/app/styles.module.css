@@ -99,6 +99,14 @@
   width: 100%;
   height: 100%;
   margin-top: 5px;
+  transform: none;
+  animation: none;
+}
+
+.homeImg.spinReverse,
+.homeImg:not(.spinReverse) {
+  animation: none !important;
+  transform: none !important;
 }
 
 .fadeFlash {
@@ -106,7 +114,7 @@
 }
 
 .shrinkWrapper {
-  animation: shrinkAway 1.5s ease-in forwards;
+  animation: shrinkAway .2s ease-in forwards;
 }
 
 .flashImageContainer {
@@ -120,13 +128,13 @@
 }
 
 .antlersContainer {
-  animation: antlersFade 0.3s ease-in-out !important;
+  animation: antlersFade 0.1s ease-in-out !important;
   top: 45% !important;
   transform: translate(-50%, -50%) scale(0.5) !important;
 }
 
 .girlsLaughingContainer {
-  animation: girlsFade 0.2s ease-in-out !important;
+  animation: girlsFade 0.5s ease-in-out !important;
 }
 
 .flashImage {

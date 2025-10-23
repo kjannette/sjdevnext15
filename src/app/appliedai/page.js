@@ -381,41 +381,7 @@ export default function About() {
               </div>
             </div>
             <div className={aboutStyles.appContainer}>
-              {/****    NOVODRAFT START    *****/}
-              <div className={aboutStyles.novoLeft}>
-                <div className={featuredStyles.gitBoxRight}>Visit Site</div>
-                <a href="https://www.novodraft.ai" target="_blank">
-                  <img
-                    className={featuredStyles.featureImage}
-                    src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739937570/logoMatrixUltrafav_nxpx29.png"
-                    height={130}
-                    alt="sjDev logo"
-                  />
-                </a>
-              </div>
-              <div className={aboutStyles.novoRight}>
-                <a
-                  className={aboutStyles.foo}
-                  href="https://www.novodraft.ai"
-                  target="_blank"
-                >
-                  <h3 className={aboutStyles.novoTitleText}>Novdraft.ai </h3>
-                  <p className={aboutStyles.novoGraph}>
-                    {" "}
-                    AI-enhanced legal drafting for attorneys.
-                  </p>
-                  <p className={aboutStyles.novoGraph}>
-                    Discovery and motions, ready to serve, done in minutes.
-                  </p>
-                  <p className={aboutStyles.novoGraph}>
-                    Machine-learning-augmented optical character recognition
-                    plus chain of thought LLM prompt sequencing generates
-                    contextually-precise, persuasive content.
-                  </p>
-                </a>
-              </div>
-
-              {/****    NOVODRAFT END    *****/}
+              <div>PLACE HOLEDER</div>
             </div>
           </div>
         </div>
