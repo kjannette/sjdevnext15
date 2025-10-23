@@ -417,8 +417,8 @@ export default function About() {
                     </p>
                     <p>
                       Novodraft generates contextually-precise rhetorical content for
-                      lawyers, and also demonstrates that  AI, as applied science
-                       can do just anything faster and smarter. AI will not take jobs - it will create wealth and efficiency
+                      lawyers, and also demonstrates that applied AI
+                       can do anything faster and smarter. AI will not take jobs - it will create wealth and efficiency
                     </p>
                     <p>
                       Are you in sales? Imagine deploying a 24/7
