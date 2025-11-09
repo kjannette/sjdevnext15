@@ -53,7 +53,7 @@ export default function Featured() {
             </a>
           </div>
           <a
-            href="https://www.sjdev.co/bb/"
+            href="https://www.sjdev.co/demos/bookbrowser"
             target="_blank"
             className={homeStyles.cardTextLeft}
           >
