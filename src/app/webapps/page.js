@@ -13,7 +13,7 @@ export default function Featured() {
     <div className={homeStyles.container}>
       <div className={homeStyles.innerContainer}>
         <div className={featuredStyles.featuredGrid}>
-          {/****    SF START    *****/}
+          {/****    SF START   ************** *****/}
           <a
             href="https://www.sjdev.co/demos/salesflow"
             target="_blank"
