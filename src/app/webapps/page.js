@@ -15,7 +15,7 @@ export default function Featured() {
         <div className={featuredStyles.featuredGrid}>
           {/****    SF START    *****/}
           <a
-            href="https://www.sjdev.co/sfapp/"
+            href="https://www.sjdev.co/demos/salesflow"
             target="_blank"
             className={homeStyles.cardTextRight}
           >
