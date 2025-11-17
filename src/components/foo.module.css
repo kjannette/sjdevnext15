@@ -178,6 +178,15 @@
     padding-right: 18px;
   }
 
+  .navLinkFive {
+    color: black;
+    letter-spacing: 0.62rem;
+    text-decoration: none;
+    padding-right: 18px;
+    width: 280px;
+    padding-left: 30px;
+  }
+
   .contactLinkTwo {
     letter-spacing: 0.15rem;
   }

@@ -59,14 +59,22 @@ export default function Navpanel(props) {
             <div className={contactStyles.contactDetailThree}>
               <div
                 className={contactStyles.navLinkThree}
-                onClick={() => handleClick("/contact")}
+                onClick={() => handleClick("/blog")}
               >
-                Contact
+                Blog
               </div>
             </div>
             <div className={contactStyles.contactDetailFour}>
               <div
                 className={contactStyles.navLinkFour}
+                onClick={() => handleClick("/contact")}
+              >
+                Contact
+              </div>
+            </div>
+            <div className={contactStyles.contactDetailFive}>
+              <div
+                className={contactStyles.navLinkFive}
                 onClick={() => handleClick("/peitho")}
               >
                 Agentic Tech
