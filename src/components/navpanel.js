@@ -59,7 +59,7 @@ export default function Navpanel(props) {
             <div className={contactStyles.contactDetailThree}>
               <div
                 className={contactStyles.navLinkThree}
-                onClick={() => handleClick("/blog")}
+              
               >
                 Blog
               </div>
