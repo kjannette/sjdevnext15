@@ -111,6 +111,65 @@ a.secondary {
   gap: 24px;
 }
 
+.imgBox {
+  filter: blur(5px);
+  transition: filter 0.3s ease-in-out;
+  &:hover {
+    filter: blur(0px);
+  }
+}
+
+.videoContainer {
+  position: relative; /* Essential for positioning pseudo-elements */
+  display: inline-block; /* Or set a specific width/height */
+  overflow: hidden; /* Ensures the fade effect is contained */
+}
+
+.videoContainer::before,
+.videoContainer::after,
+.videoContainer .fade-top,
+.videoContainer .fade-bottom {
+  content: "";
+  position: absolute;
+  pointer-events: none; /* Allows interaction with the video underneath */
+  z-index: 1; /* Ensures the fade overlays the video */
+}
+
+/* Top fade */
+.videoContainer::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px; /* Adjust height for desired fade length */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+/* Bottom fade */
+.videoContainer::after {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px; /* Adjust height for desired fade length */
+  background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+/* Left fade (use a separate element or adjust pseudo-element usage) */
+.videoContainer .fade-left {
+  top: 0;
+  left: 0;
+  width: 50px; /* Adjust width for desired fade length */
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+/* Right fade (use a separate element or adjust pseudo-element usage) */
+.videoContainer .fade-right {
+  top: 0;
+  right: 0;
+  width: 50px; /* Adjust width for desired fade length */
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
 .footer a {
   display: flex;
   align-items: center;
@@ -121,6 +180,12 @@ a.secondary {
   flex-shrink: 0;
 }
 
+.homeBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   a.primary:hover {

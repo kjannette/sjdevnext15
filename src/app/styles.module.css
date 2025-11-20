@@ -55,11 +55,33 @@
 }
 
 .imgBox {
-  width: 1000px;
-  margin-top: 1px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 1px auto 0 auto;
   -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 8%, rgba(0,0,0,0.3) 12%, rgba(0,0,0,0.7) 16%, black 20%);
   mask-image: linear-gradient(to bottom, transparent 0%, transparent 8%, rgba(0,0,0,0.3) 12%, rgba(0,0,0,0.7) 16%, black 20%);
   overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.imgBox::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, 
+    white 0%, 
+    transparent 15%, 
+    transparent 85%, 
+    white 100%
+  );
+  pointer-events: none;
+  z-index: 1;
 }
 
 .homeImg {

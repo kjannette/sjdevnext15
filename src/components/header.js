@@ -66,7 +66,6 @@ export default function Header(props) {
             <div>
               <div
                 className={headerStyles.nextLink}
-                onClick={() => handleClick("/blog")}
               >
                 Blog
               </div>
