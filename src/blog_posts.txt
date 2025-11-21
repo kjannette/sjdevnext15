@@ -1,6 +1,6 @@
 
 —————————
-Title:  Effective Prompts: Build a React login page in three minutes
+Title:  Effective AI Coding Prompts: Build a React login page in three minutes
 
 Content: This is the first installment in an instructive series in prompt engineering technique.  
 
