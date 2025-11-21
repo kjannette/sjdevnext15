@@ -1,10 +1,90 @@
-—————————
-Title: Precision promtping: Effective coding with AI tools 
-
-Content: This is the first installment in a series that will instruct you in prompt engineering basics and best practices.  
-
-We'll beign with a straightforward frontend feature: A React Javascript login page.
-
- 
 
 —————————
+Title:  Effective Prompts: Build a React login page in three minutes
+
+Content: This is the first installment in an instructive series in prompt engineering technique.  
+
+We’ll begin with a practical example, by building a common frontend component: a Javascript/React login page. Later posts
+in the series will explore backend services, tooling, scripting and will contrast/compare specific LLMs.  
+
+First, some high-level considerations (with a deeper dive into each point, below):  
+
+Prompts should be expressed  in, and seek to induce, step-by-step, chain of thought reasoning. 
+
+1. Hierarchical structure is key.  Prompts should be composed top-down.  First think on the highest level, and deconstruct the task into discrete, bite-sized tasks.
+
+2. Precision is key. Prompts should encompass each step of a task as concisely as possible. 
+
+3. Semantics are key. Segment prompts the way you separate concerns.  Think about prompting the way you think about design: each section addresses a specific, self-contained feature with as little overlap as possible.
+
+In other words, when composing prompts, deconstruct the task into bite-sized commands that reflect the discrete structure and purpose of each module, method 
+or class.
+
+This step involves asking yourself questions.  The answers will define the problem.
+
+What exactly **is** a  React  login page? **What does it do**, and what are **the minimal things** it 
+needs in order to do that? For illustrative purposes (we won’t get fancy yet), we’ll stick to the 
+barest possible combination of necessary elements to "get the job done” of logging 
+users in.  
+
+A login page is (minimally):
+
+1. A discrete React component.
+
+2. Exported into a larger component hierarchy.
+
+3. That incorporates specific jsx DOM elements, such as, minimally:
+
+    a. A header <h1>with a title, i.e. “Login Page” or “Please enter username and password”.
+    
+    b. Form inputs for username and password.
+    
+    c. A submit button.
+
+4. That also incorporates methods to perform tasks, for example:
+
+    a. A “handle submit” function that is called when the submit button is clicked.
+    
+    b. A method to validate our user’s input to the form.
+    
+    c. Methods to make HTTP requests (sending the credentials to the backend for authentication) and process the responses.
+    
+    d. A method to navigate to the next page (if the login is successful).
+
+    c. Other means (i.e., "onClick" functions) that navigate to/away from the page, i.e. if the user doesn't want to log in.
+
+5. That imports a CSS file for (in this case, basic) styling.
+
+6. That incorporates the navigation in the UI.
+
+Now that we have an understanding of our requirements, we can create a series of prompts.  The below assumes you have created a root project folder with the necessary dependencies (i.e. NPM, React) installed.
+
+**Prompt 1 – Define the task and constraints**
+
+I want you to build a single React page component that will act as a “Login” page for the UI of 
+
+customer service application.
+
+Requirements:
+
+* Use React functional components.
+
+* Style with plain CSS in a separate file, no CSS frameworks at this time.
+
+* The page must include:
+
+    * A placeholder header area at the top of the page.
+    * A simple form with two inputs: “User Name” and “Password”.
+    * A “Submit” button.
+
+* This page must be treated as a route in a React Router setup.
+
+* There will be a navigation bar at the top that lets the user navigate to this page and away from it. 
+
+* To start, make a “Home” link and a “Login” link.  Those will be separate, reusable components we create in a later step.
+
+First, think step-by-step and describe the architecture and file structure you plan to use (e.g. App, router setup, LoginPage, Navbar, CSS files).
+
+Then, stop and wait for my confirmation or instructions before writing any code.
+—————————
+
