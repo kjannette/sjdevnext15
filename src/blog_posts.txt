@@ -2,7 +2,7 @@
 —————————
 Title:  Effective Prompts: Build a React login page in three minutes
 
-Content: This is the first installment in an instructive series in prompt engineering best practices.  
+Content: This is the first installment in an instructive series in prompt engineering technique.  
 
 We’ll begin with a practical example, by building a common frontend component: a Javascript/React login page. Later posts
 in the series will explore backend services, tooling, scripting and will contrast/compare specific LLMs.  
@@ -11,22 +11,19 @@ First, some high-level considerations (with a deeper dive into each point, below
 
 Prompts should be expressed  in, and seek to induce, step-by-step, chain of thought reasoning. 
 
-1. Structure is key.  Prompts should be composed top-down.  First think on the highest level, and deconstruct the task into discrete, bite-sized tasks.
+1. Hierarchical structure is key.  Prompts should be composed top-down.  First think on the highest level, and deconstruct the task into discrete, bite-sized tasks.
 
-2. Precision is key. Prompts should encompass each step of a task, as concisely as possible. 
+2. Precision is key. Prompts should encompass each step of a task as concisely as possible. 
 
-3. Break it up.  Don’t feed the LLM a lengthy, rambling prompt, break the task down into as many discrete tasks as possible, while maintaining logical cohesion. 
+3. Semantics are key. Segment prompts the way you separate concerns.  Think about prompting the way you think about design: each section addresses a specific, self-contained feature with as little overlap as possible.
 
-When composing prompts, the best approach is to deconstruct the task into small, bite-sized 
-tasks containing  concise commands reflecting the discrete structure of each module, method 
-or class.  
+In other words, when composing prompts, deconstruct the task into bite-sized commands that reflect the discrete structure and purpose of each module, method 
+or class.
 
-Really, it’s simple - just capture, step by step,  the technique you have in your mind as 
-you code your morning ticket.  This first step is asking yourself questions to define the 
-problem.
+This step involves asking yourself questions.  The answers will define the problem.
 
 What exactly **is** a  React  login page? **What does it do**, and what are **the minimal things** it 
-needs in order to do that? For illustrative purposes, we won’t get fancy (yet).  We’ll stick to the 
+needs in order to do that? For illustrative purposes (we won’t get fancy yet), we’ll stick to the 
 barest possible combination of necessary elements to "get the job done” of logging 
 users in.  
 
@@ -54,11 +51,11 @@ A login page is (minimally):
     
     d. A method to navigate to the next page (if the login is successful).
 
-    c. Other means to navigate to/from the page, i.e. if the user doesn't want to log in.
+    c. Other means (i.e., "onClick" functions) that navigate to/away from the page, i.e. if the user doesn't want to log in.
 
 5. That imports a CSS file for (in this case, basic) styling.
 
-6. That incorporates navigation in the UI.
+6. That incorporates the navigation in the UI.
 
 Now that we have an understanding of our requirements, we can create a series of prompts.
 
