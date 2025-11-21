@@ -50,13 +50,15 @@ users in.  A login page is (minimally):
 
 4. That also incorporates methods to perform tasks, for example:
 
-    a. A “handle submit” function that, called when the submit button is clicked.
+    a. A “handle submit” function that is called when the submit button is clicked.
     
     b. A method to validate our user’s input to the form.
     
     c. Methods to make HTTP requests (sending the credentials to the backend for authentication) and process the responses.
     
     d. A method to navigate to the next page (if the login is successful).
+
+    c. Other means to navigate to/from the page, i.e. if the user doesn't want to log in.
 
 5. That imports a CSS file for (in this case, basic) styling.
 
