@@ -1,6 +1,8 @@
 
 —————————
-Title:  Effective AI Coding Prompts: Build a React login page in three minutes
+Title:  Precision Promtping: Effective Coding with AI Tools
+
+Subtitle: Build a React login page in three minutes
 
 Content: This is the first installment in an instructive series in prompt engineering technique.  
 
@@ -75,7 +77,7 @@ Requirements:
 
     * A placeholder header area at the top of the page.
     * A simple form with two inputs: “User Name” and “Password”.
-    * A “Submit” button.
+    * A “submit” button.
 
 * This page must be treated as a route in a React Router setup.
 

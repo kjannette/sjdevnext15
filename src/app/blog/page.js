@@ -78,6 +78,9 @@ export default function Blog() {
             {posts.map((post) => (
               <article key={post.id} className={blogStyles.blogPost}>
                 <h1 className={blogStyles.blogTitle}>{post.title}</h1>
+                {post.subtitle && (
+                  <h2 className={blogStyles.blogSubtitle}>{post.subtitle}</h2>
+                )}
                 <div className={blogStyles.blogContent}>
                   {post.contentBlocks.map((block, index) => renderContentBlock(block, index))}
                 </div>
