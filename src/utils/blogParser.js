@@ -53,6 +53,10 @@ export function parseBlogPosts(fileContent) {
     const titleLine = lines.find(line => line.startsWith('Title:'));
     const title = titleLine ? titleLine.replace('Title:', '').trim() : '';
     
+    // Extract subtitle
+    const subtitleLine = lines.find(line => line.startsWith('Subtitle:'));
+    const subtitle = subtitleLine ? subtitleLine.replace('Subtitle:', '').trim() : '';
+    
     // Extract content - everything after "Content:"
     const contentStartIndex = lines.findIndex(line => line.startsWith('Content:'));
     if (contentStartIndex === -1) return null;
@@ -175,6 +179,7 @@ export function parseBlogPosts(fileContent) {
     return {
       id: index,
       title,
+      subtitle,
       contentBlocks
     };
   }).filter(post => post !== null);
