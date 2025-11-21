@@ -4,7 +4,8 @@ Title:  Effective Prompts: Build a React login page in three minutes
 
 Content: This is the first installment in an instructive series in prompt engineering best practices.  
 
-We’ll begin with a practical example, by building a common frontend feature: A Javascript/React login page.  
+We’ll begin with a practical example, by building a common frontend component: a Javascript/React login page. Later posts
+in the series will explore backend services, tooling, scripting and will contrast/compare specific LLMs.  
 
 First, some high-level considerations (with a deeper dive into each point, below):  
 
@@ -12,29 +13,24 @@ Prompts should be expressed  in, and seek to induce, step-by-step, chain of thou
 
 1. Structure is key.  Prompts should be composed top-down.  First think on the highest level, and deconstruct the task into discrete, bite-sized tasks.
 
-2. Precision is key. Prompts should encompass each step of a task, but be as concise as possible. 
+2. Precision is key. Prompts should encompass each step of a task, as concisely as possible. 
 
-3. Break it up.  Don’t feed the LLM a lengthy, rambing prompt, break the task down into as many discrete tasks as possible, while mantaining logical cohesion. 
+3. Break it up.  Don’t feed the LLM a lengthy, rambling prompt, break the task down into as many discrete tasks as possible, while maintaining logical cohesion. 
 
 When composing prompts, the best approach is to deconstruct the task into small, bite-sized 
-
 tasks containing  concise commands reflecting the discrete structure of each module, method 
-
 or class.  
 
 Really, it’s simple - just capture, step by step,  the technique you have in your mind as 
-
 you code your morning ticket.  This first step is asking yourself questions to define the 
-
 problem.
 
 What exactly **is** a  React  login page? **What does it do**, and what are **the minimal things** it 
-
 needs in order to do that? For illustrative purposes, we won’t get fancy (yet).  We’ll stick to the 
-
 barest possible combination of necessary elements to "get the job done” of logging 
+users in.  
 
-users in.  A login page is (minimally):
+A login page is (minimally):
 
 1. A discrete React component.
 
@@ -90,7 +86,7 @@ Requirements:
 
 * There will be a navigation bar at the top that lets the user navigate to this page and away from it. 
 
-* To start, make a “Home” link and a “Login” link.  Those will be separate, reusable component we create in a later step.
+* To start, make a “Home” link and a “Login” link.  Those will be separate, reusable components we create in a later step.
 
 —————————
 
