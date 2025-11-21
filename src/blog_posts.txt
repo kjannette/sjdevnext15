@@ -19,11 +19,14 @@ Prompts should be expressed  in, and seek to induce, step-by-step, chain of thou
 When composing prompts, the best approach is to deconstruct the task into small, bite-sized 
 
 tasks containing  concise commands reflecting the discrete structure of each module, method 
+
 or class.  
 
 Really, it’s simple - just capture, step by step,  the technique you have in your mind as 
 
-you code your morning ticket.  This first step is asking yourself questions.
+you code your morning ticket.  This first step is asking yourself questions to define the 
+
+problem.
 
 What exactly **is** a  React  login page? **What does it do**, and what are **the minimal things** it 
 

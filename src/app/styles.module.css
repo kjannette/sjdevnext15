@@ -1,5 +1,5 @@
 .container {
-  height: 890px;
+  min-height: 890px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -522,7 +522,7 @@
 
 @media only screen and (max-width: 430px) {
   .container {
-    height: 980px;
+    min-height: 980px;
   }
   .homeContainer {
     height: 100%;
