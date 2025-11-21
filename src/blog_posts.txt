@@ -25,9 +25,9 @@ Really, it’s simple - just capture, step by step,  the technique you have in y
 
 you code your morning ticket.  This first step is asking yourself questions.
 
-What exactly *is* a  React  login page? What does it do, and what are the minimal things it 
+What exactly **is** a  React  login page? **What does it do**, and what are **the minimal things** it 
 
-needs in order to do that? For illustratvie purposes, we won’t get fancy (yet).  We’ll stick to the 
+needs in order to do that? For illustrative purposes, we won’t get fancy (yet).  We’ll stick to the 
 
 barest possible combination of necessary elements to "get the job done” of logging 
 
@@ -63,7 +63,7 @@ Now that we have an understanding of our requirements, we can create a series of
 
 Here is the first:
 
-Prompt 1 – Define the task and constraints
+**Prompt 1 – Define the task and constraints**
 
 I want you to build a single React page component that will act as a “Login” page for the UI of 
 
@@ -83,7 +83,7 @@ Requirements:
 
 * This page must be treated as a route in a React Router setup.
 
-* There will be a navigation bar at the top that lets the user navigate to this page and away from it: 
+* There will be a navigation bar at the top that lets the user navigate to this page and away from it. 
 
 * To start, make a “Home” link and a “Login” link.  Those will be separate, reusable component we create in a later step.
 
