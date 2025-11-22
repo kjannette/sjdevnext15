@@ -22,7 +22,6 @@
 .aboutColumnTR {
   display: flex;
   flex-direction: column;
-  margin-top: -4px;
   border-right: 1px solid #abd1ff;
   border-radius: 0px 15px;
   width: 50%;
@@ -134,49 +133,54 @@
 
 .imageBoxFour {
   display: flex;
-  margin-top: 8px;
-  margin-right: 10px;
-  width: 20%;
+  margin-right: 30px;
+  width: 30%;
 }
 
 .imageBoxFive {
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
   align-items: center;
   margin-top: 23px;
   width: 20%;
 }
 .colorCell1 {
-  border-radius: 8px;
+  border: 1px solid #4129ff;
+  height: 85px;
+  border-radius: 30px 0px 0px 0px;
   height: fit-content;
-  background-color: #acacac;
-  opacity: 0.14;
+  background-color: #eff96a;
+  opacity: 0.44;
   margin-top: 17px;
 }
 
 .colorCell2 {
-  border-radius: 8px;
+  border-radius: 90px 0px 0px 90px;
   height: fit-content;
   background-color: #0000ff;
-  opacity: 0.17;
+  opacity: 0.26;
 }
 
 .colorCell3 {
-  border-radius: 8px;
+  border: 1px solid #ff2929;
+  height: 140px;
+  margin-top: 30px;
+  border-radius: 0px 30px 0px 40px;
   height: fit-content;
   background-color: #ffff00;
   opacity: 0.55;
 }
 
 .colorCell4 {
-  border-radius: 8px;
+  border-radius: 0px 30px 0px 10px;
   height: fit-content;
   background-color: hsl(180, 66%, 49%);
   opacity: 0.8;
 }
 
 .colorCell5 {
-  border-radius: 8px;
+  border-radius: 0px 30px 0px 90px;
+  margin-right: 20px;
   height: fit-content;
   background-color: #ffc0cb;
   opacity: 1;
