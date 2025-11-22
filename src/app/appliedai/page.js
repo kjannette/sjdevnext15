@@ -245,7 +245,7 @@ export default function About() {
                           <img
                             className={aboutStyles.imgOne}
                             src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1763792286/three_paper_cranes_go_right_xsgmrc.png"
-                            height={112}
+                            height={62}
                             alt="sjDev man"
                           />
                         </div>
@@ -273,7 +273,7 @@ export default function About() {
                           <img
                             className={aboutStyles.imgTwo}
                             src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1763793585/blue_two_cranes_righter_fyvqip.png"
-                            height={90}
+                            height={110}
                             alt="sjDev man"
                           />
                         </div>
