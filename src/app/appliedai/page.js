@@ -244,8 +244,8 @@ export default function About() {
                         <div className={aboutStyles.colorCell1}>
                           <img
                             className={aboutStyles.imgOne}
-                            src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739936788/purpleMe_rf5gpm.png"
-                            height={130}
+                            src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1763792286/three_paper_cranes_go_right_xsgmrc.png"
+                            height={112}
                             alt="sjDev man"
                           />
                         </div>
@@ -258,7 +258,7 @@ export default function About() {
                         <div className={aboutStyles.colorCell2}>
                           <img
                             className={aboutStyles.imgOne}
-                            src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739936788/purpleMe_rf5gpm.png"
+                            src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1763794368/three_left_blue_i4liwl.png"
                             height={190}
                             alt="sjDev man"
                           />
@@ -272,8 +272,8 @@ export default function About() {
                         <div className={aboutStyles.colorCell3}>
                           <img
                             className={aboutStyles.imgTwo}
-                            src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739936788/purpleMe_rf5gpm.png"
-                            height={230}
+                            src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1763793585/blue_two_cranes_righter_fyvqip.png"
+                            height={90}
                             alt="sjDev man"
                           />
                         </div>
@@ -286,8 +286,8 @@ export default function About() {
                         <div className={aboutStyles.colorCell4}>
                           <img
                             className={aboutStyles.imgThree}
-                            src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739936788/purpleMe_rf5gpm.png"
-                            height={275}
+                            src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1763793412/one_paper_crane_left_BETTER_magenta_Smalle_eqelkz.png"
+                            height={120}
                             alt="sjDev man"
                           />
                         </div>
@@ -300,8 +300,8 @@ export default function About() {
                         <div className={aboutStyles.colorCell5}>
                           <img
                             className={aboutStyles.imgFour}
-                            src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739936788/purpleMe_rf5gpm.png"
-                            height={310}
+                            src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1763793055/one_paper_crane_left_BETTER_wb0saw.png"
+                            height={165}
                             alt="sjDev logo"
                           />
                         </div>

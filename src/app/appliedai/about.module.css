@@ -134,19 +134,19 @@
 
 .imageBoxFour {
   display: flex;
-  margin-top: 8px;
-  margin-right: 10px;
-  width: 20%;
+  margin-right: 30px;
+  width: 30%;
 }
 
 .imageBoxFive {
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
   align-items: center;
   margin-top: 23px;
   width: 20%;
 }
 .colorCell1 {
+  height: 85px;
   border-radius: 8px;
   height: fit-content;
   background-color: #acacac;
@@ -162,6 +162,7 @@
 }
 
 .colorCell3 {
+  height: 140px;
   border-radius: 8px;
   height: fit-content;
   background-color: #ffff00;
@@ -169,14 +170,15 @@
 }
 
 .colorCell4 {
-  border-radius: 8px;
+  border-radius: 0px 30px 0px 10px;
   height: fit-content;
   background-color: hsl(180, 66%, 49%);
   opacity: 0.8;
 }
 
 .colorCell5 {
-  border-radius: 8px;
+  border-radius: 0px 30px 0px 90px;
+  margin-right: 20px;
   height: fit-content;
   background-color: #ffc0cb;
   opacity: 1;
