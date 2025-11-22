@@ -111,14 +111,6 @@ a.secondary {
   gap: 24px;
 }
 
-.imgBox {
-  filter: blur(5px);
-  transition: filter 0.3s ease-in-out;
-  &:hover {
-    filter: blur(0px);
-  }
-}
-
 .videoContainer {
   position: relative; /* Essential for positioning pseudo-elements */
   display: inline-block; /* Or set a specific width/height */
