@@ -4,6 +4,7 @@ import { Roboto } from "next/font/google";
 import fs from "fs";
 import path from "path";
 import { parseBlogPosts } from "../../utils/blogParser";
+import Image from "next/image";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -36,6 +37,25 @@ export default function Blog() {
         <p key={index} className={blogStyles.blogParagraph}>
           {renderTextWithBold(block.content)}
         </p>
+      );
+    } else if (block.type === 'image') {
+      return (
+        <figure key={index} className={blogStyles.blogImageContainer}>
+          <div className={blogStyles.blogImageWrapper}>
+            <Image
+              src={`/${block.src.replace(/^public\//, '')}`}
+              alt={block.caption || 'Blog image'}
+              width={800}
+              height={600}
+              className={blogStyles.blogImage}
+            />
+          </div>
+          {block.caption && (
+            <figcaption className={blogStyles.blogImageCaption}>
+              {block.caption}
+            </figcaption>
+          )}
+        </figure>
       );
     } else if (block.type === 'ordered-numbered') {
       return (
