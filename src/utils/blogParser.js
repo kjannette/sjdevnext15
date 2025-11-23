@@ -61,6 +61,14 @@ export function parseBlogPosts(fileContent) {
     const contentStartIndex = lines.findIndex(line => line.startsWith('Content:'));
     if (contentStartIndex === -1) return null;
     
+    // Find subtitle index to get lines between subtitle and content
+    const subtitleIndex = lines.findIndex(line => line.startsWith('Subtitle:'));
+    
+    // Get lines between subtitle and content (for images that appear before content)
+    const preContentLines = subtitleIndex !== -1 ? 
+      lines.slice(subtitleIndex + 1, contentStartIndex) : 
+      lines.slice(0, contentStartIndex);
+    
     // Get the first content line (after "Content:")
     const firstContentLine = lines[contentStartIndex].replace('Content:', '').trim();
     
@@ -69,6 +77,35 @@ export function parseBlogPosts(fileContent) {
     
     // Build content blocks (paragraphs, lists, etc.)
     const contentBlocks = [];
+    
+    // Process pre-content lines for images
+    for (let i = 0; i < preContentLines.length; i++) {
+      const line = preContentLines[i];
+      const trimmedLine = line.trim();
+      
+      const imageMatch = trimmedLine.match(/^Image:\s+(.+)/);
+      if (imageMatch) {
+        // Look ahead for the caption on the next non-empty line
+        let caption = '';
+        for (let j = i + 1; j < preContentLines.length; j++) {
+          const nextLine = preContentLines[j].trim();
+          if (nextLine !== '') {
+            const nextCaptionMatch = nextLine.match(/^Image Caption:\s+(.+)/);
+            if (nextCaptionMatch) {
+              caption = nextCaptionMatch[1];
+              i = j; // Skip the caption line in the main loop
+            }
+            break;
+          }
+        }
+        
+        contentBlocks.push({
+          type: 'image',
+          src: imageMatch[1],
+          caption: caption
+        });
+      }
+    }
     
     // Add first paragraph if exists
     if (firstContentLine) {
@@ -83,6 +120,10 @@ export function parseBlogPosts(fileContent) {
       const line = remainingLines[i];
       const trimmedLine = line.trim();
       
+      // Check if it's an image line
+      const imageMatch = trimmedLine.match(/^Image:\s+(.+)/);
+      // Check if it's an image caption line
+      const captionMatch = trimmedLine.match(/^Image Caption:\s+(.+)/);
       // Check if it's a numbered list item (1., 2., 3., etc.)
       const numberedMatch = trimmedLine.match(/^(\d+)\.\s+(.+)/);
       // Check if it's a lettered list item (a., b., c., etc.)
@@ -90,7 +131,43 @@ export function parseBlogPosts(fileContent) {
       // Check if it's a bullet point (* )
       const bulletMatch = trimmedLine.match(/^\*\s+(.+)/);
       
-      if (numberedMatch) {
+      if (imageMatch) {
+        // Save current paragraph if any
+        if (currentParagraph.trim()) {
+          contentBlocks.push({ type: 'paragraph', content: parseBoldText(currentParagraph.trim()) });
+          currentParagraph = '';
+        }
+        // Close any open list
+        if (currentList) {
+          contentBlocks.push(currentList);
+          currentList = null;
+        }
+        
+        // Look ahead for the caption on the next non-empty line
+        let caption = '';
+        for (let j = i + 1; j < remainingLines.length; j++) {
+          const nextLine = remainingLines[j].trim();
+          if (nextLine !== '') {
+            const nextCaptionMatch = nextLine.match(/^Image Caption:\s+(.+)/);
+            if (nextCaptionMatch) {
+              caption = nextCaptionMatch[1];
+              i = j; // Skip the caption line in the main loop
+            }
+            break;
+          }
+        }
+        
+        contentBlocks.push({
+          type: 'image',
+          src: imageMatch[1],
+          caption: caption
+        });
+        
+      } else if (captionMatch) {
+        // Caption lines are handled in the image block, so skip if encountered alone
+        continue;
+        
+      } else if (numberedMatch) {
         // Save current paragraph if any
         if (currentParagraph.trim()) {
           contentBlocks.push({ type: 'paragraph', content: parseBoldText(currentParagraph.trim()) });

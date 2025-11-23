@@ -1,14 +1,14 @@
 
 —————————
-Title:  Precision Promtping: Effective Coding with AI Tools
+Title:  Precision Prompting: Effective Coding with AI
 
-Subtitle: Build a React login page in three minutes
+Subtitle: Build a React login page in 3 minutes with 5 prompts
 
 Image: public/prompt_demo/prompt_demo_1.png
 
 Image Caption:  After the first prompt, your login page should look like this.
  
-Content: This is the first installment in an instructive series in prompt engineering technique.  
+Content: This is the first installment in an instructive series on prompt engineering.  
 
 We’ll begin with a practical example, by building a common frontend component: a Javascript/React login page. Later posts
 in the series will explore backend services, tooling, scripting and will contrast/compare specific LLMs.  
