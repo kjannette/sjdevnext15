@@ -13,11 +13,13 @@ Content: This is the first installment in an instructive series on prompt engine
 We’ll begin with a practical example, by building a common frontend component: a Javascript/React login page. Later posts
 in the series will explore backend services, tooling, scripting and will contrast/compare specific LLMs.  
 
-First, some high-level considerations (with a deeper dive into each point, below):  
+First, some high-level considerations (with a deeper dive into each point, below).   
+
+Note: for purposes of this illustration, we assume the highest-order React commpent, the App (which renders all others), already exists.
 
 Prompts should be expressed  in, and seek to induce, step-by-step, chain of thought reasoning. 
 
-1. Hierarchical structure is key.  Prompts should be composed top-down.  First think on the highest level, and deconstruct the task into discrete, bite-sized tasks.
+1. Hierarchical structure is key.  Prompts should be composed top-down.  First think on the highest level, and deconstruct the task into discrete, bite-sized tasks. 
 
 2. Precision is key. Prompts should encompass each step of a task as concisely as possible. 
 
@@ -29,9 +31,11 @@ or class.
 This step involves asking yourself questions.  The answers will define the problem.
 
 What exactly **is** a  React  login page? **What does it do**, and what are **the minimal things** it 
-needs in order to do that? For illustrative purposes (we won’t get fancy yet), we’ll stick to the 
+needs in order to do that? 
+
+For illustrative purposes (we won’t get fancy yet), we’ll stick to the 
 barest possible combination of necessary elements to "get the job done” of logging 
-users in.  
+in.  
 
 A login page is (minimally):
 
@@ -67,29 +71,25 @@ Now that we have an understanding of our requirements, we can create a series of
 
 **Prompt 1 – Define the task and constraints**
 
-Let’s build a simple React customer service application.  
-
-First, we will build the highest parent in the component tree, which will render all other components: the App module.  
-
-For now, it will be a basic placeholder as we focus on a child component, the login page, which will be imported in App.
+I want you to build a LoginPage component for a React customer service application. A basic App component with React Router exists - we're focusing on login functionality.
 
 Requirements:
 
-* Use React functional components.
+1. Use React functional components.
 
-* Style with plain CSS in a separate file, no CSS frameworks at this time.
+2. Style with plain CSS in a separate file, no CSS frameworks at this time.
 
-* The login page must include:
+3. This page must be treated as a route in a React Router setup.
 
-    * A placeholder header area at the top of the page.
-    * A simple form with two inputs: “User Name” and “Password”.
-    * A “submit” button.
+4. There will be a navigation bar at the top that lets the user navigate to this page and away from it, with a "home" link and a "login" link.
 
-* This page must be treated as a route in a React Router setup.
+5. The login page must include:
 
-* There will be a navigation bar at the top that lets the user navigate to this page and away from it. 
-
-* To start, make a “Home” link and a “Login” link.  Those will be separate, reusable components we create in a later step.
+    a. A placeholder header area at the top of the page.
+    
+    b. A simple form with two inputs: "User Name" and "Password".
+    
+    c. A "submit" button.
 
 First, think step-by-step and describe the architecture and file structure you plan to use (e.g. App, router setup, LoginPage, Navbar, CSS files).
 
