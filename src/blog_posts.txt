@@ -103,7 +103,7 @@ The best results come from treating your AI like a skilled colleague: explain th
 
 Aside Start:
 
-The most common source of rambling, "garbage" output from LLMs is imprecise prompting that fails to guide the process.  
+**The most common source of rambling/"garbage" LLM output: imprecise prompting, failing to guide the process.**  
 
 1. Incomplete Context Loading - When the LLM doesn't read ALL relevant files before starting, and works with assumptions.
 
@@ -111,7 +111,7 @@ The most common source of rambling, "garbage" output from LLMs is imprecise prom
 
 3. Not Verifying Changes - Ideally, LLMs should re-read sections after making edits to ensure they're correct, but ensuring that happens is up to you.
 
-4. Missing the Forest for the Trees - LLMs can get hyperfocused on code details and miss simple structural issues.
+4. Missing the Forest for the Trees - LLMs can get hyperfocused on code details and miss simple structural requirements.
 
 Aside End:
 

@@ -60,9 +60,9 @@ export default function Blog() {
     } else if (block.type === 'aside') {
       return (
         <aside key={index} className={blogStyles.blogAside}>
-          {block.content.map((line, lineIndex) => (
+          {block.content.map((segments, lineIndex) => (
             <p key={lineIndex} className={blogStyles.blogAsideText}>
-              {line}
+              {renderTextWithBold(segments)}
             </p>
           ))}
         </aside>

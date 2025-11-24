@@ -142,9 +142,11 @@ export function parseBlogPosts(fileContent) {
       // Check if it's the end of an aside block
       if (trimmedLine === 'Aside End:') {
         if (insideAside && asideContent.length > 0) {
+          // Parse each line for bold text
+          const parsedContent = asideContent.map(line => parseBoldText(line));
           contentBlocks.push({
             type: 'aside',
-            content: asideContent
+            content: parsedContent
           });
         }
         insideAside = false;

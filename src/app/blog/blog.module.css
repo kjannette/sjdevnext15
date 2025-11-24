@@ -122,6 +122,11 @@
   margin-bottom: 0;
 }
 
+.blogAside strong {
+  font-weight: 700;
+  color: #000;
+}
+
 @media only screen and (max-width: 430px) {
   .blogContainer {
     padding: 1rem;
