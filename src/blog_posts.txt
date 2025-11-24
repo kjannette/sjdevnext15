@@ -140,6 +140,6 @@ Think step-by-step and implement the components and functionality below, in the 
 
 Do not add any complex styling yet; keep JSX simple. Do not create functions for processing the form data input.  Pause after completion of the above steps for review and next instructions.
 
-Give the output a quick inspection, just like a PR review.  
+Give the output a quick inspection, just like a PR review and make corrections if needed, either manually or with brief follow-up prompts.
 
 We will proceed with the implementation in the next post.
