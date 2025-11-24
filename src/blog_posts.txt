@@ -10,27 +10,35 @@ Image Caption:  After the first two prompts your login page should look like thi
  
 Content: This is the first installment in an instructive series on prompt engineering.  
 
-We’ll begin with a practical example, by building a common frontend component: a Javascript/React login page. Later posts
-in the series will explore backend services, tooling, scripting and will contrast/compare specific LLMs.  
+We’ll begin with a practical example, by building a common frontend component: a Javascript/React login page. 
 
-First, some high-level considerations (with a deeper dive into each point, below):  
+Aside Start:
+
+Note: for purposes of the below illustration, we assume that the project's necessary dependencies (i.e. React, React Router) are installed and the highest-order React component, the App (which renders all others), already exists.
+
+Aside End:
+
+Later posts in the series will explore backend services, tooling, scripting and will contrast/compare specific LLMs.  
+
+First, some high-level considerations (with a deeper dive into each point, below).   
 
 Prompts should be expressed  in, and seek to induce, step-by-step, chain of thought reasoning. 
 
-1. Hierarchical structure is key.  Prompts should be composed top-down.  First think on the highest level, and deconstruct the task into discrete, bite-sized tasks.
+1. Hierarchical structure is key.  Prompts should be composed top-down.  First think on the highest level, and deconstruct the task into discrete, bite-sized tasks. 
 
 2. Precision is key. Prompts should encompass each step of a task as concisely as possible. 
 
 3. Semantics are key. Segment prompts the way you separate concerns.  Think about prompting the way you think about design: each section addresses a specific, self-contained feature with as little overlap as possible.
 
-In other words, when composing prompts, deconstruct the task into bite-sized commands that reflect the discrete structure and purpose of each module, method 
-or class.
+In other words, when composing prompts, deconstruct the task into bite-sized commands that reflect the discrete structure and purpose of each module, 
+class or method.
 
 This step involves asking yourself questions.  The answers will define the problem.
 
 What exactly **is** a  React  login page? **What does it do**, and what are **the minimal things** it 
-needs in order to do that? For illustrative purposes (we won’t get fancy yet), we’ll stick to the 
-barest possible combination of necessary elements to "get the job done” of logging 
+needs in order to do that? 
+
+For illustrative purposes (we won’t get fancy yet), we’ll stick to the barest possible combination of necessary elements to "get the job done” of logging 
 users in.  
 
 A login page is (minimally):
@@ -39,7 +47,7 @@ A login page is (minimally):
 
 2. Exported into a larger component hierarchy.
 
-3. That incorporates specific jsx DOM elements, such as, minimally:
+3. That incorporates specific jsx DOM elements, such as (minimally):
 
     a. A header <h1>with a title, i.e. “Login Page” or “Please enter username and password”.
     
@@ -63,79 +71,75 @@ A login page is (minimally):
 
 6. That incorporates the navigation in the UI.
 
-Now that we have an understanding of our requirements, we can create a series of prompts.  The below assumes you have created a root project folder with the necessary dependencies (i.e. NPM, React) installed.
+Now that we have an understanding of our requirements, we can create a series of prompts. 
 
 **Prompt 1 – Define the task and constraints**
 
-Let’s build a simple React customer service application.  
-
-First, we will build the highest parent in the component tree, which will render all other components: the App module.  
-
-For now, it will be a basic placeholder as we focus on a child component, the login page, which will be imported in App.
+I want you to build a login page component for a React customer service application. It should be exported to, and incorporated in, the existing parent App component.
 
 Requirements:
 
-* Use React functional components.
+1. Use React functional components.
 
-* Style with plain CSS in a separate file, no CSS frameworks at this time.
+2. Style with plain CSS in a separate file, no CSS frameworks at this time.
 
-* The login page must include:
+3. This page must be treated as a route in a React Router setup.
 
-    * A placeholder header area at the top of the page.
-    * A simple form with two inputs: “User Name” and “Password”.
-    * A “submit” button.
+4. There will be a navigation bar at the top that lets the user navigate to this page and away from it, with a "home" link and a "login" link.
 
-* This page must be treated as a route in a React Router setup.
+5. The login page must include:
 
-* There will be a navigation bar at the top that lets the user navigate to this page and away from it. 
+    a. A placeholder header area at the top of the page.
+    
+    b. A simple form with two inputs: "User Name" and "Password".
+    
+    c. A "submit" button.
 
-* To start, make a “Home” link and a “Login” link.  Those will be separate, reusable components we create in a later step.
-
-First, think step-by-step and describe the architecture and file structure you plan to use (e.g. App, router setup, LoginPage, Navbar, CSS files).
-
-Then, stop and wait for my confirmation or instructions before writing any code.
+First, think step-by-step and describe the architecture, file structure, methods and other details you will implement. Then, stop and wait for my confirmation or instructions before writing any code.
 
 **This "pause and review" step is critical.** 
 
 It prevents the AI from running ahead and making assumptions about what you want, gives you control over direction, and creates checkpoints where you can course-correct. 
 
-It's the difference between collaboration — where you guide the process iteratively — and delegation, where you hope the AI reads your mind. 
+Reviewing the output takes only seconds, but it's the difference between collaboration — where you guide the process iteratively — and delegation, where you hope the AI reads your mind. 
 
 Aside Start:
 
-**The most common source of rambling/"garbage" LLM output: imprecise prompting, failing to guide the process.**  
+**The most common source of "garbage" output is failure to guide the process and catch:**  
 
 1. Incomplete Context Loading - When the LLM doesn't read ALL relevant files before starting, and works with assumptions.
 
 2. Jumping to Solutions Too Quickly - LLMs pattern-match -- it's how they work -- but sometimes they do so without fully understanding YOUR specific setup.  Therefore, LLMs might implement before validating assumptions against the actual codebase.
 
-3. Not Verifying Changes - Ideally, LLMs should re-read sections after making edits to ensure they're correct, but ensuring that happens is up to you.
+3. Not Verifying Changes - Ideally, LLMs should "proof read" sections after edits, but ensuring that happens is up to you.
 
 4. Missing the Forest for the Trees - LLMs can get hyperfocused on code details and miss simple structural requirements.
 
 Aside End:
 
-The best results come from treating your AI like a skilled colleague: explain the plan, confirm understanding, then execute together.
-
-Including the "pause and review" step keeps the process supervised and on track.
+Including the "pause and review" step keeps the process supervised and on track. The best results come from treating your AI like a skilled, but overzealous, colleague: explain the plan, confirm understanding, then oversee execution details.
 
 —————————
 Subtitle: Build a React login page in 3 minutes with 5 prompts, part 2
 
-Content:  This post builds on the output from the above prompt, adding a second to "flesh out" the structure we defined with our LLM, above.
+Content:  This post builds on the output from the above prompt, adding a second prompt to build what we defined with our LLM, above.
 
-**Prompt 2 – Create the basic components (no styling yet)**
+**Prompt 2 – Create basic component (no styling yet)**
 
-That structure is acceptable, keep it in mind as we move forward and make sure, as we build, our additions conform to it.  We will proceed with the plan in carefully executed phases.  The following instructions are for the second  phase, follow, but do not exceed them.
+That structure and approach is acceptable, keep it in mind as we move forward and make sure, as we build, our additions conform to it.  We will proceed with the plan in carefully executed phases.  The following instructions are for the second  phase - follow, but do not exceed them.
 
-Think step-by-step and implement the components and functionality below, in the same order, explaining your plan briefly before writing each feature:
+Think step-by-step and implement the components and functionality below, in the numbered order, explaining your plan concisely before writing each numbered item:
 
-1. A minimal App component that uses React Router and defines at least two routes:
-    a. / for a basic "Home" page.
+1. React Router functionality in the App component, which defines two routes:
+    a. / for a basic "Home" page (we will build it later).
     b. /login for the new "Login" page.
-2. A Navbar component that appears at the top, with navigation links to “Home” and “Login” using React Router navigation (e.g., Link or NavLink).
-3. A LoginPage component that contains:
-    a. A placeholder header area (text is fine for now).
-    b. A form with: an input for "User Name", an input for "Password", a submit button.
-        
-Do not add any complex styling yet; keep JSX and logic simple, clear and readable. Pause after completion of the above steps for review and further instructions.
+2. The Login page component, containing:
+    a. A placeholder header area.
+    b. A form with: an input for "User Name", an input for "Password", and a submit button.
+2. A separate Navbar component that is imported into the Login page and appears at the top, with navigation links to “Home” and “Login,” using React Router navigation.
+
+Do not add any complex styling yet; keep JSX simple. Do not create functions for processing the form data input.  Pause after completion of the above steps for review and next instructions.
+
+Give the output a quick inspection, just like a PR review and make corrections if needed, either manually or with brief follow-up prompts.
+
+We will proceed with the implementation in the next post.
