@@ -10,16 +10,17 @@ Image Caption:  After the first two prompts your login page should look like thi
  
 Content: This is the first installment in an instructive series on prompt engineering.  
 
-We’ll begin with a practical example, by building a common frontend component: a Javascript/React login page. Later posts
-in the series will explore backend services, tooling, scripting and will contrast/compare specific LLMs.  
-
-First, some high-level considerations (with a deeper dive into each point, below).   
+We’ll begin with a practical example, by building a common frontend component: a Javascript/React login page. 
 
 Aside Start:
 
-Note: for purposes of this illustration, we assume that the necessary dependencies (i.e. React, React Router) are installed and the highest-order React component, the App (which renders all others), already exists.
+Note: for purposes of the below illustration, we assume that the project's necessary dependencies (i.e. React, React Router) are installed and the highest-order React component, the App (which renders all others), already exists.
 
 Aside End:
+
+Later posts in the series will explore backend services, tooling, scripting and will contrast/compare specific LLMs.  
+
+First, some high-level considerations (with a deeper dive into each point, below).   
 
 Prompts should be expressed  in, and seek to induce, step-by-step, chain of thought reasoning. 
 
@@ -46,7 +47,7 @@ A login page is (minimally):
 
 2. Exported into a larger component hierarchy.
 
-3. That incorporates specific jsx DOM elements, such as, minimally:
+3. That incorporates specific jsx DOM elements, such as (minimally):
 
     a. A header <h1>with a title, i.e. “Login Page” or “Please enter username and password”.
     
@@ -104,39 +105,41 @@ Reviewing the output takes only seconds, but it's the difference between collabo
 
 Aside Start:
 
-**The most common source of rambling/"garbage" LLM output: imprecise prompting, failing to guide the process.**  
+**The most common source of "garbage" output is failure to guide the process and catch:**  
 
 1. Incomplete Context Loading - When the LLM doesn't read ALL relevant files before starting, and works with assumptions.
 
 2. Jumping to Solutions Too Quickly - LLMs pattern-match -- it's how they work -- but sometimes they do so without fully understanding YOUR specific setup.  Therefore, LLMs might implement before validating assumptions against the actual codebase.
 
-3. Not Verifying Changes - Ideally, LLMs should re-read sections after making edits to ensure they're correct, but ensuring that happens is up to you.
+3. Not Verifying Changes - Ideally, LLMs should "proof read" sections after edits, but ensuring that happens is up to you.
 
 4. Missing the Forest for the Trees - LLMs can get hyperfocused on code details and miss simple structural requirements.
 
 Aside End:
 
-The best results come from treating your AI like a skilled colleague: explain the plan, confirm understanding, then execute together.
-
-Including the "pause and review" step keeps the process supervised and on track.
+Including the "pause and review" step keeps the process supervised and on track. The best results come from treating your AI like a skilled, but overzealous, colleague: explain the plan, confirm understanding, then oversee execution details.
 
 —————————
 Subtitle: Build a React login page in 3 minutes with 5 prompts, part 2
 
-Content:  This post builds on the output from the above prompt, adding a second to "flesh out" the structure we defined with our LLM, above.
+Content:  This post builds on the output from the above prompt, adding a second prompt to build what we defined with our LLM, above.
 
-**Prompt 2 – Create the basic components (no styling yet)**
+**Prompt 2 – Create basic component (no styling yet)**
 
-That structure is acceptable, keep it in mind as we move forward and make sure, as we build, our additions conform to it.  We will proceed with the plan in carefully executed phases.  The following instructions are for the second  phase, follow, but do not exceed them.
+That structure and approach is acceptable, keep it in mind as we move forward and make sure, as we build, our additions conform to it.  We will proceed with the plan in carefully executed phases.  The following instructions are for the second  phase - follow, but do not exceed them.
 
-Think step-by-step and implement the components and functionality below, in the same order, explaining your plan briefly before writing each feature:
+Think step-by-step and implement the components and functionality below, in the numbered order, explaining your plan concisely before writing each numbered item:
 
-1. A minimal App component that uses React Router and defines at least two routes:
-    a. / for a basic "Home" page.
+1. React Router functionality in the App component, which defines two routes:
+    a. / for a basic "Home" page (we will build it later).
     b. /login for the new "Login" page.
-2. A Navbar component that appears at the top, with navigation links to “Home” and “Login” using React Router navigation (e.g., Link or NavLink).
-3. A LoginPage component that contains:
-    a. A placeholder header area (text is fine for now).
-    b. A form with: an input for "User Name", an input for "Password", a submit button.
-        
-Do not add any complex styling yet; keep JSX and logic simple, clear and readable. Pause after completion of the above steps for review and further instructions.
+2. The Login page component, containing:
+    a. A placeholder header area.
+    b. A form with: an input for "User Name", an input for "Password", and a submit button.
+2. A separate Navbar component that is imported into the Login page and appears at the top, with navigation links to “Home” and “Login,” using React Router navigation.
+
+Do not add any complex styling yet; keep JSX simple. Do not create functions for processing the form data input.  Pause after completion of the above steps for review and next instructions.
+
+Give the output a quick inspection, just like a PR review.  
+
+We will proceed with the implementation in the next post.
