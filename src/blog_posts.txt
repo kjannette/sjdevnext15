@@ -95,7 +95,7 @@ Requirements:
     
     c. A "submit" button.
 
-First, think step-by-step and describe the architecture, file structure, methods and other details you will implement. Then, stop and wait for my confirmation or instructions before writing any code.
+First, think step-by-step and describe the architecture and file structure that will be needed. Then, concisely hone in on methods the component will contain, and implementation details. Finally, stop and wait for my confirmation or instructions before writing any code.
 
 **This "pause and review" step is critical.** 
 
