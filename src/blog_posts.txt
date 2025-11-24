@@ -67,9 +67,11 @@ Now that we have an understanding of our requirements, we can create a series of
 
 **Prompt 1 – Define the task and constraints**
 
-I want you to build a single React page component that will act as a “Login” page for the UI of 
+Let’s build a simple React customer service application.  
 
-a customer service application.
+First, we will build the highest parent in the component tree, which will render all other components: the App module.  
+
+For now, it will be a basic placeholder as we focus on a child component, the login page, which will be imported in App.
 
 Requirements:
 
@@ -77,7 +79,7 @@ Requirements:
 
 * Style with plain CSS in a separate file, no CSS frameworks at this time.
 
-* The page must include:
+* The login page must include:
 
     * A placeholder header area at the top of the page.
     * A simple form with two inputs: “User Name” and “Password”.
@@ -99,8 +101,6 @@ It prevents the AI from running ahead and making assumptions about what you want
 
 It's the difference between collaboration — where you guide the process iteratively — and delegation, where you hope the AI reads your mind. 
 
-The best results come from treating your AI like a skilled colleague: explain the plan, confirm understanding, then execute together.
-
 Aside Start:
 
 **The most common source of rambling/"garbage" LLM output: imprecise prompting, failing to guide the process.**  
@@ -114,6 +114,8 @@ Aside Start:
 4. Missing the Forest for the Trees - LLMs can get hyperfocused on code details and miss simple structural requirements.
 
 Aside End:
+
+The best results come from treating your AI like a skilled colleague: explain the plan, confirm understanding, then execute together.
 
 Including the "pause and review" step keeps the process supervised and on track.
 
