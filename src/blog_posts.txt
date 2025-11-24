@@ -109,7 +109,7 @@ Aside Start:
 
 1. Incomplete Context Loading - When the LLM doesn't read ALL relevant files before starting, and works with assumptions.
 
-2. Jumping to Solutions Too Quickly - LLMs pattern-match -- it's how they work -- but sometimes they do so without fully understanding YOUR specific setup.  Therefore, LLMs might implement before validating assumptions against the actual codebase.
+2. Jumping to Solutions Too Quickly - LLMs pattern-match -- it's how they work -- but sometimes they do so without fully understanding YOUR specific configuration.  Therefore, LLMs might implement before validating assumptions against the actual codebase.
 
 3. Not Verifying Changes - Ideally, LLMs should "proof read" sections after edits, but ensuring that happens is up to you.
 
