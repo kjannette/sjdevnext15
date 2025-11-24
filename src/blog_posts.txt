@@ -15,7 +15,11 @@ in the series will explore backend services, tooling, scripting and will contras
 
 First, some high-level considerations (with a deeper dive into each point, below).   
 
-Note: for purposes of this illustration, we assume the highest-order React commpent, the App (which renders all others), already exists.
+Aside Start:
+
+Note: for purposes of this illustration, we assume that the necessary dependencies (i.e. React, React Router) are installed and the highest-order React component, the App (which renders all others), already exists.
+
+Aside End:
 
 Prompts should be expressed  in, and seek to induce, step-by-step, chain of thought reasoning. 
 
@@ -25,17 +29,16 @@ Prompts should be expressed  in, and seek to induce, step-by-step, chain of thou
 
 3. Semantics are key. Segment prompts the way you separate concerns.  Think about prompting the way you think about design: each section addresses a specific, self-contained feature with as little overlap as possible.
 
-In other words, when composing prompts, deconstruct the task into bite-sized commands that reflect the discrete structure and purpose of each module, method 
-or class.
+In other words, when composing prompts, deconstruct the task into bite-sized commands that reflect the discrete structure and purpose of each module, 
+class or method.
 
 This step involves asking yourself questions.  The answers will define the problem.
 
 What exactly **is** a  React  login page? **What does it do**, and what are **the minimal things** it 
 needs in order to do that? 
 
-For illustrative purposes (we won’t get fancy yet), we’ll stick to the 
-barest possible combination of necessary elements to "get the job done” of logging 
-in.  
+For illustrative purposes (we won’t get fancy yet), we’ll stick to the barest possible combination of necessary elements to "get the job done” of logging 
+users in.  
 
 A login page is (minimally):
 
@@ -67,11 +70,11 @@ A login page is (minimally):
 
 6. That incorporates the navigation in the UI.
 
-Now that we have an understanding of our requirements, we can create a series of prompts.  The below assumes you have created a root project folder with the necessary dependencies (i.e. NPM, React) installed.
+Now that we have an understanding of our requirements, we can create a series of prompts. 
 
 **Prompt 1 – Define the task and constraints**
 
-I want you to build a LoginPage component for a React customer service application. A basic App component with React Router exists - we're focusing on login functionality.
+I want you to build a login page component for a React customer service application. It should be exported to, and incorporated in, the existing parent App component.
 
 Requirements:
 
@@ -91,15 +94,13 @@ Requirements:
     
     c. A "submit" button.
 
-First, think step-by-step and describe the architecture and file structure you plan to use (e.g. App, router setup, LoginPage, Navbar, CSS files).
-
-Then, stop and wait for my confirmation or instructions before writing any code.
+First, think step-by-step and describe the architecture, file structure, methods and other details you will implement. Then, stop and wait for my confirmation or instructions before writing any code.
 
 **This "pause and review" step is critical.** 
 
 It prevents the AI from running ahead and making assumptions about what you want, gives you control over direction, and creates checkpoints where you can course-correct. 
 
-It's the difference between collaboration — where you guide the process iteratively — and delegation, where you hope the AI reads your mind. 
+Reviewing the output takes only seconds, but it's the difference between collaboration — where you guide the process iteratively — and delegation, where you hope the AI reads your mind. 
 
 Aside Start:
 
