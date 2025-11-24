@@ -103,6 +103,25 @@
   line-height: 1.4;
 }
 
+.blogAside {
+  background-color: #f5f5f5;
+  border-left: 4px solid #e0e0e0;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  border-radius: 4px;
+}
+
+.blogAsideText {
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.blogAsideText:last-child {
+  margin-bottom: 0;
+}
+
 @media only screen and (max-width: 430px) {
   .blogContainer {
     padding: 1rem;
@@ -127,6 +146,11 @@
   
   .blogImageCaption {
     font-size: 0.85rem;
+  }
+  
+  .blogAside {
+    padding: 0.75rem 1rem;
+    font-size: 0.8rem;
   }
 }
 

@@ -57,6 +57,16 @@ export default function Blog() {
           )}
         </figure>
       );
+    } else if (block.type === 'aside') {
+      return (
+        <aside key={index} className={blogStyles.blogAside}>
+          {block.content.map((line, lineIndex) => (
+            <p key={lineIndex} className={blogStyles.blogAsideText}>
+              {line}
+            </p>
+          ))}
+        </aside>
+      );
     } else if (block.type === 'ordered-numbered') {
       return (
         <ol key={index} className={blogStyles.blogOrderedList}>

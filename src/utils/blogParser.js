@@ -115,10 +115,50 @@ export function parseBlogPosts(fileContent) {
     // Process remaining lines
     let currentParagraph = '';
     let currentList = null;
+    let insideAside = false;
+    let asideContent = [];
     
     for (let i = 0; i < remainingLines.length; i++) {
       const line = remainingLines[i];
       const trimmedLine = line.trim();
+      
+      // Check if it's the start of an aside block
+      if (trimmedLine === 'Aside Start:') {
+        // Save current paragraph if any
+        if (currentParagraph.trim()) {
+          contentBlocks.push({ type: 'paragraph', content: parseBoldText(currentParagraph.trim()) });
+          currentParagraph = '';
+        }
+        // Close any open list
+        if (currentList) {
+          contentBlocks.push(currentList);
+          currentList = null;
+        }
+        insideAside = true;
+        asideContent = [];
+        continue;
+      }
+      
+      // Check if it's the end of an aside block
+      if (trimmedLine === 'Aside End:') {
+        if (insideAside && asideContent.length > 0) {
+          contentBlocks.push({
+            type: 'aside',
+            content: asideContent
+          });
+        }
+        insideAside = false;
+        asideContent = [];
+        continue;
+      }
+      
+      // If we're inside an aside, collect the lines
+      if (insideAside) {
+        if (trimmedLine !== '') {
+          asideContent.push(trimmedLine);
+        }
+        continue;
+      }
       
       // Check if it's an image line
       const imageMatch = trimmedLine.match(/^Image:\s+(.+)/);

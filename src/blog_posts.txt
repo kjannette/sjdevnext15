@@ -6,7 +6,7 @@ Subtitle: Build a React login page in 3 minutes with 5 prompts
 
 Image: public/prompt_demo/prompt_demo_1.png
 
-Image Caption:  After the first prompt, your login page should look like this.
+Image Caption:  After the first two prompts your login page should look like this.
  
 Content: This is the first installment in an instructive series on prompt engineering.  
 
@@ -69,7 +69,7 @@ Now that we have an understanding of our requirements, we can create a series of
 
 I want you to build a single React page component that will act as a “Login” page for the UI of 
 
-customer service application.
+a customer service application.
 
 Requirements:
 
@@ -92,5 +92,48 @@ Requirements:
 First, think step-by-step and describe the architecture and file structure you plan to use (e.g. App, router setup, LoginPage, Navbar, CSS files).
 
 Then, stop and wait for my confirmation or instructions before writing any code.
-—————————
 
+**This "pause and review" step is critical.** 
+
+It prevents the AI from running ahead and making assumptions about what you want, gives you control over direction, and creates checkpoints where you can course-correct. 
+
+It's the difference between collaboration — where you guide the process iteratively — and delegation, where you hope the AI reads your mind. 
+
+The best results come from treating your AI like a skilled colleague: explain the plan, confirm understanding, then execute together.
+
+Aside Start:
+
+The most common source of rambling, "garbage" output from LLMs is imprecise prompting that fails to guide the process.  
+
+1. Incomplete Context Loading - When the LLM doesn't read ALL relevant files before starting, and works with assumptions.
+
+2. Jumping to Solutions Too Quickly - LLMs pattern-match -- it's how they work -- but sometimes they do so without fully understanding YOUR specific setup.  Therefore, LLMs might implement before validating assumptions against the actual codebase.
+
+3. Not Verifying Changes - Ideally, LLMs should re-read sections after making edits to ensure they're correct, but ensuring that happens is up to you.
+
+4. Missing the Forest for the Trees - LLMs can get hyperfocused on code details and miss simple structural issues.
+
+Aside End:
+
+Including the "pause and review" step keeps the process supervised and on track.
+
+—————————
+Subtitle: Build a React login page in 3 minutes with 5 prompts, part 2
+
+Content:  This post builds on the output from the above prompt, adding a second to "flesh out" the structure we defined with our LLM, above.
+
+**Prompt 2 – Create the basic components (no styling yet)**
+
+That structure is acceptable, keep it in mind as we move forward and make sure, as we build, our additions conform to it.  We will proceed with the plan in carefully executed phases.  The following instructions are for the second  phase, follow, but do not exceed them.
+
+Think step-by-step and implement the components and functionality below, in the same order, explaining your plan briefly before writing each feature:
+
+1. A minimal App component that uses React Router and defines at least two routes:
+    a. / for a basic "Home" page.
+    b. /login for the new "Login" page.
+2. A Navbar component that appears at the top, with navigation links to “Home” and “Login” using React Router navigation (e.g., Link or NavLink).
+3. A LoginPage component that contains:
+    a. A placeholder header area (text is fine for now).
+    b. A form with: an input for "User Name", an input for "Password", a submit button.
+        
+Do not add any complex styling yet; keep JSX and logic simple, clear and readable. Pause after completion of the above steps for review and further instructions.
