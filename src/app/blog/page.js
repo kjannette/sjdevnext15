@@ -32,7 +32,13 @@ export default function Blog() {
   };
 
   const renderContentBlock = (block, index) => {
-    if (block.type === 'paragraph') {
+    if (block.type === 'sectionHeader') {
+      return (
+        <h3 key={index} className={blogStyles.sectionHeader}>
+          {block.content}
+        </h3>
+      );
+    } else if (block.type === 'paragraph') {
       return (
         <p key={index} className={blogStyles.blogParagraph}>
           {renderTextWithBold(block.content)}
@@ -77,7 +83,16 @@ export default function Blog() {
                 <ol type="a" className={blogStyles.blogSubList}>
                   {item.subItems.map((subItem, subIndex) => (
                     <li key={subIndex} className={blogStyles.blogSubListItem}>
-                      {renderTextWithBold(subItem)}
+                      {renderTextWithBold(subItem.content || subItem)}
+                      {subItem.subSubItems && subItem.subSubItems.length > 0 && (
+                        <ol type="i" className={blogStyles.blogSubSubList}>
+                          {subItem.subSubItems.map((subSubItem, subSubIndex) => (
+                            <li key={subSubIndex} className={blogStyles.blogSubSubListItem}>
+                              {renderTextWithBold(subSubItem)}
+                            </li>
+                          ))}
+                        </ol>
+                      )}
                     </li>
                   ))}
                 </ol>

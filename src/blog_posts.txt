@@ -20,74 +20,77 @@ Aside End:
 
 Later posts in the series will explore backend services, tooling, scripting and will contrast/compare specific LLMs.  
 
-First, some high-level considerations (with a deeper dive into each point, below).   
+## The Setup
 
-Prompts should be expressed  in, and seek to induce, step-by-step, chain of thought reasoning. 
+First, some high-level considerations that you should always have in mind when composing prompts.
+
+Prompts should be expressed  in, and seek to induce, step-by-step, chain of thought reasoning. Other key considerations:
 
 1. Hierarchical structure is key.  Prompts should be composed top-down.  First think on the highest level, and deconstruct the task into discrete, bite-sized tasks. 
 
 2. Precision is key. Prompts should encompass each step of a task as concisely as possible. 
 
-3. Semantics are key. Segment prompts the way you separate concerns.  Think about prompting the way you think about design: each section addresses a specific, self-contained feature with as little overlap as possible.
+3. Semantics are key. Segment prompts the way you separate concerns.  Think about it like architecture/design: Present an overview, then fine-grained segments addressing self-contained specs. Minimize overlap.
 
-In other words, when composing prompts, deconstruct the task into bite-sized commands that reflect the discrete structure and purpose of each module, 
-class or method.
+Organzied thoughts yield well structured, working code output. 
 
-This step involves asking yourself questions.  The answers will define the problem.
+Start by asking yourself questions.  The answers will define the work.
 
-What exactly **is** a  React  login page? **What does it do**, and what are **the minimal things** it 
+What exactly **is** a  React  login page? **What does it do**, and what are **the minimal elements** it 
 needs in order to do that? 
 
-For illustrative purposes (we won’t get fancy yet), we’ll stick to the barest possible combination of necessary elements to "get the job done” of logging 
-users in.  
+For illustrative purposes (we won’t get fancy yet), we’ll stick to the barest collection of elements needed to get credentialed users logged in.
+users in done.
 
-A login page is (minimally):
+A login page **is** (at least):
 
 1. A discrete React component.
 
 2. Exported into a larger component hierarchy.
 
-3. That incorporates specific jsx DOM elements, such as (minimally):
+3. That imports a CSS file for (in this case, basic) styling.
 
-    a. A header <h1>with a title, i.e. “Login Page” or “Please enter username and password”.
+4. That incorporates specific jsx DOM elements, such as, minimally:
+
+    a. A header (<h1>) with a title, i.e. “Customer Login" or “Please enter username and password”.
     
     b. Form inputs for username and password.
     
     c. A submit button.
 
-4. That also incorporates methods to perform tasks, for example:
+5. A login page **does certain tasks**, and therefore needs functions.
 
-    a. A “handle submit” function that is called when the submit button is clicked.
+    a. A “handle submit” function, called when the submit button is clicked.
     
-    b. A method to validate our user’s input to the form.
+    b. A "validate" function, for the form input.
     
-    c. Methods to make HTTP requests (sending the credentials to the backend for authentication) and process the responses.
-    
-    d. A method to navigate to the next page (if the login is successful).
+    c. An HTTP POST function (to send credentials to the backend for auth), process the response, take appropriate action:
 
-    c. Other means (i.e., "onClick" functions) that navigate to/away from the page, i.e. if the user doesn't want to log in.
+        i. Navigate to the next page (if login is successful).
 
-5. That imports a CSS file for (in this case, basic) styling.
+        ii. Navigate away from the page (i.e. if the user doesn't want to log in -- "onClick" function(s) ).
 
-6. That incorporates the navigation in the UI.
+        iii. Handle errors on invalid input or unsuccessful login (credentials rejected, i.e. 401).
 
-Now that we have an understanding of our requirements, we can create a series of prompts. 
+With clearly-defined requirements, we can now create a series of prompts. 
+
+## The Execution
 
 **Prompt 1 – Define the task and constraints**
 
-I want you to build a login page component for a React customer service application. It should be exported to, and incorporated in, the existing parent App component.
+Build a login page component for a React customer service application. In planning, examine the existing file structure.  The login page will be exported to, and incorporated in, the parent App component.
 
 Requirements:
 
 1. Use React functional components.
 
-2. Style with plain CSS in a separate file, no CSS frameworks at this time.
+2. Style with plain CSS in a separate file, no CSS frameworks.
 
-3. This page must be treated as a route in a React Router setup.
+3. The login page will be a route in a React Router setup.
 
-4. There will be a navigation bar at the top that lets the user navigate to this page and away from it, with a "home" link and a "login" link.
+4. The login page will include a navigation bar at the top with a "home" link and a "login" link.  This should be a separate, reusable component that is imported.
 
-5. The login page must include:
+5. The login page must also include:
 
     a. A placeholder header area at the top of the page.
     
@@ -95,7 +98,17 @@ Requirements:
     
     c. A "submit" button.
 
-First, think step-by-step and describe the architecture and file structure that will be needed. Then, concisely hone in on methods the component will contain, and implementation details. Finally, stop and wait for my confirmation or instructions before writing any code.
+    d. A "validate" function for form input that accepts a standard email pattern (user@domain.com) username, and an 11 character password with at least one uppercase letter (A-Z) at least one number (0-9) and at least one special character (!@#$%^&()+-=[]{}|;:,.<>?) password.
+
+    e. A POST function (just use fetch for now) to send the validated credentials to the backend.
+
+    f. A function to navigate to the user dashboard we will build later if validation succeeds.
+
+    e. A function to display an error message if validation fails (just a placeholder for now, we will build it out later.) 
+
+First, think step-by-step and briefly describe: the architecture and file structure; then, hone in on requirements: imports, functions, a simple jsx UI design, and any other relevant implementation details. 
+
+Finally, stop and wait for my confirmation or instructions before writing any code.
 
 **This "pause and review" step is critical.** 
 
@@ -113,16 +126,16 @@ Aside Start:
 
 3. Not Verifying Changes - Ideally, LLMs should "proof read" sections after edits, but ensuring that happens is up to you.
 
-4. Missing the Forest for the Trees - LLMs can get hyperfocused on code details and miss simple structural requirements.
+4. Missing the Forest for the Trees - LLMs can get hyperfocused on code details, while neglecting structural realities.  This leads to absurd results, such as excessive, unnecessary (and expensive) API calls.
 
 Aside End:
 
-Including the "pause and review" step keeps the process supervised and on track. The best results come from treating your AI like a skilled, but overzealous, colleague: explain the plan, confirm understanding, then oversee execution details.
+Observing a "pause and review" supervision cadence keeps the process on track. Treat the AI like a skilled, but overzealous, junior colleague: explain the plan, confirm understanding, then oversee execution details.  Beware of the LLM "getting away from" your intent.
 
 —————————
 Subtitle: Build a React login page in 3 minutes with 5 prompts, part 2
 
-Content:  This post builds on the output from the above prompt, adding a second prompt to build what we defined with our LLM, above.
+Content:  This is the second installment in a series on effective prompt engineering.  This prompt builds on the foundation created in the first one, above.  In it, we instructed  adding a second prompt to build what we defined with our LLM, above.
 
 **Prompt 2 – Create basic component (no styling yet)**
 

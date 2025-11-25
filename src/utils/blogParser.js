@@ -162,6 +162,8 @@ export function parseBlogPosts(fileContent) {
         continue;
       }
       
+      // Check if it's a section header (## Header Text)
+      const sectionHeaderMatch = trimmedLine.match(/^##\s+(.+)/);
       // Check if it's an image line
       const imageMatch = trimmedLine.match(/^Image:\s+(.+)/);
       // Check if it's an image caption line
@@ -170,10 +172,30 @@ export function parseBlogPosts(fileContent) {
       const numberedMatch = trimmedLine.match(/^(\d+)\.\s+(.+)/);
       // Check if it's a lettered list item (a., b., c., etc.)
       const letteredMatch = trimmedLine.match(/^([a-z])\.\s+(.+)/);
+      // Check if it's a roman numeral list item (i., ii., iii., etc.)
+      const romanMatch = trimmedLine.match(/^(i{1,3}|iv|v|vi{0,3}|ix|x)\.\s+(.+)/);
       // Check if it's a bullet point (* )
       const bulletMatch = trimmedLine.match(/^\*\s+(.+)/);
       
-      if (imageMatch) {
+      if (sectionHeaderMatch) {
+        // Save current paragraph if any
+        if (currentParagraph.trim()) {
+          contentBlocks.push({ type: 'paragraph', content: parseBoldText(currentParagraph.trim()) });
+          currentParagraph = '';
+        }
+        // Close any open list
+        if (currentList) {
+          contentBlocks.push(currentList);
+          currentList = null;
+        }
+        
+        // Add section header block
+        contentBlocks.push({
+          type: 'sectionHeader',
+          content: sectionHeaderMatch[1]
+        });
+        
+      } else if (imageMatch) {
         // Save current paragraph if any
         if (currentParagraph.trim()) {
           contentBlocks.push({ type: 'paragraph', content: parseBoldText(currentParagraph.trim()) });
@@ -223,10 +245,23 @@ export function parseBlogPosts(fileContent) {
         }
         currentList.items.push({ content: parseBoldText(numberedMatch[2]), subItems: [] });
         
+      } else if (romanMatch) {
+        // This is a sub-sub-item of the previous lettered item
+        // Check roman numerals BEFORE letters since "i", "v", "x" are also letters
+        if (currentList && currentList.type === 'ordered-numbered' && currentList.items.length > 0) {
+          const lastItem = currentList.items[currentList.items.length - 1];
+          if (lastItem.subItems.length > 0) {
+            lastItem.subItems[lastItem.subItems.length - 1].subSubItems.push(parseBoldText(romanMatch[2]));
+          }
+        }
+        
       } else if (letteredMatch) {
         // This is a sub-item of the previous numbered item
         if (currentList && currentList.type === 'ordered-numbered' && currentList.items.length > 0) {
-          currentList.items[currentList.items.length - 1].subItems.push(parseBoldText(letteredMatch[2]));
+          currentList.items[currentList.items.length - 1].subItems.push({
+            content: parseBoldText(letteredMatch[2]),
+            subSubItems: []
+          });
         }
         
       } else if (bulletMatch) {
@@ -258,10 +293,11 @@ export function parseBlogPosts(fileContent) {
         // Check if next line continues the same list type
         const nextIsNumbered = nextNonEmptyLine.match(/^(\d+)\.\s+(.+)/);
         const nextIsLettered = nextNonEmptyLine.match(/^([a-z])\.\s+(.+)/);
+        const nextIsRoman = nextNonEmptyLine.match(/^(i{1,3}|iv|v|vi{0,3}|ix|x)\.\s+(.+)/);
         const nextIsBullet = nextNonEmptyLine.match(/^\*\s+(.+)/);
         
         // Only close the list if the next line is NOT the same type
-        const shouldCloseNumberedList = currentList?.type === 'ordered-numbered' && !nextIsNumbered && !nextIsLettered;
+        const shouldCloseNumberedList = currentList?.type === 'ordered-numbered' && !nextIsNumbered && !nextIsLettered && !nextIsRoman;
         const shouldCloseBulletList = currentList?.type === 'unordered' && !nextIsBullet;
         
         if (shouldCloseNumberedList || shouldCloseBulletList) {
