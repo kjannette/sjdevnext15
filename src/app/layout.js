@@ -2,6 +2,8 @@ import Footer from "../components/footer";
 import ClientNavigationWrapper from "../components/ClientNavigationWrapper";
 import "./globals.css";
 import { Roboto } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import { GA_MEASUREMENT_ID } from "../secrets";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -25,6 +27,7 @@ export default function RootLayout({ children }) {
           {children}
         </ClientNavigationWrapper>
         <Footer />
+        <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />
       </body>
     </html>
   );
