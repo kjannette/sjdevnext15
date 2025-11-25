@@ -75,15 +75,6 @@ export default function Contact() {
                       github.com
                     </a>
                   </div>
-                  <div className={contactStyles.contactDetailSix}>
-                    <a
-                      className={contactStyles.contactLinkSix}
-                      rel="me"
-                      href="https://layer8.space/@sj"
-                    >
-                      @sj@layer8.space
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>

@@ -45,6 +45,14 @@
   margin-bottom: 0;
 }
 
+.sectionHeader {
+  font-size: 1.52rem;
+  font-weight: 700;
+  color: #000;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
 .blogOrderedList,
 .blogUnorderedList {
   margin-bottom: 1.5rem;
@@ -65,6 +73,18 @@
 }
 
 .blogSubListItem {
+  margin-bottom: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.blogSubSubList {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 1.5rem;
+  list-style-type: lower-roman;
+}
+
+.blogSubSubListItem {
   margin-bottom: 0.5rem;
   padding-left: 0.5rem;
 }
@@ -142,6 +162,10 @@
 
   .blogContent {
     font-size: 1rem;
+  }
+  
+  .sectionHeader {
+    font-size: 1.2rem;
   }
 
   .blogPost {
