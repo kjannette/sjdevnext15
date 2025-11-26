@@ -456,10 +456,7 @@ export default function About() {
                   </>
                   <>
                     <p>
-                      One example (and a fintech app you probably have on your mobile device) employed  recursive ML analysis of customer behavior, giving the bank
-                       insight that inspired novel financial
-                      products. The result was impressive YOY growth versus
-                      rivals.
+                    One company (a fintech app you’ve probably installed on your phone) leveraged ML to analyze user behavior, gaining insight that led novel financial products users loved. The result? Substantial YOY growth versus rivals.
                     </p>
                     <p>
                       <Link className={aboutStyles.aboutLink} href="/contact">
