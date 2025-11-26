@@ -456,7 +456,7 @@ export default function About() {
                   </>
                   <>
                     <p>
-                    One company (a fintech app you’ve probably installed on your phone) leveraged ML to analyze user behavior, gaining insight that led novel financial products users loved. The result? Substantial YOY growth versus rivals.
+                    One company (a fintech app you’ve probably installed on your phone) leveraged ML to analyze user behavior, gaining insight that inspired novel financial products users love. The result? Substantial YOY growth versus rivals.
                     </p>
                     <p>
                       <Link className={aboutStyles.aboutLink} href="/contact">
