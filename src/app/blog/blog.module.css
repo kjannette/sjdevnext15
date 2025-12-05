@@ -1,8 +1,84 @@
+/* Digest Page Styles */
+.blogDigestContainer {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.digestTitle {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: #2196f3;
+  margin-bottom: 2rem;
+  letter-spacing: 0.02rem;
+  text-align: center;
+}
+
+.digestList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.digestItem {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 1rem;
+}
+
+.digestItem:last-child {
+  border-bottom: none;
+}
+
+.digestLink {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  padding: 0.75rem;
+  border-radius: 4px;
+}
+
+.digestLink:hover {
+  background-color: #f5f5f5;
+  transform: translateX(4px);
+}
+
+.digestLinkTitle {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #2196f3;
+  line-height: 1.4;
+}
+
+.digestLinkDate {
+  font-size: 0.95rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* Individual Blog Post Styles */
 .blogContainer {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
+}
+
+.backToBlog {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: #2196f3;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.backToBlog:hover {
+  color: #1976d2;
+  transform: translateX(-4px);
 }
 
 .blogPost {
@@ -27,8 +103,15 @@
   font-size: 1.4rem;
   font-weight: 500;
   color: #2196f3;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   letter-spacing: 0.02rem;
+}
+
+.blogDate {
+  font-size: 1rem;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 2rem;
 }
 
 .blogContent {
@@ -148,8 +231,33 @@
 }
 
 @media only screen and (max-width: 430px) {
+  .blogDigestContainer {
+    padding: 1rem;
+  }
+
+  .digestTitle {
+    font-size: 1.26rem;
+  }
+
+  .digestLinkTitle {
+    font-size: 1.1rem;
+  }
+
+  .digestLinkDate {
+    font-size: 0.85rem;
+  }
+
+  .digestLink {
+    padding: 0.5rem;
+  }
+
   .blogContainer {
     padding: 1rem;
+  }
+
+  .backToBlog {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
   }
 
   .blogTitle {
@@ -158,6 +266,10 @@
 
   .blogSubtitle {
     font-size: 1.05rem;
+  }
+
+  .blogDate {
+    font-size: 0.9rem;
   }
 
   .blogContent {
