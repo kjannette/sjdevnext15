@@ -4,6 +4,8 @@ Title:  Precision Prompting: Effective Coding with AI
 
 Subtitle: Build a React login page in 3 minutes with 5 prompts
 
+Date: 11/20/2025
+
 Image: public/prompt_demo/prompt_demo_1.png
 
 Image Caption:  After the first two prompts your login page should look like this.
@@ -133,9 +135,13 @@ Aside End:
 Observing a "pause and review" supervision cadence keeps the process on track. Treat the AI like a skilled, but overzealous, junior colleague: explain the plan, confirm understanding, then oversee execution details.  Beware of the LLM "getting away from" your intent.
 
 —————————
-Subtitle: Build a React login page in 3 minutes with 5 prompts, part 2
+Title:  Precision Prompting: Effective Coding with AI, Part 2
+
+Subtitle: Second Installmant, Build a React login page in 3 minutes with 5 prompts
 
 Content:  This is the second installment in a series on effective prompt engineering.  This prompt builds on the foundation created in the first one, above.  In it, we instructed  adding a second prompt to build what we defined with our LLM, above.
+
+Date: Date: 11/25/2025
 
 **Prompt 2 – Create basic component (no styling yet)**
 

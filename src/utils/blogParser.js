@@ -42,11 +42,34 @@ function parseBoldText(text) {
   return segments;
 }
 
+// Helper function to create URL-friendly slug from title
+function createSlug(title) {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '') // Remove special characters
+    .trim()
+    .replace(/\s+/g, '-') // Replace spaces with hyphens
+    .replace(/-+/g, '-'); // Replace multiple hyphens with single hyphen
+}
+
+// Helper function to parse date and create sortable timestamp
+function parseDate(dateString) {
+  // Expected format: MM/DD/YYYY
+  const parts = dateString.split('/');
+  if (parts.length === 3) {
+    const month = parseInt(parts[0], 10);
+    const day = parseInt(parts[1], 10);
+    const year = parseInt(parts[2], 10);
+    return new Date(year, month - 1, day);
+  }
+  return new Date(); // Return current date if parsing fails
+}
+
 export function parseBlogPosts(fileContent) {
   // Split by the separator
   const posts = fileContent.split('—————————').filter(section => section.trim());
   
-  return posts.map((post, index) => {
+  const parsedPosts = posts.map((post, index) => {
     const lines = post.trim().split('\n');
     
     // Extract title
@@ -56,6 +79,14 @@ export function parseBlogPosts(fileContent) {
     // Extract subtitle
     const subtitleLine = lines.find(line => line.startsWith('Subtitle:'));
     const subtitle = subtitleLine ? subtitleLine.replace('Subtitle:', '').trim() : '';
+    
+    // Extract date
+    const dateLine = lines.find(line => line.startsWith('Date:'));
+    const dateString = dateLine ? dateLine.replace('Date:', '').trim() : '';
+    const dateObject = dateString ? parseDate(dateString) : new Date();
+    
+    // Create slug from title
+    const slug = createSlug(title);
     
     // Extract content - everything after "Content:"
     const contentStartIndex = lines.findIndex(line => line.startsWith('Content:'));
@@ -335,8 +366,16 @@ export function parseBlogPosts(fileContent) {
       id: index,
       title,
       subtitle,
+      date: dateString,
+      dateObject: dateObject,
+      slug: slug,
       contentBlocks
     };
   }).filter(post => post !== null);
+  
+  // Sort posts by date, newest first
+  parsedPosts.sort((a, b) => b.dateObject - a.dateObject);
+  
+  return parsedPosts;
 }
 
