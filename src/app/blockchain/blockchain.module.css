@@ -1,0 +1,112 @@
+.innerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2cm;
+  background-color: #fff;
+  width: 65%;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blockchainContainer {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.gridRow {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  min-width: 150px;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  border-left: 1px solid #abd1ff;
+  padding-left: 2rem;
+}
+
+.imageLink {
+  display: block;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.imageLink:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.birdImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.textWrapper {
+  padding: 0px 6px;
+  margin-bottom: 10px;
+}
+
+.textWrapper > p {
+  margin: 4px 5px 0px 4px;
+  padding: 5px 25px 0px 5px;
+  line-height: 1.39rem;
+  text-align: justify;
+  text-justify: inter-word;
+  letter-spacing: -0.03rem;
+}
+
+/* Mobile responsive styles */
+@media only screen and (max-width: 768px) {
+  .gridRow {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .leftColumn {
+    width: 100%;
+    align-items: center;
+    padding-top: 0;
+  }
+
+  .rightColumn {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid #abd1ff;
+    padding-left: 0;
+    padding-top: 1rem;
+  }
+
+  .textWrapper > p {
+    padding: 5px 10px 0px 5px;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .blockchainContainer {
+    margin-top: 15px;
+  }
+
+  .textWrapper > p {
+    font-size: 0.95rem;
+    line-height: 1.4rem;
+  }
+}
+

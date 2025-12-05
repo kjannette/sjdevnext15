@@ -67,6 +67,14 @@ export default function Navpanel(props) {
             <div className={contactStyles.contactDetailFour}>
               <div
                 className={contactStyles.navLinkFour}
+                onClick={() => handleClick("/blockchain")}
+              >
+                Blockchain
+              </div>
+            </div>
+            <div className={contactStyles.contactDetailFive}>
+              <div
+                className={contactStyles.navLinkFive}
                 onClick={() => handleClick("/contact")}
               >
                 Contact
