@@ -1,4 +1,4 @@
-// Helper function to parse bold text (**text**)
+
 function parseBoldText(text) {
   const segments = [];
   const regex = /\*\*(.+?)\*\*/g;
@@ -6,7 +6,7 @@ function parseBoldText(text) {
   let match;
   
   while ((match = regex.exec(text)) !== null) {
-    // Add text before the bold part
+
     if (match.index > lastIndex) {
       segments.push({
         text: text.substring(lastIndex, match.index),
@@ -14,7 +14,7 @@ function parseBoldText(text) {
       });
     }
     
-    // Add the bold text
+
     segments.push({
       text: match[1],
       bold: true
@@ -23,15 +23,14 @@ function parseBoldText(text) {
     lastIndex = regex.lastIndex;
   }
   
-  // Add remaining text after last match
+
   if (lastIndex < text.length) {
     segments.push({
       text: text.substring(lastIndex),
       bold: false
     });
   }
-  
-  // If no matches, return the whole text as non-bold
+
   if (segments.length === 0) {
     segments.push({
       text: text,
@@ -42,7 +41,7 @@ function parseBoldText(text) {
   return segments;
 }
 
-// Helper function to create URL-friendly slug from title
+// Helper func to create URL-friendly slug from title
 function createSlug(title) {
   return title
     .toLowerCase()
@@ -52,7 +51,7 @@ function createSlug(title) {
     .replace(/-+/g, '-'); // Replace multiple hyphens with single hyphen
 }
 
-// Helper function to parse date and create sortable timestamp
+// Helper function - parse date and create sortable timestamp
 function parseDate(dateString) {
   // Expected format: MM/DD/YYYY
   const parts = dateString.split('/');
@@ -109,7 +108,7 @@ export function parseBlogPosts(fileContent) {
     // Build content blocks (paragraphs, lists, etc.)
     const contentBlocks = [];
     
-    // Process pre-content lines for images
+  
     for (let i = 0; i < preContentLines.length; i++) {
       const line = preContentLines[i];
       const trimmedLine = line.trim();
@@ -138,7 +137,6 @@ export function parseBlogPosts(fileContent) {
       }
     }
     
-    // Add first paragraph if exists
     if (firstContentLine) {
       contentBlocks.push({ type: 'paragraph', content: parseBoldText(firstContentLine) });
     }
@@ -160,7 +158,7 @@ export function parseBlogPosts(fileContent) {
           contentBlocks.push({ type: 'paragraph', content: parseBoldText(currentParagraph.trim()) });
           currentParagraph = '';
         }
-        // Close any open list
+
         if (currentList) {
           contentBlocks.push(currentList);
           currentList = null;
@@ -185,7 +183,7 @@ export function parseBlogPosts(fileContent) {
         continue;
       }
       
-      // If we're inside an aside, collect the lines
+      // If inside an aside, collect the lines
       if (insideAside) {
         if (trimmedLine !== '') {
           asideContent.push(trimmedLine);
@@ -209,25 +207,25 @@ export function parseBlogPosts(fileContent) {
       const bulletMatch = trimmedLine.match(/^\*\s+(.+)/);
       
       if (sectionHeaderMatch) {
-        // Save current paragraph if any
+
         if (currentParagraph.trim()) {
           contentBlocks.push({ type: 'paragraph', content: parseBoldText(currentParagraph.trim()) });
           currentParagraph = '';
         }
-        // Close any open list
+  
         if (currentList) {
           contentBlocks.push(currentList);
           currentList = null;
         }
         
-        // Add section header block
+
         contentBlocks.push({
           type: 'sectionHeader',
           content: sectionHeaderMatch[1]
         });
         
       } else if (imageMatch) {
-        // Save current paragraph if any
+        // Save current paragraph; if any
         if (currentParagraph.trim()) {
           contentBlocks.push({ type: 'paragraph', content: parseBoldText(currentParagraph.trim()) });
           currentParagraph = '';
@@ -238,7 +236,7 @@ export function parseBlogPosts(fileContent) {
           currentList = null;
         }
         
-        // Look ahead for the caption on the next non-empty line
+        // Look ahead for a caption on the next non-empty line
         let caption = '';
         for (let j = i + 1; j < remainingLines.length; j++) {
           const nextLine = remainingLines[j].trim();
@@ -246,7 +244,7 @@ export function parseBlogPosts(fileContent) {
             const nextCaptionMatch = nextLine.match(/^Image Caption:\s+(.+)/);
             if (nextCaptionMatch) {
               caption = nextCaptionMatch[1];
-              i = j; // Skip the caption line in the main loop
+              i = j; 
             }
             break;
           }
@@ -269,7 +267,7 @@ export function parseBlogPosts(fileContent) {
           currentParagraph = '';
         }
         
-        // Start or continue numbered list
+
         if (!currentList || currentList.type !== 'ordered-numbered') {
           if (currentList) contentBlocks.push(currentList);
           currentList = { type: 'ordered-numbered', items: [] };
@@ -277,7 +275,7 @@ export function parseBlogPosts(fileContent) {
         currentList.items.push({ content: parseBoldText(numberedMatch[2]), subItems: [] });
         
       } else if (romanMatch) {
-        // This is a sub-sub-item of the previous lettered item
+        // A sub-sub-item of the previous lettered item
         // Check roman numerals BEFORE letters since "i", "v", "x" are also letters
         if (currentList && currentList.type === 'ordered-numbered' && currentList.items.length > 0) {
           const lastItem = currentList.items[currentList.items.length - 1];
@@ -338,14 +336,13 @@ export function parseBlogPosts(fileContent) {
           }
         }
         
-        // Close paragraph if exists
+        // Close paragraph; if exists
         if (currentParagraph.trim()) {
           contentBlocks.push({ type: 'paragraph', content: parseBoldText(currentParagraph.trim()) });
           currentParagraph = '';
         }
         
       } else {
-        // Regular text - add to current paragraph
         if (currentList) {
           contentBlocks.push(currentList);
           currentList = null;
@@ -354,7 +351,6 @@ export function parseBlogPosts(fileContent) {
       }
     }
     
-    // Add any remaining content
     if (currentList) {
       contentBlocks.push(currentList);
     }
@@ -373,7 +369,6 @@ export function parseBlogPosts(fileContent) {
     };
   }).filter(post => post !== null);
   
-  // Sort posts by date, newest first
   parsedPosts.sort((a, b) => b.dateObject - a.dateObject);
   
   return parsedPosts;

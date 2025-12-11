@@ -66,17 +66,17 @@ export default function Header(props) {
             <div>
               <div
                 className={headerStyles.nextLink}
-                onClick={() => handleClick("/blog")}
+                onClick={() => handleClick("/blockchain")}
               >
-                Blog
+                Blockchain
               </div>
             </div>
             <div>
               <div
                 className={headerStyles.nextLink}
-                onClick={() => handleClick("/blockchain")}
+                onClick={() => handleClick("/blog")}
               >
-                Blockchain
+                Blog
               </div>
             </div>
             <div>
