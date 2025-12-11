@@ -12,6 +12,16 @@ const roboto = Roboto({
   style: ["italic", "normal"],
 });
 
+export const metadata = {
+  title: "SJ Development",
+  description: "Innovative AI and Web Development Solutions",
+  icons: {
+    icon: "/crane_fav.png",
+    shortcut: "/crane_fav.png",
+    apple: "/crane_fav.png",
+  },
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

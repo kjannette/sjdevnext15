@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Origami Crane - Geometric Design -->
+  
+  <!-- Body/Center -->
+  <polygon points="32,20 44,40 20,40" fill="#2196f3"/>
+  
+  <!-- Left Wing -->
+  <polygon points="20,40 8,32 20,28 32,20" fill="#1976d2"/>
+  
+  <!-- Right Wing -->
+  <polygon points="44,40 56,32 44,28 32,20" fill="#64b5f6"/>
+  
+  <!-- Tail -->
+  <polygon points="20,40 44,40 32,56" fill="#1565c0"/>
+  
+  <!-- Head/Neck -->
+  <polygon points="32,20 28,8 36,8" fill="#2196f3"/>
+  <polygon points="28,8 22,4 28,12" fill="#1976d2"/>
+  
+</svg>
+
