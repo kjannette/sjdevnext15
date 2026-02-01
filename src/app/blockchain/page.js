@@ -18,7 +18,7 @@ export default function Blockchain() {
             <div className={blockchainStyles.gridRow}>
               <div className={blockchainStyles.leftColumn}>
                 <a 
-                  href="https://www.chirper.live" 
+                  href="https://github.com/kjannette/Chirper/tree/main" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className={blockchainStyles.imageLink}
