@@ -89,7 +89,7 @@ const Founder = () => {
     const promptText = JSON.stringify({ prompt: promptValue });
 
     //console.log("send prompt fired, request:", promptText);
-    const response = await fetch(`https://www.sjdev.co/v1/lm-cr-query/`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE}/v1/lm-cr-query`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
