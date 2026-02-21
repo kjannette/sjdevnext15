@@ -55,27 +55,25 @@ const FoundSub = (props) => {
                 <img
                   className={foundStyles.geoImg}
                   src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1740705223/geo_fmr4v0.gif"
-                  height={100}
+                  height={90}
                   alt="artistic picture of a man in a suit"
                 />
               </div>
               <div className={foundStyles.rightLower}>
                 <div className={foundStyles.rightLowerTextBox}>
                   <p className={foundStyles.rightLowerGraph}>
-                    This is Peitho: a RAG-enhanced, agentic LLM cluster.
+                    Peitho: An LLM Cluster Architecture
                   </p>
 
                   <p className={foundStyles.rightLowerGraph}>
-                    Tool access includes web search within domain-specific
-                    queries, plus a local vector database.
+                    Claude API is Peitho's inference engine. Proprietary data is transformed to vectorized embeddings via Amazon Titan and added to a FAISS index.
                   </p>
 
                   <p className={foundStyles.rightLowerGraph}>
-                    Proprietary (CoT) prompting and context provisioning
-                    optimize critical reasoning.
+                    LangChain orchestrates tooling and workflow, i.e. semantic retrieval at query time based on conceptual similarity and user intent.
                   </p>
                   <p className={foundStyles.rightLowerGraph}>
-                    Ask Peitho how sjDev can help your organization grow.
+                    Finally, Custom Chain-of-Thought (CoT) prompting optimizes critical reasoning. Ask Peitho how sjDev can help your organization grow.
                   </p>
                 </div>
               </div>
