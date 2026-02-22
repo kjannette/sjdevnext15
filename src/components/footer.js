@@ -6,16 +6,8 @@ export default function Footer() {
     <div className={styles.footerContainer}>
       <div className={styles.footerInnerBox}>
         <a href="" className={styles.footerLink} rel="noopener noreferrer">
-          |{"   "} © 2023 - 2025 sjDev{"   "} |
+          |{"   "} © 2023 - 2026 sjDev{"   "} |
         </a>
-        <div className={styles.nextLogoBox}>
-          <img
-            className={styles.nextLogo}
-            src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739937756/nextLogo_seodzo.png"
-            height={30}
-            alt="next js logo"
-          />
-        </div>
       </div>
     </div>
   );
