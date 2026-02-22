@@ -65,7 +65,7 @@ export default function Featured() {
           </a>
           {/****    BB END    *****/}
 
-          {/****    BT START    *****/}
+          {/****    dCAK START    *****/}
           <a href="" className={homeStyles.cardTextRight}>
             <h3>deClawed-Assisty-Kitty</h3>
             <p>
@@ -83,7 +83,7 @@ export default function Featured() {
             </a>
             <div className={featuredStyles.gitBox}>View on Github</div>
           </div>
-          {/****    BT END    *****/}
+          {/****    dCAK END    *****/}
         </div>
       </div>
     </div>
