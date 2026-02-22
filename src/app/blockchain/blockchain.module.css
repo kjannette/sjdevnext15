@@ -24,9 +24,30 @@
   gap: 2rem;
 }
 
+.gridRowMargin {
+  display: flex;
+  flex-direction: row;
+  margin-top: 45px;
+  width: 100%;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
 .leftColumn {
   display: flex;
   flex-direction: column;
+  width: 20%;
+  min-width: 150px;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.leftColumn2 {
+  display: flex;
+  flex-direction: column;
+  margin-top: -25px;
+  margin-left: 42px;
   width: 20%;
   min-width: 150px;
   justify-content: flex-start;
@@ -39,6 +60,14 @@
   flex-direction: column;
   width: 60%;
   border-left: 1px solid #abd1ff;
+  padding-left: 2rem;
+}
+
+.rightColumn2 {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  border-right: 1px solid #abd1ff;
   padding-left: 2rem;
 }
 
@@ -59,12 +88,18 @@
   object-fit: contain;
 }
 
+.birdImage2 {
+  width: 320px;
+  height: auto;
+  object-fit: contain;
+}
+
 .textWrapper {
   padding: 0px 6px;
   margin-bottom: 10px;
 }
 
-.textWrapper > p {
+.textWrapper>p {
   margin: 4px 5px 0px 4px;
   padding: 5px 25px 0px 5px;
   line-height: 1.39rem;
@@ -73,9 +108,18 @@
   letter-spacing: -0.03rem;
 }
 
+.colorSpan {
+  color: #abd1ff;
+}
+
 /* Mobile responsive styles */
 @media only screen and (max-width: 768px) {
   .gridRow {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .gridRowMargin {
     flex-direction: column;
     gap: 1rem;
   }
@@ -94,7 +138,15 @@
     padding-top: 1rem;
   }
 
-  .textWrapper > p {
+  .rightColumn2 {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid #abd1ff;
+    padding-left: 0;
+    padding-top: 1rem;
+  }
+
+  .textWrapper>p {
     padding: 5px 10px 0px 5px;
   }
 }
@@ -104,9 +156,8 @@
     margin-top: 15px;
   }
 
-  .textWrapper > p {
+  .textWrapper>p {
     font-size: 0.95rem;
     line-height: 1.4rem;
   }
 }
-
