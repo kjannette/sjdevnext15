@@ -67,17 +67,16 @@ export default function Featured() {
 
           {/****    BT START    *****/}
           <a href="" className={homeStyles.cardTextRight}>
-            <h3>Budgetize</h3>
+            <h3>deClawed-Assisty-Kitty</h3>
             <p>
-              Member dashboard SaaS for regional business association. Snippet
-              demos 'monthly net' budget view.
+              LLM-driven mail & task automation. Integrates with any LLM API (or local model), via your own local Model Context Protocol server — for greater privacy, transparency and ops control.
             </p>
           </a>
           <div className={homeStyles.cardImageLeft}>
-            <a href="" target="_blank">
+            <a href="https://github.com/kjannette/deClawed-Assisty-Kitty" target="_blank">
               <img
                 className={featuredStyles.fadeInFromRightAnimation}
-                src="https://res.cloudinary.com/dd8ewixm7/image/upload/v1739937681/budget_cvvtbj.jpg"
+                src="./kitty-logo.png"
                 height={130}
                 alt="sjDev"
               />
