@@ -18,6 +18,9 @@ export default function Blockchain() {
 
             <div className={blockchainStyles.gridRow}>
               <div className={blockchainStyles.leftColumn}>
+                <div className={blockchainStyles.gitTextContainer}>
+                  <p className={blockchainStyles.hoverText}>View Git</p>
+                </div>
                 <a
                   href="https://github.com/kjannette/Chirper/tree/main"
                   target="_blank"
@@ -50,6 +53,9 @@ export default function Blockchain() {
                 </div>
               </div>
               <div className={blockchainStyles.leftColumn2}>
+                <div className={blockchainStyles.gitTextContainer}>
+                  <p className={blockchainStyles.hoverText}>View Git</p>
+                </div>
                 <a
                   href="https://github.com/kjannette/koin_ping"
                   target="_blank"
@@ -67,12 +73,43 @@ export default function Blockchain() {
               </div>
             </div>
 
+            <div className={blockchainStyles.gridRow}>
+              <div className={blockchainStyles.leftColumn}>
+                <div className={blockchainStyles.gitTextContainer}>
+                  <p className={blockchainStyles.hoverText}>View Git</p>
+                </div>
+                <a
+                  href="https://github.com/kjannette/trahn-coin-trader"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={blockchainStyles.imageLink}
+                >
+                  <Image
+                    src="/three_bird.png"
+                    alt="Chirper - Cross-chain bridge tool"
+                    width={200}
+                    height={200}
+                    className={blockchainStyles.birdImage}
+                  />
+                </a>
+              </div>
+              <div className={blockchainStyles.rightColumn}>
+                <div className={blockchainStyles.textWrapper}>
+                  <p>
+                    <span className={blockchainStyles.colorSpan}>Trahn Trade</span> is a sophisticated, Golang-based grid trading bot for Uniswap V2/ETH, designed to profit from market price oscillations.
+                    Trahn Trade employs an algorithmic trading strategy, placing buy and sell orders at predetermined intervals (a "grid"). The algorithm realizes gains over cost basis by quickly-executed transactions based on grid-range oscillations.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
 
 
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 
