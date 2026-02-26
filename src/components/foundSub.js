@@ -62,7 +62,7 @@ const FoundSub = (props) => {
               <div className={foundStyles.rightLower}>
                 <div className={foundStyles.rightLowerTextBox}>
                   <p className={foundStyles.rightLowerGraph}>
-                    Peitho: An LLM Cluster Architecture
+                    Peitho: An LLM Cluster Architecture (with a high temp)
                   </p>
 
                   <p className={foundStyles.rightLowerGraph}>
