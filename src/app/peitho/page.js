@@ -97,8 +97,12 @@ const Founder = () => {
       body: promptText,
     });
     const data = await response.json();
+    const responseText =
+      typeof data === "string"
+        ? data
+        : data?.content ?? data?.text ?? String(data);
 
-    setText(data);
+    setText(responseText);
     setIsBusy(false);
   }
 
