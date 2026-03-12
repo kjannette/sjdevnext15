@@ -128,7 +128,7 @@
 .rightLowerGraph {
   margin-top: 12px;
   text-justify: inter-character;
-  font-size: .7rem;
+  font-size: .65rem;
   padding: 0px 10px;
   letter-spacing: 1px;
 }
@@ -207,6 +207,14 @@
   margin-top: 25px;
   height: 100px;
   min-width: 900px;
+}
+
+.descriptionLink {
+  color: blue;
+}
+
+.descrptionLink:hover {
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 430px) {
