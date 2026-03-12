@@ -73,7 +73,7 @@ const FoundSub = (props) => {
                     LangChain orchestrates tooling and workflow, i.e. semantic retrieval at query time based on conceptual similarity and user intent.
                   </p>
                   <p className={foundStyles.rightLowerGraph}>
-                    Finally, Custom Chain-of-Thought (CoT) prompting optimizes critical reasoning. Ask Peitho how sjDev can help your organization grow.
+                    Custom Chain-of-Thought (CoT) prompting optimizes critical reasoning. Ask Peitho how sjDev can help your organization grow.
                   </p>
                 </div>
               </div>
