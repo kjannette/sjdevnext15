@@ -62,7 +62,7 @@ const FoundSub = (props) => {
               <div className={foundStyles.rightLower}>
                 <div className={foundStyles.rightLowerTextBox}>
                   <p className={foundStyles.rightLowerGraph}>
-                    Peitho: An LLM Cluster Architecture (with a high temp)
+                    Peitho: An LLM Cluster Architecture
                   </p>
 
                   <p className={foundStyles.rightLowerGraph}>
@@ -70,10 +70,10 @@ const FoundSub = (props) => {
                   </p>
 
                   <p className={foundStyles.rightLowerGraph}>
-                    LangChain orchestrates tooling and workflow, i.e. semantic retrieval at query time based on conceptual similarity and user intent.
+                    LangChain orchestrates workflow, i.e. semantic retrieval at query time based on conceptual similarity and user intent. Chain-of-Thought (CoT) prompting optimizes critical reasoning.
                   </p>
                   <p className={foundStyles.rightLowerGraph}>
-                    Finally, Custom Chain-of-Thought (CoT) prompting optimizes critical reasoning. Ask Peitho how sjDev can help your organization grow.
+                    Peitho’s “personality” models “street-samurai” Molly Millions, anti-hero of William Gibson's 1984 novel <a className={foundStyles.descriptionLink} href="https://en.wikipedia.org/wiki/Neuromancer"><i>Neuromancer</i></a>, wherein Gibson coined the term “cyberspace”.
                   </p>
                 </div>
               </div>
