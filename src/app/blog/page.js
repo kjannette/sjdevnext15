@@ -19,7 +19,10 @@ export default function BlogDigest() {
               <div className={blogStyles.digestItem}>
                 <Link href="/letsembargostackoverflow" className={blogStyles.digestLink}>
                   <span className={blogStyles.digestLinkTitle}>
-                    Model Collapse And The Death of Peer-Reviewed Discourse — Or, Let&#39;s Embargo Stack Overflow From LLM Training Like The MF&#39;in Strait of Hormuz
+                    Model Collapse And The Death of Populist Peer-Review
+                  </span>
+                  <span className={blogStyles.digestLinkSubtitle}>
+                    Or, <em>Let&#39;s Embargo Stack Overflow Like The MF&#39;in Strait of Hormuz</em>
                   </span>
                 </Link>
                 <span className={blogStyles.digestDate}>March 16, 2026</span>

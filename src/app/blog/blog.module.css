@@ -52,6 +52,13 @@
   line-height: 1.4;
 }
 
+.digestLinkSubtitle {
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: #2196f3;
+  line-height: 1.4;
+}
+
 .digestLinkDate {
   font-size: 0.95rem;
   color: #666;
@@ -250,6 +257,10 @@
 
   .digestLinkTitle {
     font-size: 1.1rem;
+  }
+
+  .digestLinkSubtitle {
+    font-size: 0.9rem;
   }
 
   .digestLinkDate {
