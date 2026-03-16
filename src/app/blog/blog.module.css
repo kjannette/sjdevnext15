@@ -58,6 +58,15 @@
   font-style: italic;
 }
 
+.digestDate {
+  font-size: 0.95rem;
+  color: #fff;
+  text-align: left;
+  display: block;
+  margin-top: 0.4rem;
+  padding-left: 0.75rem;
+}
+
 /* Individual Blog Post Styles */
 .blogContainer {
   width: 100%;
